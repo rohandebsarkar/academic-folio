@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
     {{- partial "head.html" . -}}
-    <body>
+    <body class="mx-auto max-w-[1024px]">
         {{- partial "header.html" . -}}
-        <div id="content" class="mt-[40px] p-4">
+        <div id="content" class="p-4">
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}

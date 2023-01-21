@@ -1,3 +1,3 @@
-<footer class="text-center absolute inset-x-0 bottom-0 p-4">
-    &copy; Copyright {{ now.Format "2006" }} {{ .Site.Copyright }}
+<footer class="fixed text-center inset-x-0 bottom-0 p-4">
+    {{ with .Site.Copyright }}{{ . }}{{ end }}
 </footer>

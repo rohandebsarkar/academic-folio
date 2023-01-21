@@ -1,5 +1,25 @@
 {{ define "main" }}
-<main>
-    {{ .Content }}
+<main class="space-y-4">
+    <h1 class="text-4xl">
+        {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
+            <strong>{{ .Site.Params.firstName }}</strong>
+            {{ .Site.Params.middleName }}
+            {{ .Site.Params.lastName }}
+        {{ else }}
+            {{ .Site.Title }}          
+        {{ end }}
+    </h1>
+
+    <div class="float-right max-w-[25%] ml-4">
+        {{ with resources.Get "img/prof_pic.jpg" }}
+            {{ with .Resize "800x webp" }}
+                <img class="rounded" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+            {{ end }}
+        {{ end }}
+    </div>
+    
+    <div>
+        {{ .Content }}
+    </div>
 </main>
 {{ end }}

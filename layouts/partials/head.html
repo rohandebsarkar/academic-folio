@@ -1,5 +1,11 @@
 <head>
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>
+        {{ if eq .Page.RelPermalink "/" }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} - {{ .Site.Title }}
+        {{ end }}
+    </title>
     {{ $styles := resources.Get "css/main.css" | resources.PostCSS }}
     {{ if hugo.IsProduction }}
     {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
