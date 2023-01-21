@@ -4,6 +4,9 @@ title = 'Academic Folio'
 copyright = '© Copyright 2023 The Academic Folio Authors'
 
 [params]
-firstName = 'You'
-middleName = 'R.'
-lastName = 'Name'
+firstName = 'Albert'
+lastName = 'Einstein'
+
+email = 'einstein@example.org'
+
+description = "Albert Einstein's personal website powered by the Academic Folio theme."
