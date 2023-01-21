@@ -1,3 +1,4 @@
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'academic-folio'
+languageCode = 'en'
+title = 'Academic Folio'
+copyright = 'The Academic Authors'
