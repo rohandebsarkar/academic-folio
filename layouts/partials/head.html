@@ -6,11 +6,18 @@
             {{ .Title }} - {{ .Site.Title }}
         {{ end }}
     </title>
-    {{ $styles := resources.Get "css/main.css" | resources.PostCSS }}
+
+    {{ $tailwindStyles := resources.Get "css/tailwind.css" | postCSS }}
+    {{ $styles := resources.Get "css/main.scss" | toCSS }}
+
     {{ if hugo.IsProduction }}
-    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+        {{ $tailwindStyles = $tailwindStyles | minify | fingerprint | resources.PostProcess }}
+        {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ else if .Site.IsServer }}
-    {{ $styles = $styles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
+        {{ $tailwindStyles = $tailwindStyles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
+        {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
+    
+    <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 </head>
