@@ -1,0 +1,5 @@
+<head>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ $styles := resources.Get "css/main.scss" | toCSS | postCSS | minify | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+</head>
