@@ -1,5 +1,10 @@
 <head>
     <title>{{ .Title }} - {{ .Site.Title }}</title>
-    {{ $styles := resources.Get "css/main.scss" | toCSS | postCSS | minify | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{ $styles := resources.Get "css/main.css" | resources.PostCSS }}
+    {{ if hugo.IsProduction }}
+    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+    {{ else if .Site.IsServer }}
+    {{ $styles = $styles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
+    {{ end }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 </head>
