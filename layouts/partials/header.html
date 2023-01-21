@@ -4,8 +4,8 @@
         <li><a href="{{ .Site.BaseURL }}">About</a></li>
         <li><a href="/blog">Blog</a></li>
         {{ range site.RegularPages }}
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
-        <li>Dark Mode</li>
+        <li><button id="theme-toggle"><small>Toggle Theme</small></button></li>
     </ul>
 </header>

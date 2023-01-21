@@ -3,22 +3,7 @@ body {
     background-color: var(--global-bg-color);
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-em,
-div,
-li,
-span,
-strong {
-    color: var(--global-text-color);
-}
-
-a {
+a, #theme-toggle {
     color: var(--global-theme-color);
 
     &:hover {
@@ -27,9 +12,6 @@ a {
     }
 }
 
-p code {
+code {
     color: var(--global-theme-color);
-    background-color: var(--global-code-bg-color);
-    padding: 0 0.25rem;
-    border-radius: 0.25rem;
 }
