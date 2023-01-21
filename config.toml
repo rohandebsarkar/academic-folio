@@ -4,12 +4,14 @@ title = 'Academic Folio'
 copyright = '© Copyright 2023 The Academic Folio Authors'
 
 [params]
-firstName = 'Albert'
-lastName = 'Einstein'
+  firstName = 'Albert'
+  lastName = 'Einstein'
 
-email = 'einstein@example.org'
+  email = 'einstein@example.org'
 
-description = "Albert Einstein's personal website powered by the Academic Folio theme."
+  description = "Albert Einstein's personal website powered by the Academic Folio theme."
+
+  footerLastUpdated = true
 
 [markup]
   [markup.goldmark]

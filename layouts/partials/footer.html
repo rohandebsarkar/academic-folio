@@ -1,3 +1,12 @@
 <footer class="fixed inset-x-0 bottom-0 p-4 text-center text-sm">
-    {{ with .Site.Copyright }}{{ . }}{{ end }} &bull; Powered by <a href="https://gohugo.io">Hugo</a> with <a href="https://codeberg.org/academic-folio/academic-folio">academic-folio</a> theme.
+    {{ with .Site.Copyright }}
+        {{ . }}
+    {{ end }}
+        &bull;
+        Powered by <a href="https://gohugo.io">Hugo</a> with 
+        <a href="https://codeberg.org/academic-folio/academic-folio">academic-folio</a> theme
+    {{ if .Site.Params.footerLastUpdated }}
+        &bull;
+        Last updated: {{ now.Format "02 Jan 2006"}}
+    {{ end }}
 </footer>
