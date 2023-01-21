@@ -18,7 +18,7 @@
     <div class="float-right max-w-[25%] ml-4">
         {{ with resources.Get "img/prof_pic.jpg" }}
             {{ with .Resize "800x webp" }}
-                <img class="rounded z-10" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+                <img class="rounded z-10" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .RelPermalink }}">
             {{ end }}
         {{ end }}
         <p class="block w-full mt-2 text-center font-mono">

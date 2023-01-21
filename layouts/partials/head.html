@@ -7,6 +7,9 @@
         {{ end }}
     </title>
 
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {{ $tailwindStyles := resources.Get "css/tailwind.css" | postCSS }}
     {{ $styles := resources.Get "css/main.scss" | toCSS }}
 
