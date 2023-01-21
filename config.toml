@@ -10,3 +10,8 @@ lastName = 'Einstein'
 email = 'einstein@example.org'
 
 description = "Albert Einstein's personal website powered by the Academic Folio theme."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -3,6 +3,9 @@
     <ul class="ml-auto flex flex-nowrap space-x-6">
         <li><a href="{{ .Site.BaseURL }}">About</a></li>
         <li><a href="/blog">Blog</a></li>
+        {{ range site.RegularPages }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
         <li>Dark Mode</li>
     </ul>
 </header>
