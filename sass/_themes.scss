@@ -1,7 +1,7 @@
 /*******************************************************************************
  * Themes
  ******************************************************************************/
- 
+
 :root {
   --global-bg-color: #{$grey-color-light};
   --global-code-bg-color: #{$code-bg-color-light};
@@ -15,6 +15,14 @@
   --global-distill-app-color: #{$grey-color-dark};
   --global-divider-color: #{$grey-color};
   --global-card-bg-color: #{$white-color};
+
+  .icon-sun {
+    display: none;
+  }
+
+  .icon-moon {
+    display: inline;
+  }
 }
 
 html[data-theme='dark'] {
@@ -30,4 +38,12 @@ html[data-theme='dark'] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #{$grey-color};
   --global-card-bg-color: #{$black-color};
+
+  .icon-sun {
+    display: inline;
+  }
+
+  .icon-moon {
+    display: none;
+  }
 }

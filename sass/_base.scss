@@ -16,6 +16,23 @@ code {
     color: var(--global-theme-color);
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+
+    vertical-align: -.140em;
+
+    fill: var(--global-text-color);
+
+    &:hover {
+        fill: var(--global-hover-color);
+    }
+}
+
+nav a {
+    color: var(--global-text-color);
+}
+
 nav .active a {
     color: var(--global-theme-color);
 }

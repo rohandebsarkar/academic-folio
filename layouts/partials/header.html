@@ -34,7 +34,10 @@
                             </li>
                         {{ end }}
                     {{ end }}
-                    <li><button id="theme-toggle" class="hover:underline" onclick="toggleTheme()">Toggle Theme</button></li>
+                    <li><button id="theme-toggle" class="py-1" onclick="toggleTheme()">
+                        <span class="icon-sun">{{ partial "icon" (dict "context" . "name" "fas sun") }}</span>
+                        <span class="icon-moon">{{ partial "icon" (dict "context" . "name" "fas moon") }}</span>
+                    </button></li>
                 </ul>
             </ul>
         </ul>
