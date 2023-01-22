@@ -34,7 +34,10 @@
                             </li>
                         {{ end }}
                     {{ end }}
-                    <li><button id="theme-toggle" class="hover:underline" onclick="toggleTheme()">Toggle Theme</button></li>
+                    <li><button id="theme-toggle" onclick="toggleTheme()">
+                        <span class="icon-sun">{{ partial "icon" "sun" }}</span>
+                        <span class="icon-moon">{{ partial "icon" "moon" }}</span>
+                    </button></li>
                 </ul>
             </ul>
         </ul>

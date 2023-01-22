@@ -2,3 +2,7 @@ baseURL: 'https://academic-folio.netlify.app/'
 languageCode: en
 title: Academic Folio
 copyright: © Copyright 2023 The Academic Folio Contributors
+
+module:
+  imports:
+  - path: github.com/hugo-mods/icons
