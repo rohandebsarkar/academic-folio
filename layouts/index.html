@@ -5,10 +5,10 @@
                 <strong>{{ .Site.Params.firstName }}</strong>
                 {{ .Site.Params.lastName }}
             {{ else }}
-                {{ .Site.Title }}          
+                {{ .Site.Title }}
             {{ end }}
         </h1>
-    
+
         {{ with .Site.Params.description }}
             <h2>{{ . }}</h2>
         {{ end }}
@@ -24,7 +24,7 @@
             {{ .Site.Params.email }}
         </p>
     </div>
-    
+
     <article class="space-y-4">
         {{ .Content }}
     </article>
