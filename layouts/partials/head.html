@@ -1,7 +1,7 @@
 <head>
     {{/*  Title  */}}
     <title>
-        {{ if eq .Page.Permalink .Site.BaseURL }}
+        {{ if .IsHome }}
             {{ .Site.Title }}
         {{ else }}
             {{ .Title }} - {{ .Site.Title }}
