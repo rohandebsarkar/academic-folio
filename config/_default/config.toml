@@ -16,9 +16,9 @@ copyright = '© Copyright 2023 The Academic Folio Contributors'
   url = '/Teaching'
   weight= 25
 
-[[menu.main]]
-  identifier = 'blog'
-  name = 'Blog'
-  title = 'blog section'
-  url = '/blog/'
-  weight = 30
+#[[menu.main]]
+#  identifier = 'blog'
+#  name = 'Blog'
+#  title = 'blog section'
+#  url = '/blog/'
+#  weight = 30
