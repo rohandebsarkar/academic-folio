@@ -12,9 +12,9 @@
                 </li>
                 <ul id="hamburger-menu" class="hidden md:flex md:flex-nowrap md:space-x-8 md:space-y-0 space-y-4">
                     {{ range site.RegularPages }}
-                        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                        <li><a class="hover:underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
                     {{ end }}
-                    <li><button id="theme-toggle" onclick="toggleTheme()">Toggle Theme</button></li>
+                    <li><button id="theme-toggle" class="hover:underline" onclick="toggleTheme()">Toggle Theme</button></li>
                 </ul>
             </ul>
         </ul>
