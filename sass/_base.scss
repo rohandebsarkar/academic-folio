@@ -3,17 +3,20 @@ body {
     background-color: var(--global-bg-color);
 }
 
-a, #theme-toggle {
+a {
     color: var(--global-theme-color);
 
     &:hover {
         color: var(--global-hover-color);
-        text-decoration: underline;
     }
 }
 
 code {
     color: var(--global-theme-color);
+}
+
+nav a {
+    color: var(--global-text-color);
 }
 
 #hamburger span {

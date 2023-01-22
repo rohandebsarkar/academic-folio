@@ -1,7 +1,7 @@
 baseURL = 'https://rohandebsarkar.github.io/academic-folio/'
 languageCode = 'en'
 title = 'Academic Folio'
-copyright = '© Copyright 2023 The Academic Folio Authors'
+copyright = '© Copyright 2023 The Academic Folio Contributors'
 
 [params]
   firstName = 'Albert'
@@ -13,10 +13,6 @@ copyright = '© Copyright 2023 The Academic Folio Authors'
 
   footerLastUpdated = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
 
 [menu]
 [[menu.main]]
@@ -37,3 +33,4 @@ copyright = '© Copyright 2023 The Academic Folio Authors'
   title = 'blog section'
   url = '/blog/'
   weight = 30
+
