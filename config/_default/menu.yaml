@@ -3,6 +3,7 @@ main:
     name: Home
     url: /
     weight: 20
+    
   - identifier: Teaching
     name: Teaching
     url: /Teaching
