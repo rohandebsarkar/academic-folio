@@ -1,21 +1,18 @@
-[menu]
-
-[[menu.main]]
+[[main]]
   identifier= "Home"
   name= 'Home'
   url = '/'
   weight = 20
 
-[[menu.main]]
+[[main]]
   identifier= "Teaching"
   name= 'Teaching'
   url = '/Teaching'
   weight= 25
 
-#[[menu.main]]
+#[[main]]
 #  identifier = 'blog'
 #  name = 'Blog'
 #  title = 'blog section'
 #  url = '/blog/'
 #  weight = 30
-
