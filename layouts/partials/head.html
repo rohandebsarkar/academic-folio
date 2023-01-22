@@ -12,7 +12,7 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{/*  Stylesheets  */}}
+    {{/*  Stylesheet Configuarations */}}
     {{ $tailwindStyles := resources.Get "css/tailwind.css" | postCSS }}
     {{ $styles := resources.Get "css/main.scss" | toCSS }}
 
@@ -24,9 +24,11 @@
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
     
+    {{/*  Stylesheets  */}}
     <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 
-    {{/*  Theme Script  */}}
+    {{/*  Scripts  */}}
+    {{ partial "scripts/hamburger.html" . }}
     {{ partial "scripts/theme.html" . }}
 </head>

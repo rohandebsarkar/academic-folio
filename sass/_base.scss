@@ -15,3 +15,7 @@ a, #theme-toggle {
 code {
     color: var(--global-theme-color);
 }
+
+#hamburger span {
+    background-color: var(--global-text-color);
+}
