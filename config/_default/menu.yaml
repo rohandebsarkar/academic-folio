@@ -8,3 +8,8 @@ main:
     name: Teaching
     url: /teaching/
     weight: 20
+
+  - identifier: blog
+    name: blog
+    url: /blog/
+    weight: 30

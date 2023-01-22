@@ -1,0 +1,36 @@
+{{ define "main" }}
+<main>
+    <header>
+        <h1 class="text-4xl">
+            {{ .Page.Title }}
+        </h1>
+    
+        {{ with .Page.Params.description }}
+            <h2>{{ . }}</h2>
+        {{ end }}
+    </header>
+    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+    <article class="space-y-4">
+        {{ .Content }}
+    </article>
+    <div class="container mt-5">
+        <div class="post">
+        <!-- Ranges through content/posts/*.md -->
+        <ul class="post-list">
+            {{ range .Pages }}
+            <li class="">
+                <h3>
+                    <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
+                </h3>
+                <p>{{.Params.Decription}}</p>
+                <p class=post-meta>
+                    {{.Date.Format "2006-01-02"}}
+                </p>
+            </li>
+            {{ end }}
+        </ul>
+        </div>
+    </div>
+    
+</main>
+{{ end }}

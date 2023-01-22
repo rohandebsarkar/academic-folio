@@ -44,3 +44,61 @@ nav .active a {
 #hamburger span {
     background-color: var(--global-text-color);
 }
+
+// Extra Markdown style (post Customization)
+.post{
+    .post-meta{
+      color: var(--global-text-color-light);
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+    .post-tags{
+      color: var(--global-text-color-light);
+      font-size: 0.875rem;
+      padding-top: 0.25rem;
+      padding-bottom: 1rem;
+      a {
+        color: var(--global-text-color-light);
+        text-decoration: none;
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+    .post-content{
+      blockquote {
+        border-left: 5px solid var(--global-theme-color);
+        padding: 8px;
+      }
+    }
+  }
+
+.post-list {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    li {
+      border-bottom: 1px solid var(--global-divider-color);
+      list-style: none;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      .post-meta {
+        color: var(--global-text-color-light);
+        font-size: 0.875rem;
+        margin-bottom: 0;
+      }
+      .post-tags {
+        color: var(--global-text-color-light);
+        font-size: 0.875rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0;
+      }
+      a {
+        color: var(--global-text-color);
+        text-decoration: none;
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
