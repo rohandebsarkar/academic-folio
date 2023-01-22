@@ -1,5 +1,4 @@
 {{ define "main" }}
-<main class="space-y-4">
     <header>
         <h1 class="text-4xl">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
@@ -29,5 +28,4 @@
     <div class="space-y-4">
         {{ .Content }}
     </div>
-</main>
 {{ end }}
