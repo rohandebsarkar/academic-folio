@@ -4,7 +4,7 @@ WIP: Hugo port of the popular Jekyll theme al-folio
 To Install this theme for your own:
 1. Fork this Repository
 2. Clone it into your own system
-3. Switch to branch `publish_site
+3. Switch to branch `publish_site`
 4. Make the changes and commit
 5. Make sure your website is published correctly
 
