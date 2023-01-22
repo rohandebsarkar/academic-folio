@@ -1,0 +1,10 @@
+main:
+  - identifier: Home
+    name: Home
+    url: /
+    weight: 20
+    
+  - identifier: Teaching
+    name: Teaching
+    url: /Teaching
+    weight: 25
