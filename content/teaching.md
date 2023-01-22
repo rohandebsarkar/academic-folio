@@ -1,6 +1,6 @@
 ---
 title: "Teaching"
-description: "A breif note on Albert Einstein's teaching experiences"
+description: "A brief note on Albert Einstein's teaching experiences"
 ---
 
 By 1908, Albert Einstein was recognized as a leading scientist and was appointed lecturer at the University of Bern. The following year, after he gave a lecture on electrodynamics and the relativity principle at the University of Zurich, Alfred Kleiner recommended him to the faculty for a newly created professorship in theoretical physics. Einstein was appointed associate professor in 1909.
