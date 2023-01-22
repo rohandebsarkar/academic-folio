@@ -1,6 +1,6 @@
 <head>
     <title>
-        {{ if eq .Page.RelPermalink "/" }}
+        {{ if eq .Page.Permalink .Site.BaseURL }}
             {{ .Site.Title }}
         {{ else }}
             {{ .Title }} - {{ .Site.Title }}
