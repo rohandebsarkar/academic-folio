@@ -1,7 +1,7 @@
 <header class="fixed inset-x-0 top-0 bg-inherit border-b border-inherit opacity-80">
     <nav class="mx-auto p-4 max-w-[1024px]">
         <ul class="flex flex-nowrap">
-            <li><a class="hover:underline" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a></li>
+            <li><a class="hover:underline text-inherit" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a></li>
             <ul class="ml-auto md:space-y-0 space-y-2 md:text-center text-right">
                 <li class="md:hidden">
                     <button id="hamburger" class="space-y-1.5" onclick="hamburger()">
@@ -15,20 +15,20 @@
                     {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
                             <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
-                                <a class="hover:underline" href="#">
+                                <a class="hover:underline text-inherit" href="#">
                                     {{ .Pre }}{{ .Name }}
                                 </a>
                             </li>
                             <ul class="sub-menu">
                                 {{ range .Children }}
                                     <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                        <a class="hover:underline" href="{{ .URL }}">{{ .Name }}</a>
+                                        <a class="hover:underline text-inherit" href="{{ .URL }}">{{ .Name }}</a>
                                     </li>
                                 {{ end }}
                             </ul>
                         {{ else }}
                             <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
-                                <a class="hover:underline" href="{{ .URL }}">
+                                <a class="hover:underline text-inherit" href="{{ .URL }}">
                                     {{ .Pre }}{{ .Name }}
                                 </a>
                             </li>
