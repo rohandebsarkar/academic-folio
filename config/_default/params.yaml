@@ -1,9 +1,8 @@
-params:
-  firstName: Albert
-  lastName: Einstein
+firstName: Albert
+lastName: Einstein
 
-  email: einstein@example.org
+email: einstein@example.org
 
-  description: Albert Einstein's personal website powered by the Academic Folio theme
-  
-  footerLastUpdated: true
+description: Albert Einstein's personal website powered by the Academic Folio theme
+
+footerLastUpdated: true
