@@ -1,0 +1,20 @@
+<script>
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.theme = theme;
+    };
+
+    function toggleTheme() {
+        if (localStorage.theme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    };
+
+    if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || localStorage.theme === 'dark') {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+</script>

@@ -7,7 +7,7 @@
         {{ range site.RegularPages }}
             <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
-        <li><button id="theme-toggle"><small>Toggle Theme</small></button></li>
+        <li><button id="theme-toggle" onclick="toggleTheme()"><small>Toggle Theme</small></button></li>
     </ul>
     </div>
 </header>
