@@ -1,0 +1,20 @@
+[menu]
+
+[[menu.main]]
+  identifier= "Home"
+  name= 'Home'
+  url = '/'
+  weight = 20
+
+[[menu.main]]
+  identifier= "Teaching"
+  name= 'Teaching'
+  url = '/Teaching'
+  weight= 25
+
+#[[menu.main]]
+#  identifier = 'blog'
+#  name = 'Blog'
+#  title = 'blog section'
+#  url = '/blog/'
+#  weight = 30
