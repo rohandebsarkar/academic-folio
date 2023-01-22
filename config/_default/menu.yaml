@@ -1,10 +1,10 @@
 main:
-  - identifier: Home
+  - identifier: home
     name: Home
     url: /
-    weight: 20
-    
-  - identifier: Teaching
+    weight: 10
+
+  - identifier: teaching
     name: Teaching
-    url: /Teaching
-    weight: 25
+    url: /teaching/
+    weight: 20
