@@ -1,4 +1,4 @@
-baseURL = 'http://academic-folio.codeberg.page/'
+baseURL = 'https://rohandebsarkar.github.io/academic-folio/'
 languageCode = 'en'
 title = 'Academic Folio'
 copyright = '© Copyright 2023 The Academic Folio Authors'
