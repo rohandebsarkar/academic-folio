@@ -17,3 +17,17 @@ copyright = '© Copyright 2023 The Academic Folio Authors'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[menu]
+[[menu.main]]
+  identifier= "Home"
+  name= 'Home'
+  url = '/'
+  weight = 20
+
+[[menu.main]]
+  identifier = 'blog'
+  name = 'Blog'
+  title = 'blog section'
+  url = '/blog/'
+  weight = 30
