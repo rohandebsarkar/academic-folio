@@ -14,8 +14,7 @@ min_version = "0.41.0"
   name = ""
   homepage = ""
 
-# If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "al-folio"
+  homepage = "https://alshedivat.github.io/al-folio/"
+  repo = "https://github.com/alshedivat/al-folio"
