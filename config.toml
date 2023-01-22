@@ -13,10 +13,6 @@ copyright = '© Copyright 2023 The Academic Folio Contributors'
 
   footerLastUpdated = true
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
 
 [menu]
 [[menu.main]]
