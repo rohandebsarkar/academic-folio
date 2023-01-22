@@ -1,6 +1,7 @@
 body {
     color: var(--global-text-color);
     background-color: var(--global-bg-color);
+    border-color: var(--global-divider-color);
 }
 
 a {
@@ -15,14 +16,8 @@ code {
     color: var(--global-theme-color);
 }
 
-nav {
-    a {
-        color: var(--global-text-color);
-    }
-
-    .active a {
-        color: var(--global-theme-color);
-    }
+nav .active a {
+    color: var(--global-theme-color);
 }
 
 #hamburger span {

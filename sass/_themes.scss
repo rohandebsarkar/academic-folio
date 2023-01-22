@@ -15,21 +15,6 @@
   --global-distill-app-color: #{$grey-color-dark};
   --global-divider-color: #{$grey-color};
   --global-card-bg-color: #{$white-color};
-
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
-    display : flex;
-    align-items: center;
-  }
-
-  .repo-img-light {
-    display: block;
-  }
-  .repo-img-dark {
-    display: none;
-  }
 }
 
 html[data-theme='dark'] {
@@ -45,19 +30,4 @@ html[data-theme='dark'] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #{$grey-color};
   --global-card-bg-color: #{$black-color};
-
-  .fa-sun {
-    display : flex;
-    align-items: center;
-  }
-  .fa-moon {
-    display : none;
-  }
-
-  .repo-img-light {
-    display: none;
-  }
-  .repo-img-dark {
-    display: block;
-  }
 }
