@@ -15,22 +15,15 @@
     {{ .Content }}
 
     <div class="post-list">
-        <ul class="border-t">
+        <ul class="border-t border-dashed">
             {{ range .Pages }}
-                <li class="px-2 py-4 mt-2 space-y-2 border-b">
+                <li class="py-4 space-y-2 border-b border-dashed">                   
                     <h3>
-                        <a class="text-4xl" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <a class="text-2xl font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <p>
+                            {{ .Params.Description }}
+                        </p>
                     </h3>
-                    <p>
-                        {{ .Params.Description }}
-                    </p>
-                    <p class="post-date text-sm">
-                        {{ if .Date }}
-                            {{ .Date.Format "January 2, 2006" }}
-                        {{ else if .GitInfo.AuthorDate }}
-                            {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
-                        {{ end }}
-                    </p>
                 </li>
             {{ end }}
         </ul>

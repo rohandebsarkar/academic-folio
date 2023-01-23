@@ -5,9 +5,9 @@
     </h1>
 
     {{ with .Page.Params.description }}
-    <h2 class="text-2xl text-center">
-        {{ . }}
-    </h2>
+        <h2 class="text-2xl text-center">
+            {{ . }}
+        </h2>
     {{ end }}
 </header>
 
@@ -20,13 +20,13 @@
                 <li class="py-4 space-y-2 border-b border-dashed">
                     <p class="text-sm font-mono">
                         {{ if .Date }}
-                        {{ .Date.Format "January 2, 2006" }}
+                            {{ .Date.Format "January 2, 2006" }}
                         {{ else if .GitInfo.AuthorDate }}
-                        {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
+                            {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
                         {{ end }}
                         {{ with .Page.Params.author }}
-                        &nbsp; &bull; &nbsp;
-                        {{ . }}
+                            &nbsp; &bull; &nbsp;
+                            {{ . }}
                         {{ end }}
                     </p>
                     
