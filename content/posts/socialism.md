@@ -2,9 +2,13 @@
 title: Why Socialism?
 author: Albert Einstein
 
+date: "1949-05-01"
+
 tags: [socialism, politics]
 categories: [blog-posts]
 ---
+
+*Source: Monthly Review, May 1949*
 
 Is it advisable for one who is not an expert on economic and social issues to express views on the 
 subject of socialism? I believe for a number of reasons that it is. 
