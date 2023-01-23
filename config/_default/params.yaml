@@ -9,3 +9,6 @@ footerLastUpdated: true
 
 recentPosts: 5 # number of recent posts to show in home page
 showRecentPosts: true
+
+social_navbar: true # show social icons on navbar
+social_index: true # show social icons on index page
