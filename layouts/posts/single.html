@@ -19,7 +19,7 @@
             {{ with .Page.Params.author }}
                 &nbsp; &bull; &nbsp;
                 {{ . }}
-            {{ end }}            
+            {{ end }}
         </h3>
 
         {{ $currentPage := . }}
@@ -27,7 +27,7 @@
             {{ with .Page.ReadingTime }}
                 {{ partial "icon" (dict "context" $currentPage "name" "fas clock") }} {{ . }} min read
             {{ end }}
-            {{ with .Page.Params.tags }} 
+            {{ with .Page.Params.tags }}
                 &nbsp; &bull; &nbsp;
                 {{ range . }}
                     <a href="#">{{ partial "icon" (dict "context" $currentPage "name" "fas hashtag") }} {{ . }}</a>
