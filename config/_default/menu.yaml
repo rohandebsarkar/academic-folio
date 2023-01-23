@@ -10,22 +10,22 @@ main:
   weight: 20
 
 social:
-  - identifier: email
+  - name: email
     url: mailto:email@example.com
     pre: 'fas envelope'
     weight: 1
 
-  - identifier: LinkedIn
+  - name: LinkedIn
     url: username
     pre: 'fab linkedin'
     weight: 2
 
-  - identifier: GitHub
+  - name: GitHub
     url: username
     pre: 'fab github'
     weight: 3
   
-  - identifier: Mastodon
+  - name: Mastodon
     url: https://mastodon.social/einstein
     pre: 'fab mastodon'
     weight: 4
