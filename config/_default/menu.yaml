@@ -13,20 +13,20 @@ social:
 - name: email
   url: mailto:email@example.com
   weight: 1
-  params: 
+  params:
     icon: fas fa-envelope
-  
+
 
 - name: LinkedIn
   url: https://www.linkedin.com/username
   weight: 2
-  params: 
+  params:
     icon: fab fa-linkedin
 
 - name: GitHub
   url: https://github.com/username
   weight: 3
-  params: 
+  params:
     icon: fab fa-github
 
 - name: Mastodon
