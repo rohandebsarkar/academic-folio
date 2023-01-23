@@ -12,22 +12,26 @@ main:
 social:
 - name: email
   url: mailto:email@example.com
-  pre: fas envelope
   weight: 1
+  params:
+    icon: fas fa-envelope
+
 
 - name: LinkedIn
   url: https://www.linkedin.com/username
-  pre: fab linkedin
   weight: 2
+  params:
+    icon: fab fa-linkedin
 
 - name: GitHub
   url: https://github.com/username
-  pre: fab github
   weight: 3
+  params:
+    icon: fab fa-github
 
 - name: Mastodon
   url: https://mastodon.social/username
-  pre: fab mastodon
   weight: 4
   params:
+    icon: fab fa-mastodon
     rel: me

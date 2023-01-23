@@ -1,3 +1,4 @@
-github.com/FortAwesome/Font-Awesome v0.0.0-20210316185733-d79d85c3fad8/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
-github.com/hugo-mods/icons v0.0.0-20220508080705-d938a1900b1c h1:BHTy85KaX2uQnC+1i5NRVAxiJNOwpIwQXlY/zpLD6zA=
-github.com/hugo-mods/icons v0.0.0-20220508080705-d938a1900b1c/go.mod h1:sPodUyqumOYz75PKIwmqOYZXLIcLAujn7V9+1Hk4VW8=
+github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123153711-afb088a6b19b h1:tYrnV6CEGpbL7Asg11IdqSo3LawVHO0zf4s3GJdy1Tw=
+github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123153711-afb088a6b19b/go.mod h1:aCz8OeO0sfGMZTQvMwIXkOtjYITfn2hAj03T2kAwkGw=
+github.com/academic-folio/hugo-modules/svg-icon-system v0.0.0-20230123153711-afb088a6b19b h1:jCH16L+5pSv2I447zTK9gCtYHcivmhT4sU1ciDTUmeE=
+github.com/academic-folio/hugo-modules/svg-icon-system v0.0.0-20230123153711-afb088a6b19b/go.mod h1:IQvp9TMIVvUGo2FWIPSNLNkgpwyqFpQskgxcWEJNWOw=
