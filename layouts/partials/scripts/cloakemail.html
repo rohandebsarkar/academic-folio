@@ -17,4 +17,4 @@
   {{- $domainReversed = $domainReversed | append (index $domain (sub (len $domain) .)) }}
 {{- end -}}
 
-<span class="e-mail" data-user='{{ delimit $userReversed "" }}' data-website='{{ delimit $domainReversed "" }}'></span>
+<span class="e-mail" data-user='{{ delimit $userReversed "" }}' data-domain='{{ delimit $domainReversed "" }}'></span>

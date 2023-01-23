@@ -1,45 +1,58 @@
-<header class="fixed inset-x-0 top-0 bg-inherit border-b border-inherit opacity-80">
-    <nav class="mx-auto p-4 max-w-[1024px]">
+<header class="fixed inset-x-0 top-0 bg-inherit border-b border-inherit">
+    <nav class="h-full mx-auto p-4 max-w-[1024px]">
         <ul class="flex flex-nowrap">
-            <li><a class="text-inherit" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a></li>
-            <ul class="ml-auto md:space-y-0 space-y-2 md:text-center text-right">
-                <li class="md:hidden">
-                    <button id="hamburger" class="space-y-1.5" onclick="hamburger()">
-                        <span class="block w-8 h-0.5"></span>
-                        <span class="block w-8 h-0.5"></span>
-                        <span class="block w-8 h-0.5"></span>
-                    </button>
-                </li>
-                <ul id="hamburger-menu" class="hidden md:flex md:flex-nowrap md:space-x-8 md:space-y-0 space-y-4">
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                        {{ if .HasChildren }}
-                            <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
-                                <a class="text-inherit" href="#">
-                                    {{ .Pre }}{{ .Name }}
-                                </a>
-                            </li>
-                            <ul class="sub-menu">
-                                {{ range .Children }}
-                                    <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                        <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+            <li>
+                <a class="text-lg" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+            </li>
+            <li class="mx-4 flex flex-nowrap text-lg">
+                {{ partial "social" . }}
+            </li>
+            <li class="ml-auto">
+                <ul class="md:space-y-0 md:text-center text-right space-y-2">
+                    <li class="md:hidden">
+                        <button id="hamburger" class="space-y-1.5 align-middle" onclick="hamburger()">
+                            <span class="block w-8 h-0.5 rounded"></span>
+                            <span class="block w-8 h-0.5 rounded"></span>
+                            <span class="block w-8 h-0.5 rounded"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <ul id="hamburger-menu" class="hidden md:flex md:flex-nowrap md:space-x-8 md:space-y-0 space-y-4">
+                            {{ $currentPage := . }}
+                            {{ range .Site.Menus.main }}
+                                {{ if .HasChildren }}
+                                    <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
+                                        <a class="text-inherit" href="#">
+                                            {{ .Pre }}{{ .Name }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <ul class="sub-menu">
+                                            {{ range .Children }}
+                                                <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
+                                                    <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+                                                </li>
+                                            {{ end }}
+                                        </ul>
+                                    </li>
+                                {{ else }}
+                                    <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
+                                        <a href="{{ .URL }}">
+                                            {{ .Pre }}{{ .Name }}
+                                        </a>
                                     </li>
                                 {{ end }}
-                            </ul>
-                        {{ else }}
-                            <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
-                                <a class="text-inherit" href="{{ .URL }}">
-                                    {{ .Pre }}{{ .Name }}
-                                </a>
+                            {{ end }}
+                            <li>
+                                <button id="theme-toggle" onclick="toggleTheme()">
+                                    <span class="icon-sun" title="light theme">{{ partial "icon" (dict "context" $currentPage "name" "fas sun") }}</span>
+                                    <span class="icon-moon" title="dark theme">{{ partial "icon" (dict "context" $currentPage "name" "fas moon") }}</span>
+                                </button>
                             </li>
-                        {{ end }}
-                    {{ end }}
-                    <li><button id="theme-toggle" onclick="toggleTheme()">
-                        <span class="icon-sun">{{ partial "icon" "sun" }}</span>
-                        <span class="icon-moon">{{ partial "icon" "moon" }}</span>
-                    </button></li>
+                        </ul>
+                    </li>
                 </ul>
-            </ul>
+            </li>
         </ul>
     </nav>
 </header>
