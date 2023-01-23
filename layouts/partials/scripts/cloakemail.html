@@ -1,0 +1,20 @@
+{{/* Get address, protocol and other parameters */}}
+{{- $address := . -}}
+{{- $protocol := "mailto" -}}
+{{- $parts := split $address "@" -}}
+{{- $user := split (index $parts 0) "" -}}
+{{- $domain := split ((index $parts 1) | default "") "" -}}
+
+{{/*  Reverse username  */}}
+{{- $userReversed := slice -}}
+{{- range seq (len $user) -}}
+  {{- $userReversed = $userReversed | append (index $user (sub (len $user) .)) }}
+{{- end -}}
+
+{{/*  Reverse domain  */}}
+{{- $domainReversed := slice -}}
+{{- range seq (len $domain) -}}
+  {{- $domainReversed = $domainReversed | append (index $domain (sub (len $domain) .)) }}
+{{- end -}}
+
+<span class="e-mail" data-user='{{ delimit $userReversed "" }}' data-website='{{ delimit $domainReversed "" }}'></span>

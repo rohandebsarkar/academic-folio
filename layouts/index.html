@@ -21,7 +21,9 @@
             {{ end }}
         {{ end }}
         <p class="block w-full mt-2 text-center font-mono">
-            {{ .Site.Params.email }}
+            {{ with .Site.Params.email }}
+                {{ partial "scripts/cloakemail.html" . }}
+            {{ end }}
         </p>
     </div>
 
