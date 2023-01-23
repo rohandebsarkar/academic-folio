@@ -16,17 +16,17 @@ social:
   weight: 1
 
 - name: LinkedIn
-  url: username
+  url: https://www.linkedin.com/username
   pre: fab linkedin
   weight: 2
 
 - name: GitHub
-  url: username
+  url: https://github.com/username
   pre: fab github
   weight: 3
 
 - name: Mastodon
-  url: https://mastodon.social/einstein
+  url: https://mastodon.social/username
   pre: fab mastodon
   weight: 4
   params:
