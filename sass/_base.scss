@@ -134,3 +134,8 @@ table.table td,
 table.table th {
   border-color: var(--global-divider-color);
 }
+
+.katex-display {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
