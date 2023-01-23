@@ -35,6 +35,10 @@
         {{ partial "posts/recents" . }}
     </div>
 
+    <div class="space-y-2">
+        {{ partial "news/recents" . }}
+    </div>
+
     {{ if .Site.Params.social_index }}
         <div class="pt-4 text-4xl">
             {{ if .Site.Menus.social }}
