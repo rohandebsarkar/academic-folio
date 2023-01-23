@@ -9,4 +9,4 @@ Einstein became a full professor at the German Charles-Ferdinand University in P
 
 In July 1912, he returned to his alma mater in Zürich. From 1912 until 1914, he was a professor of theoretical physics at the ETH Zurich, where he taught analytical mechanics and thermodynamics. He also studied continuum mechanics, the molecular theory of heat, and the problem of gravitation, on which he worked with mathematician and friend Marcel Grossmann.
 
-*Source: Wikipedia, CC-BY-SA-3.0*
+_Source: Wikipedia, CC-BY-SA-3.0_
