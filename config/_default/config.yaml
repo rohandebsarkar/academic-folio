@@ -6,3 +6,4 @@ copyright: © Copyright 2023 The Academic Folio Contributors
 module:
   imports:
   - path: github.com/adamaltmejd/hugo-icons
+  - path: github.com/academic-folio/hugo-modules/responsive-images
