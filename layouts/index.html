@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <header class="space-y-1">
+    <header class="space-y-2">
         <h1 class="text-4xl">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
                 <strong>{{ .Site.Params.firstName }}</strong>
@@ -33,7 +33,9 @@
         {{ .Content }}
     </article>
 
-    {{ partial "recent-posts.html" . }}
+    <div class="space-y-2">
+        {{ partial "recent-posts.html" . }}
+    </div>
 
     <div class="pt-4 text-4xl">
         {{ if .Site.Menus.social }}
