@@ -1,11 +1,11 @@
 {{ define "main" }}
-<header class="space-y-4 list-header py-2">
-    <h1 class="text-6xl text-center font-medium">
+<header class="space-y-2 py-2">
+    <h1 class="text-4xl font-medium">
         {{ .Page.Title }}
     </h1>
 
     {{ with .Page.Params.description }}
-        <h2 class="text-2xl text-center">
+        <h2>
             {{ . }}
         </h2>
     {{ end }}
