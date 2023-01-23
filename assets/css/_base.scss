@@ -45,7 +45,7 @@ nav .active a {
   background-color: var(--global-text-color);
 }
 
-.list-header {
+.blog-header {
   h1 {
     color: var(--global-theme-color);
   }
@@ -69,6 +69,23 @@ nav .active a {
 
       .post-date {
         color: var(--global-text-color-light);
+
+        svg {
+          fill: var(--global-text-color-light);
+        }
+
+        a {
+          color: var(--global-text-color-light);
+  
+          &:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+    
+            svg {
+              fill: var(--global-theme-color);
+            }
+          }
+        }
       }
     }
   }

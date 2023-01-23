@@ -1,5 +1,5 @@
 {{ define "main" }}
-<header class="space-y-4 list-header py-2">
+<header class="blog-header space-y-4">
     <h1 class="text-6xl text-center font-medium">
         {{ .Page.Title }}
     </h1>
@@ -38,7 +38,7 @@
                     </h3>
 
                     {{ $currentPage := . }}
-                    <p class="text-sm italic">
+                    <p class="post-date text-sm italic">
                         {{ with .Page.ReadingTime }}
                             <span class="space-x-2">{{ partial "svg" "fas fa-clock" }} {{ . }} min read</span>
                         {{ end }}
