@@ -1,15 +1,17 @@
 main:
-  - identifier: home
-    name: Home
-    url: /
-    weight: 10
+- identifier: home
+  name: Home
+  url: /
+  weight: 10
 
-  - identifier: blog
-    name: Blog
-    url: /posts/
-    weight: 20
 
-  - identifier: teaching
-    name: Teaching
-    url: /teaching/
-    weight: 30
+- identifier: blog
+  name: Blog
+  url: /posts/
+  weight: 20
+
+- identifier: teaching
+  name: Teaching
+  url: /teaching/
+  weight: 30
+

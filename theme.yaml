@@ -1,21 +1,21 @@
 name: Academic Folio
 license: MIT
-licenselink: 'https://github.com/rohandebsarkar/academic-folio/blob/main/LICENSE'
-description: 'A beautiful, simple, clean, and responsive Hugo theme for academics'
-homepage: 'https://github.com/rohandebsarkar/academic-folio'
+licenselink: https://github.com/rohandebsarkar/academic-folio/blob/main/LICENSE
+description: A beautiful, simple, clean, and responsive Hugo theme for academics
+homepage: https://github.com/rohandebsarkar/academic-folio
 
 tags:
-  - hugo
-  - hugo-theme
-  - academic-website
-  - al-folio
+- hugo
+- hugo-theme
+- academic-website
+- al-folio
 
 features: []
 min_version: 0.41.0
 
 author:
   name: Rohan Deb Sarkar
-  homepage: 'https://rohandebsarkar.github.io'
+  homepage: https://rohandebsarkar.github.io
 
 original:
   name: al-folio
@@ -24,3 +24,4 @@ original:
 
 params:
   recent_posts_count: 3
+

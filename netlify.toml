@@ -1,21 +1,22 @@
 [build]
-  command = "hugo --gc --minify -b $URL"
-  publish = "public"
+command = "hugo --gc --minify -b $URL"
+publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.109.0"
-  HUGO_ENABLEGITINFO = "true"
-
-[context.production.environment]
-  HUGO_ENV = "production"
-
-[context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+HUGO_ENABLEGITINFO = "true"
+HUGO_VERSION = "0.109.0"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.production.environment]
+HUGO_ENV = "production"
 
 [[plugins]]
-  package = "netlify-plugin-hugo-cache-resources"
-  [plugins.inputs]
-    debug = true
+package = "netlify-plugin-hugo-cache-resources"
+
+[plugins.inputs]
+debug = true

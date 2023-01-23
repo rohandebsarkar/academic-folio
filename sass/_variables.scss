@@ -3,20 +3,20 @@
  * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
-$white-color:         #ffffff !default;
-$black-color:         #000000 !default;
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
 
-$grey-color:          #828282 !default;
-$grey-color-light:    lighten($grey-color, 45%);
-$grey-color-dark:     darken($grey-color, 45%);
+$grey-color: #828282 !default;
+$grey-color-light: lighten($grey-color, 45%);
+$grey-color-dark: darken($grey-color, 45%);
 
 // Theme colors
 
-$theme-light-color:         #0000d0 !default;
-$theme-light-color-hover:   lighten($theme-light-color, 15%);
+$theme-light-color: #0000d0 !default;
+$theme-light-color-hover: lighten($theme-light-color, 15%);
 
-$theme-dark-color:          #00f1ff !default;
-$theme-dark-color-hover:    lighten($theme-dark-color, 15%);
+$theme-dark-color: #00f1ff !default;
+$theme-dark-color-hover: lighten($theme-dark-color, 15%);
 
-$code-bg-color-light:       lighten($theme-light-color, 50%);
-$code-bg-color-dark:        darken($theme-dark-color, 50%);
+$code-bg-color-light: lighten($theme-light-color, 50%);
+$code-bg-color-dark: darken($theme-dark-color, 50%);

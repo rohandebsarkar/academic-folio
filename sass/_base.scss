@@ -1,48 +1,48 @@
 body {
-    color: var(--global-text-color);
-    background-color: var(--global-bg-color);
-    border-color: var(--global-divider-color);
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  border-color: var(--global-divider-color);
 }
 
 a {
-    color: var(--global-theme-color);
+  color: var(--global-theme-color);
 
-    &:hover {
-        color: var(--global-hover-color);
-        text-decoration: underline;
-    }
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
 }
 
 code {
-    color: var(--global-theme-color);
+  color: var(--global-theme-color);
 }
 
 .icon {
-    display: inline;
+  display: inline;
 
-    width: 1em;
-    height: 1em;
+  width: 1em;
+  height: 1em;
 
-    fill: var(--global-text-color);
+  fill: var(--global-text-color);
 
-    &:hover {
-        fill: var(--global-hover-color);
-    }
+  &:hover {
+    fill: var(--global-hover-color);
+  }
 
-    // see https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
-    vertical-align: -.140em;
+  // see https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
+  vertical-align: -0.14em;
 }
 
 nav a {
-    color: var(--global-text-color);
+  color: var(--global-text-color);
 }
 
 nav .active a {
-    color: var(--global-theme-color);
+  color: var(--global-theme-color);
 }
 
 #hamburger span {
-    background-color: var(--global-text-color);
+  background-color: var(--global-text-color);
 }
 
 .list-header {
