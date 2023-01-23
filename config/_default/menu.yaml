@@ -10,3 +10,26 @@ main:
 - name: Teaching
   url: /teaching/
   weight: 3
+
+social:
+- name: email
+  url: mailto:email@example.com
+  pre: fas envelope
+  weight: 1
+
+- name: LinkedIn
+  url: https://www.linkedin.com/username
+  pre: fab linkedin
+  weight: 2
+
+- name: GitHub
+  url: https://github.com/username
+  pre: fab github
+  weight: 3
+
+- name: Mastodon
+  url: https://mastodon.social/username
+  pre: fab mastodon
+  weight: 4
+  params:
+    rel: me
