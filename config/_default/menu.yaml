@@ -7,6 +7,10 @@ main:
   url: /posts/
   weight: 2
 
+# - name: tags
+#   url: /tags/
+#   weight: 5
+
 - name: Teaching
   url: /teaching/
   weight: 3
@@ -17,7 +21,6 @@ social:
   weight: 1
   params:
     icon: fas fa-envelope
-
 
 - name: LinkedIn
   url: https://www.linkedin.com/username
