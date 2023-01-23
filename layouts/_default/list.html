@@ -24,7 +24,7 @@
                 </h3>
                 <p>{{.Params.Description}}</p>
                 <p class=post-meta>
-                    {{.Date.Format "2006-01-02"}}
+                    {{.Date | time.Format ":date_long"}}
                 </p>
             </li>
             {{ end }}
