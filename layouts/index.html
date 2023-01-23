@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <header>
+    <header class="space-y-1">
         <h1 class="text-4xl">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
                 <strong>{{ .Site.Params.firstName }}</strong>
@@ -10,7 +10,9 @@
         </h1>
 
         {{ with .Site.Params.description }}
-            <h2>{{ . }}</h2>
+            <h2>
+                {{ . }}
+            </h2>
         {{ end }}
     </header>
 

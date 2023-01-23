@@ -1,6 +1,9 @@
 ---
 title: Why Socialism?
 author: Albert Einstein
+
+tags: [socialism, politics]
+categories: [blog-posts]
 ---
 
 Is it advisable for one who is not an expert on economic and social issues to express views on the 

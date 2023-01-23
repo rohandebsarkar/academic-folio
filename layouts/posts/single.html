@@ -1,0 +1,49 @@
+{{ define "main" }}
+    <header class="post-header space-y-1">
+        <h1 class="text-4xl">
+            {{ .Page.Title }}
+        </h1>
+
+        {{ with .Page.Params.description }}
+            <h2>
+                {{ . }}
+            </h2>
+        {{ end }}
+
+        <h3 class="text-sm">
+            {{ if .Date }}
+                {{ .Date.Format "02 January, 2006" }}
+            {{ else if .GitInfo.AuthorDate }}
+                {{ .GitInfo.AuthorDate.Format "02 January, 2006" }}
+            {{ end }}
+            {{ with .Page.Params.author }}
+                &nbsp; &bull; &nbsp;
+                {{ . }}
+            {{ end }}            
+        </h3>
+
+        {{ $currentPage := . }}
+        <p class="text-sm">
+            {{ with .Page.ReadingTime }}
+                {{ partial "icon" (dict "context" $currentPage "name" "fas clock") }} {{ . }} min read
+            {{ end }}
+            {{ with .Page.Params.tags }} 
+                &nbsp; &bull; &nbsp;
+                {{ range . }}
+                    <a href="#">{{ partial "icon" (dict "context" $currentPage "name" "fas hashtag") }} {{ . }}</a>
+                {{ end }}
+            {{ end }}
+            {{ with .Page.Params.categories }}
+                &nbsp; &bull; &nbsp;
+                {{ range . }}
+                    <a href="#">{{ partial "icon" (dict "context" $currentPage "name" "fas tag") }} {{ . }}</a>
+                {{ end }}
+            {{ end }}
+        </p>
+    </header>
+
+    <article class="space-y-4">
+        {{ .Content }}
+    </article>
+</main>
+{{ end }}

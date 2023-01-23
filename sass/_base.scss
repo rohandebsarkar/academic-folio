@@ -73,3 +73,30 @@ nav .active a {
     }
   }
 }
+
+.post-header {
+  p {
+    color: var(--global-text-color-light);
+
+    svg {
+      fill: var(--global-text-color-light);
+      
+      &:hover {
+        fill: var(--global-text-color-light);
+      }
+    }
+    
+    a {
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+
+        svg {
+          fill: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
