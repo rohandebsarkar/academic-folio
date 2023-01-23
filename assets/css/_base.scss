@@ -1,0 +1,107 @@
+body {
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  border-color: var(--global-divider-color);
+}
+
+a {
+  color: var(--global-theme-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: underline;
+  }
+}
+
+code {
+  color: var(--global-theme-color);
+}
+
+.icon {
+  display: inline;
+
+  width: 1em;
+  height: 1em;
+
+  fill: var(--global-text-color);
+
+  &:hover {
+    fill: var(--global-hover-color);
+  }
+
+  // see https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
+  vertical-align: -0.14em;
+}
+
+nav a {
+  color: var(--global-text-color);
+}
+
+nav .active a {
+  color: var(--global-theme-color);
+}
+
+#hamburger span {
+  background-color: var(--global-text-color);
+}
+
+.list-header {
+  h1 {
+    color: var(--global-theme-color);
+  }
+}
+
+.post-list {
+  ul {
+    border-color: var(--global-divider-color);
+
+    li {
+      border-color: var(--global-divider-color);
+
+      a {
+        color: var(--global-text-color);
+
+        &:hover {
+          color: var(--global-hover-color);
+          text-decoration: underline;
+        }
+      }
+
+      .post-date {
+        color: var(--global-text-color-light);
+      }
+    }
+  }
+}
+
+.post-header {
+  p {
+    color: var(--global-text-color-light);
+
+    svg {
+      fill: var(--global-text-color-light);
+
+      &:hover {
+        fill: var(--global-text-color-light);
+      }
+    }
+
+    a {
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+
+        svg {
+          fill: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+.katex-display {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}

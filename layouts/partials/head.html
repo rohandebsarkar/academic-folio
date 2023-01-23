@@ -28,10 +28,11 @@
     <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .Site.Params.email }}
-        {{ partial "styles/cloakemail.html" . }}
+        {{ partial "styles/cloakemail" . }}
     {{ end }}
 
     {{/*  Scripts  */}}
-    {{ partial "scripts/hamburger.html" . }}
-    {{ partial "scripts/theme.html" . }}
+    {{ partial "scripts/hamburger" . }}
+    {{ partial "scripts/theme" . }}
+    {{ if .Params.math}} {{ partial "scripts/katex" . }} {{ end }}
 </head>

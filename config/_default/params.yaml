@@ -6,3 +6,9 @@ email: einstein@example.org
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
 footerLastUpdated: true
+
+recentPosts: 5 # number of recent posts to show in home page
+showRecentPosts: true
+
+social_navbar: true # show social icons on navbar
+social_index: true # show social icons on index page

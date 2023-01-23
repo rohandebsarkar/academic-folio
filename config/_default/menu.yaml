@@ -1,13 +1,15 @@
 main:
-- identifier: home
-  name: Home
-  url: /
-  weight: 10
+# - name: Home
+#   url: /
+#   weight: 1
 
-- identifier: teaching
-  name: Teaching
+- name: Blog
+  url: /posts/
+  weight: 2
+
+- name: Teaching
   url: /teaching/
-  weight: 20
+  weight: 3
 
 social:
 - name: email
