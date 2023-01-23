@@ -19,10 +19,10 @@
             {{ range .Pages }}
                 <li class="px-2 py-4 mt-2 space-y-2 border-b">
                     <h3>
-                        <a class="text-4xl" href="{{.Permalink}}">{{.Title}}</a>
+                        <a class="text-4xl" href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </h3>
                     <p>
-                        {{.Params.Description}}
+                        {{ .Params.Description }}
                     </p>
                     <p class="post-date text-sm">
                         {{ if .Date }}
