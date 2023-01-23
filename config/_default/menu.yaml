@@ -6,7 +6,7 @@ main:
 
   - identifier: blog
     name: Blog
-    url: /blog/
+    url: /posts/
     weight: 20
 
   - identifier: teaching
