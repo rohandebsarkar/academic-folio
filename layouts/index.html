@@ -18,9 +18,7 @@
 
     <div class="md:float-right md:max-w-[25%] md:ml-4">
         {{ with resources.Get "img/prof_pic.jpg" }}
-            {{ with .Resize "800x webp" }}
-                <img class="rounded z-10" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .RelPermalink }}">
-            {{ end }}
+            {{ partial "img" (dict "img" . "alt" .RelPermalink) }}
         {{ end }}
         <p class="block w-full mt-2 text-center font-mono">
             {{ with .Site.Params.email }}

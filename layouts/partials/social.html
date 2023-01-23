@@ -3,8 +3,8 @@
     {{ range .Site.Menus.social }}
         <li>
             <a href="{{ .URL }}" title="{{ .Name }}" target="_blank" rel="external nofollow noopener {{ .Params.rel }}">
-                {{ with .Pre }}
-                    {{ partial "icon" (dict "context" $currentPage "name" .) }}
+                {{ with .Params.icon }}
+                    {{ partial "svg" . }}
                 {{ end }}
             </a>
         </li>

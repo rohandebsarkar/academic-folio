@@ -10,12 +10,11 @@
         {{ partial "header" . }}
 
         {{/*  Main  */}}
-        <main class="my-16 p-4 space-y-4">
+        <main class="mt-16 mb-10 p-4 space-y-4">
             {{ block "main" . }}{{ end }}
         </main>
 
         {{/*  Footer  */}}
         {{ partial "footer" . }}
-        {{ partial "icon-data" . }}
     </body>
 </html>
