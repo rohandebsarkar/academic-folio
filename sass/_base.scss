@@ -46,30 +46,30 @@ nav .active a {
 }
 
 .list-header {
-	h1 {
-		color: var(--global-theme-color);
-	}
+  h1 {
+    color: var(--global-theme-color);
+  }
 }
 
 .post-list {
-	ul {
-		border-color: var(--global-divider-color);
+  ul {
+    border-color: var(--global-divider-color);
 
-		li {
-			border-color: var(--global-divider-color);
+    li {
+      border-color: var(--global-divider-color);
 
-			a{
-				color: var(--global-text-color);
+      a {
+        color: var(--global-text-color);
 
-				&:hover {
-					color: var(--global-hover-color);
-					text-decoration: underline;
-				}
-			}
+        &:hover {
+          color: var(--global-hover-color);
+          text-decoration: underline;
+        }
+      }
 
-			.post-date {
-				color: var(--global-text-color-light);
-			}
-		}
-	}
+      .post-date {
+        color: var(--global-text-color-light);
+      }
+    }
+  }
 }
