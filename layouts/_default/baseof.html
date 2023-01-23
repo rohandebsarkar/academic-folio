@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
     {{/*  Head  */}}
-    {{ partial "head.html" . }}
+    {{ partial "head" . }}
 
     {{/*  Body  */}}
     <body class="mx-auto max-w-[1024px]">
 
         {{/*  Header  */}}
-        {{ partial "header.html" . }}
+        {{ partial "header" . }}
 
         {{/*  Main  */}}
         <main class="my-16 p-4 space-y-4">
@@ -15,7 +15,7 @@
         </main>
 
         {{/*  Footer  */}}
-        {{ partial "footer.html" . }}
+        {{ partial "footer" . }}
         {{ partial "icon-data" . }}
     </body>
 </html>

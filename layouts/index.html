@@ -24,7 +24,7 @@
         {{ end }}
         <p class="block w-full mt-2 text-center font-mono">
             {{ with .Site.Params.email }}
-                {{ partial "scripts/cloakemail.html" . }}
+                {{ partial "scripts/cloakemail" . }}
             {{ end }}
         </p>
     </div>
@@ -34,12 +34,12 @@
     </article>
 
     <div class="space-y-2">
-        {{ partial "recent-posts.html" . }}
+        {{ partial "posts/recents" . }}
     </div>
 
     <div class="pt-4 text-4xl">
         {{ if .Site.Menus.social }}
-            {{ partial "social.html" . }}
+            {{ partial "social" . }}
         {{ end }}
     </div>
 {{ end }}
