@@ -23,7 +23,7 @@
         {{ $tailwindStyles = $tailwindStyles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
-    
+
     {{/*  Stylesheets  */}}
     <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
