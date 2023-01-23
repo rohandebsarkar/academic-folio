@@ -4,12 +4,12 @@ main:
     url: /
     weight: 10
 
+  - identifier: blog
+    name: Blog
+    url: /blog/
+    weight: 20
+
   - identifier: teaching
     name: Teaching
     url: /teaching/
-    weight: 20
-
-  - identifier: posts
-    name: posts
-    url: /posts/
     weight: 30

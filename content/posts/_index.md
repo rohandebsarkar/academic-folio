@@ -1,6 +1,4 @@
 ---
-title: My Blog
-description: This is the first blog post
+title: Blog
+description: This is a collection of blog posts
 ---
-
-This is the blog page.

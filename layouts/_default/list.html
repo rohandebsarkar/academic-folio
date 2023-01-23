@@ -1,36 +1,35 @@
 {{ define "main" }}
-<main>
-    <header>
-        <h1 class="text-4xl">
-            {{ .Page.Title }}
-        </h1>
+<header class="space-y-4 list-header py-2">
+    <h1 class="text-6xl text-center font-medium">
+        {{ .Page.Title }}
+    </h1>
 
-        {{ with .Page.Params.description }}
-            <h2>{{ . }}</h2>
-        {{ end }}
-    </header>
-    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
-    <article class="space-y-4">
-        {{ .Content }}
-    </article>
-    <div class="container mt-5">
-        <div class="post">
-        <!-- Ranges through content/posts/*.md -->
-        <ul class="post-list">
+    {{ with .Page.Params.description }}
+        <h2 class="text-2xl text-center">
+            {{ . }}
+        </h2>
+    {{ end }}
+</header>
+
+<article class="space-y-4">
+    {{ .Content }}
+
+    <div class="post-list">
+        <ul class="border-t">
             {{ range .Pages }}
-            <li class="">
-                <h3>
-                    <a class="post-title" href="{{.Permalink}}">{{.Title}}</a>
-                </h3>
-                <p>{{.Params.Description}}</p>
-                <p class=post-meta>
-                    {{.Date | time.Format ":date_long"}}
-                </p>
-            </li>
+                <li class="px-2 py-4 mt-2 space-y-2 border-b">
+                    <h3>
+                        <a class="text-4xl" href="{{.Permalink}}">{{.Title}}</a>
+                    </h3>   
+                    <p>
+                        {{.Params.Description}}
+                    </p>
+                    <p class="post-date text-sm">
+                        {{.Date.Format "January 02, 2006"}}
+                    </p>
+                </li>
             {{ end }}
         </ul>
-        </div>
     </div>
-
-</main>
+</article>
 {{ end }}
