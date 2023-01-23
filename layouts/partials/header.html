@@ -1,7 +1,12 @@
 <header class="fixed inset-x-0 top-0 bg-inherit border-b border-inherit opacity-80">
     <nav class="mx-auto p-4 max-w-[1024px]">
         <ul class="flex flex-nowrap">
-            <li><a class="text-inherit" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a></li>
+            <li>
+                <a class="text-inherit" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+            </li>
+            <li class="hidden ml-auto md:inline">
+                {{ partial "social" . }}
+            </li>
             <ul class="ml-auto md:space-y-0 space-y-2 md:text-center text-right">
                 <li class="md:hidden">
                     <button id="hamburger" class="space-y-1.5" onclick="hamburger()">
@@ -35,8 +40,8 @@
                         {{ end }}
                     {{ end }}
                     <li><button id="theme-toggle" onclick="toggleTheme()">
-                        <span class="icon-sun">{{ partial "icon" "sun" }}</span>
-                        <span class="icon-moon">{{ partial "icon" "moon" }}</span>
+                        <span class="icon-sun">{{ partial "icon" (dict "context" $currentPage "name" "fas sun") }}</span>
+                        <span class="icon-moon">{{ partial "icon" (dict "context" $currentPage "name" "fas moon") }}</span>
                     </button></li>
                 </ul>
             </ul>

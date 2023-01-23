@@ -30,4 +30,10 @@
     <article class="space-y-4">
         {{ .Content }}
     </article>
+
+    <div class="pt-4 text-4xl">
+        {{ if .Site.Menus.social }}
+            {{ partial "social.html" . }}
+        {{ end }}
+    </div>
 {{ end }}
