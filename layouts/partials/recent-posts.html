@@ -1,5 +1,19 @@
 <!-- You can change blog to anything else and build recent item for that thing -->
-{{ $count := $.Site.Params.recent_posts_count }}
-{{ range ( where .Site.RegularPages "Type" "posts" | first $count ) }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-{{end}}
+
+<div class="news">
+    <h2>Recent posts</h2>
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless">
+        <tbody>
+          {{ range ( where .Site.RegularPages "Type" "posts" | first .Site.Params.recentPosts ) }}
+              <tr>
+                  <th scope="row">{{.Date.Format "January 02, 2006"}}</th>
+                  <td>
+                      <a class="news-title" href="{{ .Permalink }}">{{ .Title }}</a>
+                  </td>
+              </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>

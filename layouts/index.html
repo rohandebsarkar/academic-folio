@@ -31,6 +31,8 @@
         {{ .Content }}
     </article>
 
+    {{ partial "recent-posts.html" . }}
+
     <div class="pt-4 text-4xl">
         {{ if .Site.Menus.social }}
             {{ partial "social.html" . }}

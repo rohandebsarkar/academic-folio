@@ -73,3 +73,37 @@ nav .active a {
     }
   }
 }
+
+table {
+  td,
+  th {
+    color: var(--global-text-color);
+  }
+  td {
+    font-size: 1rem;
+  }
+}
+
+a,
+table.table a {
+  color: var(--global-theme-color);
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+  &:hover:after :not(.nav-item.dropdown) {
+    width: 100%;
+  }
+}
+
+table.table tr {
+  color: var(--global-text-color);
+  &:hover {
+    color: var(--global-text-color);
+  }
+}
+
+table.table td,
+table.table th {
+  border-color: var(--global-divider-color);
+}
