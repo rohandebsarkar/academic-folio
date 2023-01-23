@@ -5,9 +5,9 @@
                 <a class="text-lg" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
             </li>
             {{ if .Site.Params.social_navbar }}
-            <li class="mx-4 flex flex-nowrap text-lg">
-                {{ partial "social" . }}
-            </li>
+                <li class="mx-4 flex flex-nowrap text-lg">
+                    {{ partial "social" . }}
+                </li>
             {{ end }}
             <li class="ml-auto">
                 <ul class="md:space-y-0 md:text-center text-right space-y-2">
