@@ -5,4 +5,4 @@ copyright: © Copyright 2023 The Academic Folio Contributors
 
 module:
   imports:
-  - path: github.com/hugo-mods/icons
+  - path: github.com/adamaltmejd/hugo-icons
