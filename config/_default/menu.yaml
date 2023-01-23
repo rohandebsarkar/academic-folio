@@ -8,3 +8,26 @@ main:
   name: Teaching
   url: /teaching/
   weight: 20
+
+social:
+  - identifier: email
+    url: mailto:email@example.com
+    pre: 'fas envelope'
+    weight: 1
+
+  - identifier: LinkedIn
+    url: username
+    pre: 'fab linkedin'
+    weight: 2
+
+  - identifier: GitHub
+    url: username
+    pre: 'fab github'
+    weight: 3
+  
+  - identifier: Mastodon
+    url: https://mastodon.social/einstein
+    pre: 'fab mastodon'
+    weight: 4
+    params:
+      rel: me
