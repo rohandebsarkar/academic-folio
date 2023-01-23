@@ -9,7 +9,7 @@ main:
     url: /teaching/
     weight: 20
 
-  - identifier: blog
-    name: blog
-    url: /blog/
+  - identifier: posts
+    name: posts
+    url: /posts/
     weight: 30
