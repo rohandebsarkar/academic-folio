@@ -76,11 +76,11 @@ nav .active a {
 
         a {
           color: var(--global-text-color-light);
-  
+
           &:hover {
             color: var(--global-theme-color);
             text-decoration: none;
-    
+
             svg {
               fill: var(--global-theme-color);
             }
