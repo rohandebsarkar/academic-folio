@@ -1,0 +1,63 @@
+{{ define "main" }}
+<header class="space-y-4 list-header py-2">
+    <h1 class="text-6xl text-center font-medium">
+        {{ .Page.Title }}
+    </h1>
+
+    {{ with .Page.Params.description }}
+    <h2 class="text-2xl text-center">
+        {{ . }}
+    </h2>
+    {{ end }}
+</header>
+
+<article class="space-y-4">
+    {{ .Content }}
+
+    <div class="post-list">
+        <ul class="border-t border-dashed">
+            {{ range .Pages }}
+                <li class="py-4 space-y-2 border-b border-dashed">
+                    <p class="text-sm font-mono">
+                        {{ if .Date }}
+                        {{ .Date.Format "January 2, 2006" }}
+                        {{ else if .GitInfo.AuthorDate }}
+                        {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
+                        {{ end }}
+                        {{ with .Page.Params.author }}
+                        &nbsp; &bull; &nbsp;
+                        {{ . }}
+                        {{ end }}
+                    </p>
+                    
+                    <h3>
+                        <a class="text-2xl font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <p>
+                            {{ .Params.Description }}
+                        </p>
+                    </h3>
+
+                    {{ $currentPage := . }}
+                    <p class="text-sm italic">
+                        {{ with .Page.ReadingTime }}
+                            <span class="space-x-2">{{ partial "svg" "fas fa-clock" }} {{ . }} min read</span>
+                        {{ end }}
+                        {{ with .Page.Params.tags }}
+                            &nbsp; &bull; &nbsp;
+                            {{ range . }}
+                                <a href="#" class="space-x-2">{{ partial "svg" "fas fa-hashtag" }} {{ . }}</a>
+                            {{ end }}
+                        {{ end }}
+                        {{ with .Page.Params.categories }}
+                            &nbsp; &bull; &nbsp;
+                            {{ range . }}
+                                <a href="#" class="space-x-2">{{ partial "svg" "fas fa-tag" }} {{ . }}</a>
+                            {{ end }}
+                        {{ end }}
+                    </p>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</article>
+{{ end }}
