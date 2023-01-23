@@ -34,5 +34,7 @@
     {{/*  Scripts  */}}
     {{ partial "scripts/hamburger" . }}
     {{ partial "scripts/theme" . }}
-    {{ if .Params.math}} {{ partial "scripts/katex" . }} {{ end }}
+    {{ if .Params.math}}
+        {{ partial "scripts/katex" . }}
+    {{ end }}
 </head>
