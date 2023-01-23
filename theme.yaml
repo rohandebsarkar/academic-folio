@@ -21,6 +21,3 @@ original:
   name: al-folio
   homepage: https://alshedivat.github.io/al-folio/
   repo: https://github.com/alshedivat/al-folio
-
-params:
-  recent_posts_count: 3
