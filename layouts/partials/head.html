@@ -27,6 +27,9 @@
     {{/*  Stylesheets  */}}
     <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ if .Site.Params.email }}
+        {{ partial "styles/cloakemail.html" . }}
+    {{ end }}
 
     {{/*  Scripts  */}}
     {{ partial "scripts/hamburger.html" . }}
