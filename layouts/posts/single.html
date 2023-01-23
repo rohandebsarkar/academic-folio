@@ -23,20 +23,20 @@
         </h3>
 
         {{ $currentPage := . }}
-        <p class="text-sm">
+        <p class="text-sm italic">
             {{ with .Page.ReadingTime }}
-                {{ partial "icon" (dict "context" $currentPage "name" "fas clock") }} {{ . }} min read
+                <span class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas clock") }} {{ . }} min read</span>
             {{ end }}
             {{ with .Page.Params.tags }}
                 &nbsp; &bull; &nbsp;
                 {{ range . }}
-                    <a href="#">{{ partial "icon" (dict "context" $currentPage "name" "fas hashtag") }} {{ . }}</a>
+                    <a href="#" class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas hashtag") }} {{ . }}</a>
                 {{ end }}
             {{ end }}
             {{ with .Page.Params.categories }}
                 &nbsp; &bull; &nbsp;
                 {{ range . }}
-                    <a href="#">{{ partial "icon" (dict "context" $currentPage "name" "fas tag") }} {{ . }}</a>
+                    <a href="#" class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas tag") }} {{ . }}</a>
                 {{ end }}
             {{ end }}
         </p>
