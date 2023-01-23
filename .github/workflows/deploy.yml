@@ -36,9 +36,6 @@ jobs:
         hugo-version: latest
         extended: true
 
-    - name: Build
-      run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-
     - name: Cache Hugo
       uses: actions/cache@v3
       with:
@@ -50,7 +47,7 @@ jobs:
           ${{ runner.os }}-go-
 
     - name: Build
-      run: hugo --minify
+      run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
