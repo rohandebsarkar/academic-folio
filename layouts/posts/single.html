@@ -25,18 +25,18 @@
         {{ $currentPage := . }}
         <p class="text-sm italic">
             {{ with .Page.ReadingTime }}
-                <span class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas clock") }} {{ . }} min read</span>
+                <span class="space-x-2">{{ partial "svg" "fas fa-clock" }} {{ . }} min read</span>
             {{ end }}
             {{ with .Page.Params.tags }}
                 &nbsp; &bull; &nbsp;
                 {{ range . }}
-                    <a href="#" class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas hashtag") }} {{ . }}</a>
+                    <a href="#" class="space-x-2">{{ partial "svg" "fas fa-hashtag" }} {{ . }}</a>
                 {{ end }}
             {{ end }}
             {{ with .Page.Params.categories }}
                 &nbsp; &bull; &nbsp;
                 {{ range . }}
-                    <a href="#" class="space-x-2">{{ partial "icon" (dict "context" $currentPage "name" "fas tag") }} {{ . }}</a>
+                    <a href="#" class="space-x-2">{{ partial "svg" "fas fa-tag" }} {{ . }}</a>
                 {{ end }}
             {{ end }}
         </p>
