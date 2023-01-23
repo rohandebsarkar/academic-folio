@@ -1,0 +1,5 @@
+<!-- You can change blog to anything else and build recent item for that thing -->
+{{ $count := $.Site.Params.recent_posts_count }}
+{{ range ( where .Site.RegularPages "Type" "posts" | first $count ) }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{end}}
