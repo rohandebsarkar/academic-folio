@@ -1,5 +1,4 @@
-github.com/FortAwesome/Font-Awesome v0.0.0-20220831210243-d3a7818c253f/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
-github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123104354-9754ac6a2855 h1:SdAxSc1JpQLpqmKuL4v+Jn6BGGcPJ2y8i2iuCNBhVuY=
-github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123104354-9754ac6a2855/go.mod h1:aCz8OeO0sfGMZTQvMwIXkOtjYITfn2hAj03T2kAwkGw=
-github.com/adamaltmejd/hugo-icons v0.0.0-20221021140430-7267d5f8ed27 h1:GkjvRVSwjcznIazEyJ9A1DQ/MsZie68GwXv9CUjK7TE=
-github.com/adamaltmejd/hugo-icons v0.0.0-20221021140430-7267d5f8ed27/go.mod h1:jPtm4lPrjOJcxPS6Bay3amRmfnHug4mrLUdspAEJcpI=
+github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123153711-afb088a6b19b h1:tYrnV6CEGpbL7Asg11IdqSo3LawVHO0zf4s3GJdy1Tw=
+github.com/academic-folio/hugo-modules/responsive-images v0.0.0-20230123153711-afb088a6b19b/go.mod h1:aCz8OeO0sfGMZTQvMwIXkOtjYITfn2hAj03T2kAwkGw=
+github.com/academic-folio/hugo-modules/svg-icon-system v0.0.0-20230123153711-afb088a6b19b h1:jCH16L+5pSv2I447zTK9gCtYHcivmhT4sU1ciDTUmeE=
+github.com/academic-folio/hugo-modules/svg-icon-system v0.0.0-20230123153711-afb088a6b19b/go.mod h1:IQvp9TMIVvUGo2FWIPSNLNkgpwyqFpQskgxcWEJNWOw=
