@@ -7,7 +7,7 @@
     {{ with .img.Resize (printf "%dx webp q%d %s" $width .quality .webpHint) }}
         {{ $breakpoint := "" }}
         {{ with $.breakpoint }}
-            {{ $breakpoint = printf "media=(min-width:%dw)" . }}
+            {{ $breakpoint = printf "media=(min-width:%dpx)" . }}
         {{ end }}
         <source {{$breakpoint|safeHTMLAttr}} srcset="{{.RelPermalink}}" type="image/webp" />
     {{ end }}

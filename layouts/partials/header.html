@@ -23,7 +23,7 @@
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.main }}
                                 {{ if .HasChildren }}
-                                    <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
+                                    {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
                                         <a class="text-inherit" href="#">
                                             {{ .Pre }}{{ .Name }}
                                         </a>
@@ -36,7 +36,7 @@
                                                 </li>
                                             {{ end }}
                                         </ul>
-                                    </li>
+                                    </li>  */}}
                                 {{ else }}
                                     <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
                                         <a href="{{ .URL }}" class="text-primary">
