@@ -4,7 +4,6 @@ This module implements an effortless method for using responsive images in Hugo 
 
 > To use this module, you'll need to install [Go](https://golang.org/doc/install).
 
-
 ## Why use responsive images?
 
 The HTML markup has the `<picture>` tag which allows developers to serve multiple resources for a single image. The benefit of serving multiple images is that the browser can choose which image to load depending on the need.
@@ -13,30 +12,20 @@ For example, on a mobile, it wouldn't make sense to load a 1920x1080 image. Usin
 
 [Chris Coyier](https://css-tricks.com/author/chriscoyier/) does a great job of explaining this in his [Guide to Responsive Images Syntax in HTML](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-using-picture).
 
-
 ## Why use this module?
 
 If we only use plain HTML, we have to use the following markup.
 
 ```html
 <picture>
-    <!-- Use when width >= 1000px -->
-    <source
-        srcset="baby.jpg"
-        media="(min-width: 1000px)"
-    />
+  <!-- Use when width >= 1000px -->
+  <source srcset="baby.jpg" media="(min-width: 1000px)" />
 
-    <!-- Use when 600px <= width < 1000px -->
-    <source
-        srcset="baby-medium.jpg"
-        media="(min-width: 600px)"
-    />
+  <!-- Use when 600px <= width < 1000px -->
+  <source srcset="baby-medium.jpg" media="(min-width: 600px)" />
 
-    <!-- Use when width < 600px -->
-    <img
-        src="baby-small.jpg"
-        alt="Baby Sleeping"
-    />
+  <!-- Use when width < 600px -->
+  <img src="baby-small.jpg" alt="Baby Sleeping" />
 </picture>
 ```
 
@@ -54,15 +43,17 @@ The `img` partial takes care of the following things:
 - Defining the media rules for the picture tag
 - Converting images to WebP format
 
-
 ## Usage
+
 To use this module, you'll have to download it first.
+
 ```sh
 # Optional. Do this if you haven't already.
 hugo mod init "<website>"
 ```
 
 Then add the module to your theme/website's `config.yaml`.
+
 ```yaml
 module:
   imports:
@@ -88,15 +79,15 @@ Once that's done, you can go ahead and use responsive images anywhere in your Hu
 
 The partial also has other arguments, which are as follows:
 
-Argument|Type|Default value|What it expects
--|-|-|----
-`img`|Image resource|nil|The image resource
-`alt`|String|""|The alt text for the image
-`class`|String|""|HTML classes to apply to the image
-`loading`|String|""|Value for the HTML `loading` attribute
-`webpHint`|String|"photo"|[Hint](https://gohugo.io/content-management/image-processing/#hint) to be used for Hugo's WebP conversion.
-`breakpoints`|Slice\<int\>|[768, 992, 1200]|Viewport breakpoints, in pixels
-`widths`|Slice\<int\>|[768, 992, 1200, -1<sup>*</sup>]|Widths to be used for each breakpoint, in pixels. `width[i]` will be used for the image when viewport width is in between `breakpoints[i-1]` and `breakpoints[i+1]`.
-`quality`|int|75|[Quality](https://gohugo.io/content-management/image-processing/#hint) value to be used for Hugo's image processing
+| Argument      | Type           | Default value                    | What it expects                                                                                                                                                      |
+| ------------- | -------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `img`         | Image resource | nil                              | The image resource                                                                                                                                                   |
+| `alt`         | String         | ""                               | The alt text for the image                                                                                                                                           |
+| `class`       | String         | ""                               | HTML classes to apply to the image                                                                                                                                   |
+| `loading`     | String         | ""                               | Value for the HTML `loading` attribute                                                                                                                               |
+| `webpHint`    | String         | "photo"                          | [Hint](https://gohugo.io/content-management/image-processing/#hint) to be used for Hugo's WebP conversion.                                                           |
+| `breakpoints` | Slice\<int\>   | [768, 992, 1200]                 | Viewport breakpoints, in pixels                                                                                                                                      |
+| `widths`      | Slice\<int\>   | [768, 992, 1200, -1<sup>*</sup>] | Widths to be used for each breakpoint, in pixels. `width[i]` will be used for the image when viewport width is in between `breakpoints[i-1]` and `breakpoints[i+1]`. |
+| `quality`     | int            | 75                               | [Quality](https://gohugo.io/content-management/image-processing/#hint) value to be used for Hugo's image processing                                                  |
 
-> <sup>*</sup>`-1` implies that the width of the input image should be used. Additionally, `-2` can be used to indicate that no image should be produced for that specific breakpoint.
+> <sup>\*</sup>`-1` implies that the width of the input image should be used. Additionally, `-2` can be used to indicate that no image should be produced for that specific breakpoint.
