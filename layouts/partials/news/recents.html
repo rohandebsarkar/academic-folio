@@ -1,8 +1,8 @@
 <!-- You can change blog to anything else and build recent item for that thing -->
-{{ if .Site.Params.showRecentPosts }}
+{{ if .Site.Params.showRecentNews }}
     <table class="text-left">
         <tbody>
-            {{ range ( where .Site.RegularPages "Type" "posts" | first .Site.Params.recentPosts ) }}
+            {{ range ( where .Site.RegularPages "Type" "news" | first .Site.Params.recentNews ) }}
             <tr>
                 <th class="pr-2 py-1">
                     {{ .Date.Format "January 02, 2006" }}

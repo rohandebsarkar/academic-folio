@@ -45,45 +45,52 @@ nav .active a {
   background-color: var(--global-text-color);
 }
 
-.blog-header {
-  h1 {
-    color: var(--global-theme-color);
+.section-header {
+  a {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
   }
 }
 
-.post-list {
-  ul {
+.blog-header {
+  color: var(--global-theme-color);
+}
+
+.list {
+  border-color: var(--global-divider-color);
+
+  li {
     border-color: var(--global-divider-color);
 
-    li {
-      border-color: var(--global-divider-color);
+    a {
+      color: var(--global-text-color);
 
-      a {
-        color: var(--global-text-color);
+      &:hover {
+        color: var(--global-hover-color);
+        text-decoration: underline;
+      }
+    }
 
-        &:hover {
-          color: var(--global-hover-color);
-          text-decoration: underline;
-        }
+    .post-date {
+      color: var(--global-text-color-light);
+
+      svg {
+        fill: var(--global-text-color-light);
       }
 
-      .post-date {
+      a {
         color: var(--global-text-color-light);
 
-        svg {
-          fill: var(--global-text-color-light);
-        }
+        &:hover {
+          color: var(--global-theme-color);
+          text-decoration: none;
 
-        a {
-          color: var(--global-text-color-light);
-
-          &:hover {
-            color: var(--global-theme-color);
-            text-decoration: none;
-
-            svg {
-              fill: var(--global-theme-color);
-            }
+          svg {
+            fill: var(--global-theme-color);
           }
         }
       }
@@ -118,7 +125,7 @@ nav .active a {
   }
 }
 
+// https://katex.org/docs/issues.html#css-customization
 .katex-display {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: auto hidden;
 }

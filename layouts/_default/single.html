@@ -1,6 +1,6 @@
 {{ define "main" }}
-    <header class="space-y-2">
-        <h1 class="text-4xl">
+    <article class="space-y-4">
+        <h1 class="text-4xl -mb-2">
             {{ .Page.Title }}
         </h1>
 
@@ -9,10 +9,9 @@
                 {{ . }}
             </h2>
         {{ end }}
-    </header>
 
-    <article class="space-y-4">
-        {{ .Content }}
+        <div class="space-y-4">
+            {{ .Content }}
+        </div>
     </article>
-</main>
 {{ end }}
