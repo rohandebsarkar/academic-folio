@@ -1,19 +1,15 @@
 main:
-# - name: Home
-#   url: /
-#   weight: 1
-
 - name: Blog
   url: /posts/
-  weight: 2
-
-# - name: tags
-#   url: /tags/
-#   weight: 5
+  weight: 1
 
 - name: Teaching
   url: /teaching/
-  weight: 3
+  weight: 2
+
+# - name: Tags
+#   url: /tags/
+#   weight: 3
 
 social:
 - name: email
