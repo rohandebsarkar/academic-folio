@@ -33,5 +33,5 @@ repos:
   rev: v3.0.0-alpha.4
   hooks:
   - id: prettier
-    args: [--tab-width 4]
+    args: [--tab-width 4 --ignore-path assets/css/main.scss]
     files: \.(js|ts|jsx|tsx|css|less|json|markdown|md|scss)$

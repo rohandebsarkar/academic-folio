@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 {{- $scr := .Scratch -}}
 {{- $site := $scr.Get "site" -}}
 {{- partial "functions/parse_theme" . -}}
