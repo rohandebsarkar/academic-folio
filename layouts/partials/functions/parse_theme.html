@@ -1,0 +1,15 @@
+{{- $scr := .Scratch -}}
+
+{{/* Attempt to load color theme specified by user. */}}
+{{- $theme_index := site.Params.color_theme | default "default" -}}
+{{ if (index site.Data.themes $theme_index) }}
+    {{ $theme := index site.Data.themes $theme_index }}
+    {{- $scr.Set "white_color" ($theme.white_color) -}}
+    {{- $scr.Set "black_color" ($theme.black_color) -}}
+    {{- $scr.Set "grey_color" ($theme.grey_color) -}}
+    {{- $scr.Set "theme_light_color" ($theme.theme_light_color) -}}
+    {{- $scr.Set "theme_dark_color" ($theme.theme_dark_color) -}}
+
+{{ else }}
+  {{ errorf "The `%s` color theme was not found! Check that the `color_theme` option in `config/_default/params.toml` matches the name of an installed color theme." $theme_index }}
+{{ end }}
