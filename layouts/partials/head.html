@@ -13,19 +13,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{/*  Stylesheet Configuarations */}}
-    {{ $tailwindStyles := resources.Get "css/tailwind.css" | postCSS }}
-    {{ $styles := resources.Get "css/main.scss" | toCSS }}
+    {{ $styles := resources.Get "css/main.css" | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
-        {{ $tailwindStyles = $tailwindStyles | minify | fingerprint | resources.PostProcess }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ else if .Site.IsServer }}
-        {{ $tailwindStyles = $tailwindStyles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
 
     {{/*  Stylesheets  */}}
-    <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
