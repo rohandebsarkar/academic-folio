@@ -21,7 +21,7 @@
 
         {{/* Original, unresized image as fallback */}}
         {{ $attributes := "" }}
-        {{ range $i, $v := slice "class" "alt" "loading" }}
+        {{ range $i, $v := slice "class" "alt" "loading" "sizes" }}
             {{ with index $ . }}
                 {{ $attributes = printf `%s %s="%s"` $attributes $v . }}
             {{ end }}
