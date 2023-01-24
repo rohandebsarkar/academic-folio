@@ -14,19 +14,17 @@
 <article class="space-y-4">
     {{ .Content }}
 
-    <div class="post-list">
-        <ul class="border-t border-dashed">
-            {{ range .Pages }}
-                <li class="py-4 space-y-2 border-b border-dashed">
-                    <h3>
-                        <a class="text-2xl font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        <p>
-                            {{ .Params.Description }}
-                        </p>
-                    </h3>
-                </li>
-            {{ end }}
-        </ul>
-    </div>
+    <ul class="post-list border-t border-dashed">
+        {{ range .Pages }}
+            <li class="py-4 space-y-2 border-b border-dashed">
+                <h3>
+                    <a class="text-2xl font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <p>
+                        {{ .Params.Description }}
+                    </p>
+                </h3>
+            </li>
+        {{ end }}
+    </ul>
 </article>
 {{ end }}
