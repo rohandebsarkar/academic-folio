@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables.scss";
+@import "themes.scss";
+@import "base.scss";

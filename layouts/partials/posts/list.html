@@ -1,30 +1,28 @@
-{{ define "main" }}
-    <article class="space-y-4">
-        <div class="post-header space-y-2">
-            <h1 class="text-4xl font-medium">
-                {{ .Page.Title }}
-            </h1>
-
-            {{ with .Page.Params.description }}
-                <h2>
-                    {{ . }}
-                </h2>
-            {{ end }}
-
-            <h3 class="text-sm font-mono">
+<ul class="list border-t border-dashed">
+    {{ range .Pages }}
+        <li class="py-4 space-y-2 border-b border-dashed">
+            <p class="text-sm font-mono">
                 {{ if .Date }}
                     {{ .Date.Format "January 2, 2006" }}
-                {{ else if .GitInfo.AuthorDate }}
+                {{ else if .GitInfo }}
                     {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
                 {{ end }}
                 {{ with .Page.Params.author }}
                     &nbsp; &bull; &nbsp;
                     {{ . }}
                 {{ end }}
+            </p>
+
+            <h3>
+                <a class="text-2xl font-medium" href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+
+                <p>{{ .Params.Description }}</p>
             </h3>
 
             {{ $currentPage := . }}
-            <p class="text-sm italic">
+            <p class="post-date text-sm italic">
                 {{ with .Page.ReadingTime }}
                     <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
                 {{ end }}
@@ -41,10 +39,6 @@
                     {{ end }}
                 {{ end }}
             </p>
-        </div>
-
-        <div class="space-y-4">
-            {{ .Content }}
-        </div>
-    </article>
-{{ end }}
+        </li>
+    {{ end }}
+</ul>
