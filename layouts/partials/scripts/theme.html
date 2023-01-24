@@ -1,20 +1,13 @@
 <script>
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.theme = theme;
-    };
-
     function toggleTheme() {
-        if (localStorage.theme === 'dark') {
-            setTheme('light');
-        } else {
-            setTheme('dark');
-        }
+        document.documentElement.classList.toggle('dark');
+        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
     };
 
     if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || localStorage.theme === 'dark') {
-        setTheme('dark');
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
     } else {
-        setTheme('light');
+        localStorage.theme = 'light';
     }
 </script>
