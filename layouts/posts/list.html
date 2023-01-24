@@ -12,9 +12,11 @@
 </header>
 
 <article class="space-y-4">
+
     <div class="text-center">
-    {{ .Content }}
+        {{ .Content }}
     </div>
+
     <div class="post-list">
         <ul class="border-t border-dashed">
             {{ range .Pages }}
@@ -22,8 +24,8 @@
                     <p class="text-sm font-mono">
                         {{ if .Date }}
                             {{ .Date.Format "January 2, 2006" }}
-                        {{ else if .GitInfo.AuthorDate }}
-                            {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
+                        {{ else if .GitInfo }}
+                            {{ .Lastmod.Format "January 2, 2006" }}
                         {{ end }}
                         {{ with .Page.Params.author }}
                             &nbsp; &bull; &nbsp;
