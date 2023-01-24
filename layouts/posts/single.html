@@ -12,10 +12,8 @@
             {{ end }}
 
             <h3 class="text-sm font-mono">
-                {{ if .Date }}
-                    {{ .Date.Format "January 2, 2006" }}
-                {{ else if .GitInfo.AuthorDate }}
-                    {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
+                {{ with .Date }}
+                    {{ .Format "January 2, 2006" }}
                 {{ end }}
                 {{ with .Page.Params.author }}
                     &nbsp; &bull; &nbsp;
