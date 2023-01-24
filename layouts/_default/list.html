@@ -10,13 +10,14 @@
             </h2>
         {{ end }}
 
-        <div class="space-y-4">
-            {{ .Content }}
-        </div>
+        {{ with .Content }}
+            <div class="space-y-4">
+                {{ . }}
+            </div>
+        {{ end }}
 
         <div>
             {{ partial "list" . }}
         </div>
-        
     </article>
 {{ end }}

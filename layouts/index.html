@@ -26,9 +26,11 @@
             </p>
         </div>
 
-        <div class="space-y-4">
-            {{ .Content }}
-        </div>
+        {{ with .Content }}
+            <div class="space-y-4">
+                {{ . }}
+            </div>
+        {{ end }}
 
         <div class="space-y-2">
             <h3 class="section-header text-2xl font-semibold -mb-2"><a href="/posts/">Recent Posts</a></h3>
