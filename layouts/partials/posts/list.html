@@ -2,10 +2,8 @@
     {{ range .Pages }}
         <li class="py-4 space-y-2 border-b border-dashed">
             <p class="text-sm font-mono">
-                {{ if .Date }}
-                    {{ .Date.Format "January 2, 2006" }}
-                {{ else if .GitInfo }}
-                    {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
+                {{ with .Date }}
+                    {{ .Format "January 2, 2006" }}
                 {{ end }}
                 {{ with .Page.Params.author }}
                     &nbsp; &bull; &nbsp;
