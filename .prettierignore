@@ -1,0 +1,2 @@
+# Ignore main.scc file since it contains go functions
+assets/css/main.scss
