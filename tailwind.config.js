@@ -5,12 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--global-text-color)',
-        secondary: 'var(--global-text-color-light)',
-        background: 'var(--global-bg-color)',
-        theme: 'var(--global-theme-color)',
-        code: 'var(--global-theme-color)'
-      }
+        primary: "var(--global-text-color)",
+        secondary: "var(--global-text-color-light)",
+        background: "var(--global-bg-color)",
+        theme: "var(--global-theme-color)",
+        code: "var(--global-theme-color)",
+      },
     },
   },
 };
