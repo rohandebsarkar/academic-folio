@@ -1,8 +1,5 @@
 <!-- You can change blog to anything else and build recent item for that thing -->
 {{ if .Site.Params.showRecentPosts }}
-    <h2 class="section-header text-2xl font-semibold">
-        <a href="/posts/">Recent Posts</a>
-    </h2>
     <table class="text-left">
         <tbody>
             {{ range ( where .Site.RegularPages "Type" "posts" | first .Site.Params.recentPosts ) }}

@@ -26,13 +26,17 @@
             </p>
         </div>
 
-        {{ .Content }}
+        <div class="space-y-4">
+            {{ .Content }}
+        </div>
 
         <div class="space-y-2">
+            <h3 class="section-header text-2xl font-semibold -mb-2"><a href="/posts/">Recent Posts</a></h3>
             {{ partial "posts/recents" . }}
         </div>
 
         <div class="space-y-2">
+            <h2 class="text-2xl font-semibold section-header -mb-2"><a href="/news/">Recent News</a></h2>
             {{ partial "news/recents" . }}
         </div>
 
