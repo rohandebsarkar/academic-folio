@@ -1,0 +1,6 @@
+module:
+  imports:
+    - path: github.com/FortAwesome/Font-Awesome
+      mounts:
+        - source: svgs
+          target: assets/svgs/fontawesome
