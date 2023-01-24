@@ -57,12 +57,10 @@ nav .active a {
 }
 
 .blog-header {
-  h1 {
-    color: var(--global-theme-color);
-  }
+  color: var(--global-theme-color);
 }
 
-.post-list {
+.list {
   border-color: var(--global-divider-color);
 
   li {

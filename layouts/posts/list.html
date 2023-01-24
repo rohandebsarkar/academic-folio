@@ -1,67 +1,27 @@
 {{ define "main" }}
-<header class="blog-header space-y-4">
-    <h1 class="text-6xl text-center font-medium">
-        {{ .Page.Title }}
-    </h1>
+    <article class="space-y-4">
+        <h1 class=" blog-header text-6xl text-center font-medium">
+            {{ .Page.Title }}
+        </h1>
 
-    {{ with .Page.Params.description }}
-        <h2 class="text-2xl text-center">
-            {{ . }}
-        </h2>
-    {{ end }}
-</header>
-
-<article class="space-y-4">
-    {{ .Content }}
-
-    <ul class="flex flex-nowrap space-x-4 justify-center">
-        {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
-            <li><a href="/{{ $taxonomyName }}/">{{ $taxonomyName }}</a></li>
+        {{ with .Page.Params.description }}
+            <h2 class="text-2xl text-center">
+                {{ . }}
+            </h2>
         {{ end }}
-    </ul>        
 
-    <ul class="post-list border-t border-dashed">
-        {{ range .Pages }}
-            <li class="py-4 space-y-2 border-b border-dashed">
-                <p class="text-sm font-mono">
-                    {{ if .Date }}
-                        {{ .Date.Format "January 2, 2006" }}
-                    {{ else if .GitInfo }}
-                        {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
-                    {{ end }}
-                    {{ with .Page.Params.author }}
-                        &nbsp; &bull; &nbsp;
-                        {{ . }}
-                    {{ end }}
-                </p>
-
-                <h3>
-                    <a class="text-2xl font-medium" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <p>
-                        {{ .Params.Description }}
-                    </p>
-                </h3>
-
-                {{ $currentPage := . }}
-                <p class="post-date text-sm italic">
-                    {{ with .Page.ReadingTime }}
-                        <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
-                    {{ end }}
-                    {{ with .Page.Params.tags }}
-                        &nbsp; &bull; &nbsp;
-                        {{ range . }}
-                            <a href="/tags/{{ . }}">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
-                        {{ end }}
-                    {{ end }}
-                    {{ with .Page.Params.categories }}
-                        &nbsp; &bull; &nbsp;
-                        {{ range . }}
-                            <a href="/categories/{{ . }}">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
-                        {{ end }}
-                    {{ end }}
-                </p>
-            </li>
+        {{ with .Content }}
+            <div class="space-y-4">
+                {{ .Content }}
+            </div>
         {{ end }}
-    </ul>
-</article>
+    
+        <div>
+            {{ partial "taxonomy/list" . }}
+        </div>   
+
+        <div>
+            {{ partial "posts/list" . }}
+        </div>
+    </article>
 {{ end }}
