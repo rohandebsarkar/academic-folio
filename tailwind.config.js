@@ -5,22 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          100: '#f2f2f2',
-          800: '#0f0f0f',
-        },
-        secondary: {
-          100: '#828282',
-          800: '#828282',
-        },
-        theme: {
-          100: '#0000d0',
-          800: '#00f1ff',
-        }
+        primary: 'var(--global-text-color)',
+        seconday: 'var(--global-text-color-light)',
+        background: 'var(--global-bg-color)',
+        theme: 'var(--global-theme-color)',
+        code: 'var(--global-theme-color)'
       }
     },
   },
-  plugins: [
-    require("nightwind"),
-  ],
 };

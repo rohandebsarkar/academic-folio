@@ -3,12 +3,12 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$grey-color-light};
-  --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$grey-color-dark};
   --global-text-color-light: #{$grey-color};
+  --global-bg-color: #{$grey-color-light};
   --global-theme-color: #{$theme-light-color};
-  --global-hover-color: #{$theme-light-color-hover};
+  --global-code-bg-color: #{$code-bg-color-light};
+
 
   .icon-sun {
     display: none;
@@ -20,12 +20,11 @@
 }
 
 html[class="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
+  --global-bg-color: #{$grey-color-dark};
   --global-theme-color: #{$theme-dark-color};
-  --global-hover-color: #{$theme-dark-color-hover};
+  --global-code-bg-color: #{$code-bg-color-dark};
 
   .icon-sun {
     display: inline;
