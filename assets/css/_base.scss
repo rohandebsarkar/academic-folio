@@ -45,6 +45,17 @@ nav .active a {
   background-color: var(--global-text-color);
 }
 
+.section-header {
+  a {
+    color: var(--global-text-color);
+    
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
 .blog-header {
   h1 {
     color: var(--global-theme-color);
