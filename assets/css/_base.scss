@@ -7,20 +7,16 @@ a {
   }
 }
 
+// https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
   display: inline;
 
   width: 1em;
   height: 1em;
 
-  fill: inherit;
+  fill: currentColor;
 
-  &:hover {
-    fill: inherit;
-  }
-
-  // see https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
-  vertical-align: -0.14em;
+  vertical-align: -.14em;
 }
 
 // https://katex.org/docs/issues.html#css-customization
