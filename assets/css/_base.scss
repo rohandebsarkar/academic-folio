@@ -129,7 +129,7 @@ nav .active a {
   }
 }
 
+// https://katex.org/docs/issues.html#css-customization
 .katex-display {
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: auto hidden;
 }
