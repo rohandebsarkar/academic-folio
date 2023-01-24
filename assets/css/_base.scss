@@ -7,6 +7,10 @@ a {
   }
 }
 
+code {
+  color: var(--global-theme-color);
+}
+
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
   display: inline;

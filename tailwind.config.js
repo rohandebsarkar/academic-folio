@@ -9,7 +9,6 @@ module.exports = {
         secondary: "var(--global-text-color-light)",
         background: "var(--global-bg-color)",
         theme: "var(--global-theme-color)",
-        code: "var(--global-theme-color)",
       },
     },
   },

@@ -7,8 +7,6 @@
   --global-text-color-light: #{$grey-color};
   --global-bg-color: #{$grey-color-light};
   --global-theme-color: #{$theme-light-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-
 
   .icon-sun {
     display: none;
@@ -24,7 +22,6 @@ html[class="dark"] {
   --global-text-color-light: #{$grey-color};
   --global-bg-color: #{$grey-color-dark};
   --global-theme-color: #{$theme-dark-color};
-  --global-code-bg-color: #{$code-bg-color-dark};
 
   .icon-sun {
     display: inline;
