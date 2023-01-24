@@ -1,0 +1,10 @@
+# red
+lightmode_text_color: '#28293d'
+lightmode_text_color_light: '#555770'
+lightmode_bg_color: '#ffffff'
+lightmode_theme_color: '#6600cc'
+
+darkmode_text_color: '#fafafa'
+darkmode_text_color_light: '#8f90a6'
+darkmode_bg_color: '#28293d'
+darkmode_theme_color: '#ac5dd9'

@@ -3,10 +3,10 @@
  ******************************************************************************/
 
 :root {
-  --global-text-color: #{$grey-color-dark};
-  --global-text-color-light: #{$grey-color};
-  --global-bg-color: #{$grey-color-light};
-  --global-theme-color: #{$theme-light-color};
+  --global-text-color: #{$lightmode-text-color};
+  --global-text-color-light: #{$lightmode-text-color-light};
+  --global-bg-color: #{$lightmode-bg-color};
+  --global-theme-color: #{$lightmode-theme-color};
 
   .icon-sun {
     display: none;
@@ -18,10 +18,10 @@
 }
 
 html[class="dark"] {
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-bg-color: #{$grey-color-dark};
-  --global-theme-color: #{$theme-dark-color};
+  --global-text-color: #{$darkmode-text-color};
+  --global-text-color-light: #{$darkmode-text-color-light};
+  --global-bg-color: #{$darkmode-bg-color};
+  --global-theme-color: #{$darkmode-theme-color};
 
   .icon-sun {
     display: inline;

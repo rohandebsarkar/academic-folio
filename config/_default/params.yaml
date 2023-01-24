@@ -16,4 +16,4 @@ showRecentNews: true
 social_navbar: true # show social icons on navbar
 social_index: true # show social icons on index page
 
-color_theme: default
+color_theme: teal

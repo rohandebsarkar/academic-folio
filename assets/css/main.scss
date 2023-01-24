@@ -7,24 +7,15 @@
 {{- $site := $scr.Get "site" -}}
 {{- partial "functions/parse_theme" . -}}
 
-$white-color: {{ $scr.Get "white_color" }} !default;
-$black-color: {{ $scr.Get "black_color" }} !default;
+$lightmode-text-color: {{ $scr.Get "lightmode_text_color" }} !default;
+$lightmode-text-color-light: {{ $scr.Get "lightmode_text_color_light" }} !default;
+$lightmode-bg-color: {{ $scr.Get "lightmode_bg_color" }} !default;
+$lightmode-theme-color: {{ $scr.Get "lightmode_theme_color" }} !default;
 
-$grey-color: {{ $scr.Get "grey_color" }} !default;
-$grey-color-light: lighten($grey-color, 45%);
-$grey-color-dark: darken($grey-color, 45%);
-
-// Theme colors
-
-$theme-light-color: {{ $scr.Get "theme_light_color" }} !default;
-$theme-light-color-hover: lighten($theme-light-color, 15%);
-
-$theme-dark-color: {{ $scr.Get "theme_dark_color" }} !default;
-$theme-dark-color-hover: lighten($theme-dark-color, 15%);
-
-$code-bg-color-light: lighten($theme-light-color, 50%);
-$code-bg-color-dark: darken($theme-dark-color, 50%);
-
+$darkmode-text-color: {{ $scr.Get "darkmode_text_color" }} !default;
+$darkmode-text-color-light: {{ $scr.Get "darkmode_text_color_light" }} !default;
+$darkmode-bg-color: {{ $scr.Get "darkmode_bg_color" }} !default;
+$darkmode-theme-color: {{ $scr.Get "darkmode_theme_color" }} !default;
 
 @import "themes.scss";
 @import "base.scss";
