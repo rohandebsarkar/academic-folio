@@ -1,8 +1,8 @@
-<header class="fixed inset-x-0 top-0 z-10 bg-inherit border-b border-inherit md:h-16">
+<header class="fixed inset-x-0 top-0 z-10 bg-inherit border-b border-secondary md:h-16">
     <nav class="h-full mx-auto p-4 max-w-[1024px]">
         <ul class="flex flex-nowrap">
             <li>
-                <a class="text-lg" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+                <a class="text-lg text-primary" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
             </li>
             {{ if .Site.Params.social_navbar }}
                 <li class="mx-4 flex flex-nowrap text-lg">
@@ -39,7 +39,7 @@
                                     </li>
                                 {{ else }}
                                     <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
-                                        <a href="{{ .URL }}">
+                                        <a href="{{ .URL }}" class="text-primary">
                                             {{ .Pre }}{{ .Name }}
                                         </a>
                                     </li>
@@ -47,8 +47,12 @@
                             {{ end }}
                             <li>
                                 <button id="theme-toggle" onclick="toggleTheme()">
-                                    <span class="icon-sun" title="light theme">{{ partial "svg" "fas fa-sun" }}</span>
-                                    <span class="icon-moon" title="dark theme">{{ partial "svg" "fas fa-moon" }}</span>
+                                    <span class="icon-sun fill-primary hover:fill-theme" title="light theme">
+                                        {{ partial "svg" "fas fa-sun" }}
+                                    </span>
+                                    <span class="icon-moon fill-primary hover:fill-theme" title="dark theme">
+                                        {{ partial "svg" "fas fa-moon" }}
+                                    </span>
                                 </button>
                             </li>
                         </ul>

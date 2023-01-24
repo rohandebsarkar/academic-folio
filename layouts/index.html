@@ -31,12 +31,16 @@
         {{ end }}
 
         <div class="space-y-2">
-            <h3 class="section-header text-2xl font-semibold -mb-2"><a href="/posts/">Recent Posts</a></h3>
+            <h3 class="section-header text-2xl font-semibold -mb-2">
+                <a href="/posts/" class="text-primary">Recent Posts</a>
+            </h3>
             {{ partial "posts/recents" . }}
         </div>
 
         <div class="space-y-2">
-            <h3 class="text-2xl font-semibold section-header -mb-2"><a href="/news/">Recent News</a></h3>
+            <h3 class="text-2xl font-semibold section-header -mb-2">
+                <a href="/news/" class="text-primary">Recent News</a>
+            </h3>
             {{ partial "news/recents" . }}
         </div>
 

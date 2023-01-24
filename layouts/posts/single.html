@@ -24,20 +24,20 @@
             </h3>
 
             {{ $currentPage := . }}
-            <p class="text-sm italic">
+            <p class="text-sm italic text-secondary">
                 {{ with .Page.ReadingTime }}
-                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
+                    <span class="fill-secondary">{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
                 {{ end }}
                 {{ with .Page.Params.tags }}
                     &nbsp; &bull; &nbsp;
                     {{ range . }}
-                        <a href="/tags/{{ . }}">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a href="/tags/{{ . }}" class="text-secondary fill-secondary hover:fill-theme hover:no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
                 {{ with .Page.Params.categories }}
                     &nbsp; &bull; &nbsp;
                     {{ range . }}
-                        <a href="/categories/{{ . }}">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a href="/categories/{{ . }}" class="text-secondary fill-secondary hover:fill-theme hover:no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
             </p>
