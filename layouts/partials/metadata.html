@@ -29,7 +29,7 @@
     "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
     "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
     "sameAs": {{ $sameAsLinks }},
-    "name": "{{ .Site.Title }}",
+    "name": "{{ .Title }}",
     "@context": "https:\/\/schema.org"
 }
 </script>
