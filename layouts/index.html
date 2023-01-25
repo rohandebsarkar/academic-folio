@@ -17,7 +17,7 @@
 
         <div class="md:float-right md:max-w-[25%] md:ml-4 text-center">
             {{ with resources.Get "img/prof_pic.jpg" }}
-                {{ partial "img" (dict "img" . "alt" .RelPermalink) }}
+                {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
             {{ end }}
             {{ with .Site.Params.email }}
                 {{ partial "scripts/cloakemail" . }}
