@@ -34,12 +34,10 @@
     "url": "{{ .Permalink }}",
     "@type": "WebSite",
     "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-    "headline": "{{ .Title }},
+    "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
     "sameAs": {{ $sameAsLinks }},
-
     {{ $name := printf "%s %s" .Site.Params.firstName .Site.Params.lastName }}
     "name": "{{ $name }}",
-
     "@context": "https:\/\/schema.org"
 }
 </script>
