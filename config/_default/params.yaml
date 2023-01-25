@@ -5,6 +5,12 @@ email: einstein@example.org
 
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
+tags:
+- hugo
+- hugo-theme
+- academic-website
+- al-folio
+
 footerLastUpdated: true
 
 recentPosts: 5 # number of recent posts to show in home page

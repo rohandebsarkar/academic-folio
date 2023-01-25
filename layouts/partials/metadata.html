@@ -16,13 +16,15 @@
 
 <meta name="author" content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}" />
 <meta name="description" content="{{ .Site.Params.description }}">
-<meta name="keywords" content="{{ .Params.tags }}" />
+<meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.tags ", " }}{{ end }}' />
 
 {{ $sameAsLinks := "]" }}
 {{ range .Site.Menus.social }}
     {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
 {{ end }}
 {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s%s" "[" | printf "%s" }}
+
+{{ $name := printf "%s %s" .Site.Params.firstName .Site.Params.lastName }}
 
 <script type="application/ld+json">
 {
@@ -36,7 +38,6 @@
     "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
     "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
     "sameAs": {{ $sameAsLinks }},
-    {{ $name := printf "%s %s" .Site.Params.firstName .Site.Params.lastName }}
     "name": "{{ $name }}",
     "@context": "https:\/\/schema.org"
 }
