@@ -1,34 +1,10 @@
 <meta charset="utf-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-{{ template "_internal/opengraph.html" . }}
-
 <meta name="author" content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}" />
 <meta name="description" content="{{ .Site.Params.description }}">
 <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.tags ", " }}{{ end }}' />
 
-{{ $sameAsLinks := "]" }}
-{{ range .Site.Menus.social }}
-    {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
-{{ end }}
-{{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s%s" "[" | printf "%s" }}
+{{ template "_internal/opengraph.html" . }}
 
-{{ $name := printf "%s %s" .Site.Params.firstName .Site.Params.lastName }}
-
-<script type="application/ld+json">
-{
-    "author":
-    {
-        "@type": "Person",
-        "name": "{{ $name }}"
-    },
-    "url": "{{ .Permalink }}",
-    "@type": "{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else }}WebSite{{ end }}",
-    "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-    "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
-    "sameAs": {{ $sameAsLinks }},
-    "name": "{{ $name }}",
-    "@context": "https:\/\/schema.org"
-}
-</script>
+{{ template "_internal/schema.html" . }}
