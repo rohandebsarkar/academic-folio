@@ -9,12 +9,14 @@
     --global-bg-color2: #{$lightmode-bg-color2};
     --global-theme-color: #{$lightmode-theme-color};
 
-    .icon-sun {
-        display: none;
-    }
-
-    .icon-moon {
-        display: inline;
+    #theme-toggle {
+        .icon-sun {
+            display: none;
+        }
+    
+        .icon-moon {
+            display: inline;
+        }
     }
 }
 
@@ -25,11 +27,13 @@ html[class='dark'] {
     --global-bg-color2: #{$darkmode-bg-color2};
     --global-theme-color: #{$darkmode-theme-color};
 
-    .icon-sun {
-        display: inline;
-    }
-
-    .icon-moon {
-        display: none;
+    #theme-toggle {
+        .icon-sun {
+            display: inline;
+        }
+    
+        .icon-moon {
+            display: none;
+        }
     }
 }
