@@ -8,3 +8,28 @@
 {{ template "_internal/opengraph.html" . }}
 
 {{ template "_internal/schema.html" . }}
+
+{{ $sameAsLinks := "]" }}
+{{ range .Site.Menus.social }}
+    {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
+{{ end }}
+{{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s%s" "[" | printf "%s" }}
+
+{{ $name := printf "%s %s" .Site.Params.firstName .Site.Params.lastName }}
+
+<script type="application/ld+json">
+{
+    "author":
+    {
+        "@type": "Person",
+        "name": "{{ $name }}"
+    },
+    "url": "{{ .Permalink }}",
+    "@type": "{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else }}WebSite{{ end }}",
+    "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+    "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
+    "sameAs": {{ $sameAsLinks }},
+    "name": "{{ $name }}",
+    "@context": "https:\/\/schema.org"
+}
+</script>
