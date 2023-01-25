@@ -98,10 +98,6 @@ At the command prompt, type `nano`.
 
 ---
 
----
-
----
-
 https://www.markdownguide.org/tools/hugo/
 
 https://www.markdownguide.org/basic-syntax/
