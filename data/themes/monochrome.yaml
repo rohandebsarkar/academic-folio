@@ -1,0 +1,9 @@
+lightmode_text_color: '#000000'
+lightmode_text_color_light: '#888888'
+lightmode_bg_color: '#ffffff'
+lightmode_theme_color: '#000000'
+
+darkmode_text_color: '#ffffff'
+darkmode_text_color_light: '#777777'
+darkmode_bg_color: '#000000'
+darkmode_theme_color: '#ffffff'
