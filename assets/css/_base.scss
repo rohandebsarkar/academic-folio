@@ -11,6 +11,10 @@ code {
     color: var(--global-theme-color);
 }
 
+pre {
+    overflow: auto hidden;
+}
+
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
     display: inline;
