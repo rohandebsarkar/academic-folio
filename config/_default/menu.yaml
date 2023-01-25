@@ -1,10 +1,38 @@
 main:
-  - identifier: home
-    name: Home
-    url: /
-    weight: 10
+- name: Blog
+  url: /posts/
+  weight: 1
 
-  - identifier: teaching
-    name: Teaching
-    url: /teaching/
-    weight: 20
+- name: Teaching
+  url: /teaching/
+  weight: 2
+
+# - name: Tags
+#   url: /tags/
+#   weight: 3
+
+social:
+- name: email
+  url: mailto:email@example.com
+  weight: 1
+  params:
+    icon: fas fa-envelope
+
+- name: LinkedIn
+  url: https://www.linkedin.com/username
+  weight: 2
+  params:
+    icon: fab fa-linkedin
+
+- name: GitHub
+  url: https://github.com/username
+  weight: 3
+  params:
+    icon: fab fa-github
+
+- name: Mastodon
+  url: https://mastodon.social/username
+  weight: 4
+  params:
+    icon: fab fa-mastodon
+    rel: me

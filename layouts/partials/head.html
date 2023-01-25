@@ -1,34 +1,37 @@
 <head>
+    {{/*  Metadata  */}}
+    {{ partial "metadata" . }}
+
     {{/*  Title  */}}
     <title>
-        {{ if .IsHome }}
+        {{ if eq .Title .Site.Title }}
             {{ .Site.Title }}
         {{ else }}
             {{ .Title }} - {{ .Site.Title }}
         {{ end }}
     </title>
 
-    {{/*  Meta Information  */}}
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{/*  Canonical URL  */}}
+    <link rel="canonical" href="{{ .Permalink }}">
 
     {{/*  Stylesheet Configuarations */}}
-    {{ $tailwindStyles := resources.Get "css/tailwind.css" | postCSS }}
-    {{ $styles := resources.Get "css/main.scss" | toCSS }}
-
+    {{ $styles := resources.Get "css/main.css" | toCSS | postCSS }}
     {{ if hugo.IsProduction }}
-        {{ $tailwindStyles = $tailwindStyles | minify | fingerprint | resources.PostProcess }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ else if .Site.IsServer }}
-        {{ $tailwindStyles = $tailwindStyles | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
-    
+
     {{/*  Stylesheets  */}}
-    <link rel="stylesheet" href="{{ $tailwindStyles.RelPermalink }}" integrity="{{ $tailwindStyles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ if .Site.Params.email }}
+        {{ partial "styles/cloakemail" . }}
+    {{ end }}
 
     {{/*  Scripts  */}}
-    {{ partial "scripts/hamburger.html" . }}
-    {{ partial "scripts/theme.html" . }}
+    {{ partial "scripts/hamburger" . }}
+    {{ partial "scripts/theme" . }}
+    {{ if .Params.math}}
+        {{ partial "scripts/katex" . }}
+    {{ end }}
 </head>

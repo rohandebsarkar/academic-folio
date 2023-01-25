@@ -1,0 +1,49 @@
+/*******************************************************************************
+ * Themes
+ ******************************************************************************/
+
+:root {
+  --global-bg-color: #{$grey-color-light};
+  --global-code-bg-color: #{$code-bg-color-light};
+  --global-text-color: #{$grey-color-dark};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$theme-light-color};
+  --global-hover-color: #{$theme-light-color-hover};
+  --global-footer-bg-color: #{$grey-color-light};
+  --global-footer-text-color: #{grey-color-dark};
+  --global-footer-link-color: #{$theme-light-color};
+  --global-distill-app-color: #{$grey-color-dark};
+  --global-divider-color: #{$grey-color};
+  --global-card-bg-color: #{$white-color};
+
+  .icon-sun {
+    display: none;
+  }
+
+  .icon-moon {
+    display: inline;
+  }
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #{$grey-color-dark};
+  --global-code-bg-color: #{$code-bg-color-dark};
+  --global-text-color: #{$grey-color-light};
+  --global-text-color-light: #{$grey-color};
+  --global-theme-color: #{$theme-dark-color};
+  --global-hover-color: #{$theme-dark-color-hover};
+  --global-footer-bg-color: #{$grey-color-dark};
+  --global-footer-text-color: #{$grey-color-light};
+  --global-footer-link-color: #{$theme-dark-color};
+  --global-distill-app-color: #{$grey-color-light};
+  --global-divider-color: #{$grey-color};
+  --global-card-bg-color: #{$black-color};
+
+  .icon-sun {
+    display: inline;
+  }
+
+  .icon-moon {
+    display: none;
+  }
+}

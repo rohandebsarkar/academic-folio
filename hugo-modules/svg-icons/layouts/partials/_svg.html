@@ -1,0 +1,62 @@
+{{/* .icon could also be a resource */}}
+{{ $svg := .icon }}
+{{ $iconIsString := eq (printf "%T" .icon) "string" }}
+{{ $classes := slice }}
+{{ if $iconIsString }}
+    {{ $path := strings.TrimSuffix ".svg" .icon }}
+    {{ $svg = resources.Get (printf "%s.svg" $path) }}
+    {{ $classes = slice (path.Base $path) }}
+{{ else }}
+    {{ $path := strings.TrimSuffix ".svg" .icon.Name }}
+    {{ $classes = slice (path.Base $path) }}
+{{ end }}
+
+{{/* If icon doesn't exist in the site, fallback to FontAwesome */}}
+{{ if and (not $svg) $iconIsString }}
+    {{ $family := index (findRE "fa(s|b|r)" .icon) 0 }}
+    {{ $family = cond (eq $family "fas") "solid" (cond (eq $family "far") "regular" "brands") }}
+    {{ $iconName := substr .icon (len "fa_ fa-") }}
+    {{ $classes = slice $iconName }}
+
+    {{ $path := printf "svgs/fontawesome/%s/%s.svg" $family $iconName }}
+    {{ $svg = resources.Get $path }}
+{{ end }}
+
+{{ $markup := "" }}
+{{ with $svg }}
+    {{ $markup = $svg.Content }}
+
+    {{ $classes = $classes | append "icon" }}
+    {{ with $.class }}{{ $classes = $classes | append . }}{{ end }}
+
+    {{/* Fetch attributes from passed arguments */}}
+    {{ $s := newScratch }}
+    {{ range $k, $v := $ }}{{ $s.Set $k $v }}{{ end }}
+    {{ $s.Delete "icon" }}
+    {{ $s.Delete "title" }}
+    {{ $s.Set "class" (delimit $classes " ") }}
+
+    {{/* Override markup with passed title */}}
+    {{ with $.title }}
+        {{ $markup = $markup | replaceRE "<title.*</title>" "" }}
+        {{ $markup = replace $markup "</svg>" (printf "<title>%s</title>" .) }}
+    {{ end }}
+
+    {{/* Override markup with passed attributes */}}
+    {{ $attributes := slice }}
+    {{ range $k, $v := $s.Values }}
+        {{ $matches := findRE (printf `%s=".*?"` $k) $markup 1 }}
+        {{ if len $matches }}
+            {{ $markup = replace $markup (index $matches 0) "" 1 }}
+        {{ end }}
+        {{ $attributes = $attributes | append (printf `%s="%s"` $k $v) }}
+    {{ end }}
+
+    {{ $pattern := `<svg([\s\S]*)?>` }}
+    {{ $replacement := printf `<svg %s ${1}>` (delimit $attributes " ") }}
+    {{ $markup = replaceRE $pattern $replacement $markup 1 | safeHTML }}
+{{ else }}
+    {{ warnf "Could not find icon '%s'." .icon }}
+{{ end }}
+
+{{ return $markup }}

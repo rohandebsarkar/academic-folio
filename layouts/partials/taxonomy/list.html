@@ -1,0 +1,5 @@
+<ul class="flex flex-wrap space-x-4 justify-center">
+    {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
+        <li><a href="/{{ $taxonomyName }}/">{{ $taxonomyName }}</a></li>
+    {{ end }}
+</ul>

@@ -1,0 +1,9 @@
+{{/*  https://stackoverflow.com/questions/21421948/protect-e-mail-address-with-css-only  */}}
+
+<style>
+    .e-mail:before {
+        content: attr(data-domain) "\0040" attr(data-user);
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+</style>

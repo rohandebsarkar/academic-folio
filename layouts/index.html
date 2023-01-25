@@ -1,31 +1,53 @@
 {{ define "main" }}
-    <header>
-        <h1 class="text-4xl">
+    <article class="space-y-4">
+        <h1 class="text-4xl -mb-2">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
                 <strong>{{ .Site.Params.firstName }}</strong>
                 {{ .Site.Params.lastName }}
             {{ else }}
-                {{ .Site.Title }}          
+                <strong>{{ .Site.Title }}</strong>
             {{ end }}
         </h1>
-    
-        {{ with .Site.Params.description }}
-            <h2>{{ . }}</h2>
-        {{ end }}
-    </header>
 
-    <div class="md:float-right md:max-w-[25%] md:ml-4">
-        {{ with resources.Get "img/prof_pic.jpg" }}
-            {{ with .Resize "800x webp" }}
-                <img class="rounded z-10" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .RelPermalink }}">
-            {{ end }}
+        {{ with .Site.Params.description }}
+            <h2>
+                {{ . }}
+            </h2>
         {{ end }}
-        <p class="block w-full mt-2 text-center font-mono">
-            {{ .Site.Params.email }}
-        </p>
-    </div>
-    
-    <article class="space-y-4">
-        {{ .Content }}
+
+        <div class="md:float-right md:max-w-[25%] md:ml-4">
+            {{ with resources.Get "img/prof_pic.jpg" }}
+                {{ partial "img" (dict "img" . "alt" .RelPermalink) }}
+            {{ end }}
+            <p class="block w-full mt-2 text-center font-mono">
+                {{ with .Site.Params.email }}
+                    {{ partial "scripts/cloakemail" . }}
+                {{ end }}
+            </p>
+        </div>
+
+        {{ with .Content }}
+            <div class="space-y-4">
+                {{ . }}
+            </div>
+        {{ end }}
+
+        <div class="space-y-2">
+            <h3 class="section-header text-2xl font-semibold -mb-2"><a href="/posts/">Recent Posts</a></h3>
+            {{ partial "posts/recents" . }}
+        </div>
+
+        <div class="space-y-2">
+            <h2 class="text-2xl font-semibold section-header -mb-2"><a href="/news/">Recent News</a></h2>
+            {{ partial "news/recents" . }}
+        </div>
+
+        {{ if .Site.Params.social_index }}
+            <div class="pt-4 text-4xl">
+                {{ if .Site.Menus.social }}
+                    {{ partial "social" . }}
+                {{ end }}
+            </div>
+        {{ end  }}
     </article>
 {{ end }}

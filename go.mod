@@ -2,4 +2,7 @@ module github.com/rohandebsarkar/academic-folio
 
 go 1.19
 
-require github.com/hugo-mods/icons v0.0.0-20220508080705-d938a1900b1c // indirect
+require (
+	github.com/rohandebsarkar/academic-folio/hugo-modules/responsive-images v0.0.0-20230124181840-f133432e1dbe // indirect
+	github.com/rohandebsarkar/academic-folio/hugo-modules/svg-icons v0.0.0-20230124065742-1359a58cf4e5 // indirect
+)
