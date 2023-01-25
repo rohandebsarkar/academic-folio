@@ -10,8 +10,8 @@
     {{ end }}
 
     {{/*  Stylesheets  */}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}
