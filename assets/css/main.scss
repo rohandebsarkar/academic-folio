@@ -2,20 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-{{- $scr := .Scratch -}}
-{{- $site := $scr.Get "site" -}}
-{{- partial "functions/parse_theme" . -}}
-
-$lightmode-text-color: {{ $scr.Get "lightmode_text_color" }} !default;
-$lightmode-text-color-light: {{ $scr.Get "lightmode_text_color_light" }} !default;
-$lightmode-bg-color: {{ $scr.Get "lightmode_bg_color" }} !default;
-$lightmode-theme-color: {{ $scr.Get "lightmode_theme_color" }} !default;
-
-$darkmode-text-color: {{ $scr.Get "darkmode_text_color" }} !default;
-$darkmode-text-color-light: {{ $scr.Get "darkmode_text_color_light" }} !default;
-$darkmode-bg-color: {{ $scr.Get "darkmode_bg_color" }} !default;
-$darkmode-theme-color: {{ $scr.Get "darkmode_theme_color" }} !default;
+{{- partial "themes/variables" . -}}
 
 @import "themes.scss";
 @import "base.scss";
