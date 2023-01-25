@@ -14,8 +14,8 @@ To Install this theme for your own:
 
 > We recommend not to change `main` branch as it would be harder to incorporate upstream changes into your repo.
 
+## Features
 
-## Features 
 - Customizable Color palettes (see `data/themes`)
 - Blog Section
 - News Section
