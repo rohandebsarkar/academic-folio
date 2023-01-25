@@ -2,7 +2,7 @@
 title: Why Socialism?
 author: Albert Einstein
 
-date: "1949-05-01"
+date: '1949-05-01'
 
 tags: [socialism, politics]
 categories: [blog-posts]

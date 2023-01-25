@@ -24,8 +24,8 @@ After that, add the module to your project's `config.yaml`.
 
 ```yaml
 module:
-  imports:
-    - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
+    imports:
+        - path: github.com/UtkarshVerma/hugo-modules/svg-icon-system
 ```
 
 Once that's done, you can go ahead and insert SVGs anywhere in your website using the `svg` partial as shown.
@@ -73,12 +73,12 @@ Each SVG is injected in the HTML source with two CSS classes, `icon` and another
 ```css
 /* Recommended. Applies to all SVGs. */
 .icon {
-  height: 1em;
-  width: 1em;
+    height: 1em;
+    width: 1em;
 }
 
 /* Specifically style 'fas fa-star' */
 .star.icon {
-  fill: yellow;
+    fill: yellow;
 }
 ```

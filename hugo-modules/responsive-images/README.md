@@ -18,14 +18,14 @@ If we only use plain HTML, we have to use the following markup.
 
 ```html
 <picture>
-  <!-- Use when width >= 1000px -->
-  <source srcset="baby.jpg" media="(min-width: 1000px)" />
+    <!-- Use when width >= 1000px -->
+    <source srcset="baby.jpg" media="(min-width: 1000px)" />
 
-  <!-- Use when 600px <= width < 1000px -->
-  <source srcset="baby-medium.jpg" media="(min-width: 600px)" />
+    <!-- Use when 600px <= width < 1000px -->
+    <source srcset="baby-medium.jpg" media="(min-width: 600px)" />
 
-  <!-- Use when width < 600px -->
-  <img src="baby-small.jpg" alt="Baby Sleeping" />
+    <!-- Use when width < 600px -->
+    <img src="baby-small.jpg" alt="Baby Sleeping" />
 </picture>
 ```
 
@@ -39,9 +39,9 @@ It is cumbersome to write this for every image, and even more so if we also add 
 
 The `img` partial takes care of the following things:
 
-- Generating multiple images for the passed image
-- Defining the media rules for the picture tag
-- Converting images to WebP format
+-   Generating multiple images for the passed image
+-   Defining the media rules for the picture tag
+-   Converting images to WebP format
 
 ## Usage
 
@@ -56,8 +56,8 @@ Then add the module to your theme/website's `config.yaml`.
 
 ```yaml
 module:
-  imports:
-    - path: github.com/UtkarshVerma/hugo-modules/responsive-images
+    imports:
+        - path: github.com/UtkarshVerma/hugo-modules/responsive-images
 ```
 
 Once that's done, you can go ahead and use responsive images anywhere in your Hugo website using the `img` partial as shown.
