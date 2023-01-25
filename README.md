@@ -1,6 +1,8 @@
 # academic-folio
 
-WIP: Hugo port of the popular Jekyll theme al-folio
+Work in Progress: Hugo port of the popular Jekyll theme al-folio
+
+## Installation
 
 To Install this theme for your own:
 
@@ -11,3 +13,9 @@ To Install this theme for your own:
 5. Make sure your website is published correctly
 
 > We recommend not to change `main` branch as it would be harder to incorporate upstream changes into your repo.
+
+
+## Features 
+- Customizable Color palettes (see `data/themes`)
+- Blog Section
+- News Section
