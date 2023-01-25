@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{/*  Stylesheet Configuarations */}}
-    {{ $styles := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
+    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
