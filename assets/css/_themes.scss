@@ -6,6 +6,7 @@
     --global-text-color: #{$lightmode-text-color};
     --global-text-color-light: #{$lightmode-text-color-light};
     --global-bg-color: #{$lightmode-bg-color};
+    --global-bg-color2: #{$lightmode-bg-color2};
     --global-theme-color: #{$lightmode-theme-color};
 
     .icon-sun {
@@ -21,6 +22,7 @@ html[class='dark'] {
     --global-text-color: #{$darkmode-text-color};
     --global-text-color-light: #{$darkmode-text-color-light};
     --global-bg-color: #{$darkmode-bg-color};
+    --global-bg-color2: #{$darkmode-bg-color2};
     --global-theme-color: #{$darkmode-theme-color};
 
     .icon-sun {

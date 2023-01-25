@@ -8,6 +8,7 @@ module.exports = {
                 primary: 'var(--global-text-color)',
                 secondary: 'var(--global-text-color-light)',
                 background: 'var(--global-bg-color)',
+                background2: 'var(--global-bg-color2)',
                 theme: 'var(--global-theme-color)',
             },
         },

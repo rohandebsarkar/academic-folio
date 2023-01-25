@@ -1,9 +1,11 @@
 lightmode_text_color: '#28293d'
 lightmode_text_color_light: '#555770'
 lightmode_bg_color: '#ffffff'
-lightmode_theme_color: '#39d98a'
+lightmode_bg_color2: '#f7f7fa'
+lightmode_theme_color: '#06C270'
 
 darkmode_text_color: '#fafafa'
 darkmode_text_color_light: '#8f90a6'
 darkmode_bg_color: '#28293d'
+darkmode_bg_color2: '#1c1c28'
 darkmode_theme_color: '#39d98a'
