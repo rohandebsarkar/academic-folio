@@ -1,20 +1,8 @@
 <head>
-    {{/*  Title  */}}
-    <title>
-        {{ if .IsHome }}
-            {{ .Site.Title }}
-        {{ else }}
-            {{ .Title }} - {{ .Site.Title }}
-        {{ end }}
-    </title>
-
-    {{/*  Meta Information  */}}
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   {{ partial "metadata" . }}
 
     {{/*  Stylesheet Configuarations */}}
     {{ $styles := resources.Get "css/main.css" | toCSS | postCSS }}
-
     {{ if hugo.IsProduction }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ else if .Site.IsServer }}
@@ -23,6 +11,7 @@
 
     {{/*  Stylesheets  */}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    <link rel="canonical" href="{{ .Permalink }}">
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}
