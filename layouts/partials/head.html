@@ -1,20 +1,21 @@
 <head>
+    {{/*  Metadata  */}}
+    {{ partial "metadata" . }}
+
     {{/*  Title  */}}
     <title>
-        {{ if .IsHome }}
+        {{ if eq .Title .Site.Title }}
             {{ .Site.Title }}
         {{ else }}
             {{ .Title }} - {{ .Site.Title }}
         {{ end }}
     </title>
 
-    {{/*  Meta Information  */}}
-    <meta name="description" content="{{ .Site.Params.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{/*  Canonical URL  */}}
+    <link rel="canonical" href="{{ .Permalink }}">
 
     {{/*  Stylesheet Configuarations */}}
     {{ $styles := resources.Get "css/main.css" | toCSS | postCSS }}
-
     {{ if hugo.IsProduction }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
     {{ else if .Site.IsServer }}
