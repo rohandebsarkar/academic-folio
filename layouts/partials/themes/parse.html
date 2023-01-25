@@ -1,7 +1,7 @@
 {{- $scr := .Scratch -}}
 
 {{/* Attempt to load color theme specified by user. */}}
-{{- $theme_index := site.Params.color_theme | default "default" -}}
+{{- $theme_index := site.Params.colorTheme | default "default" -}}
 {{ if (index site.Data.themes $theme_index) }}
     {{ $theme := index site.Data.themes $theme_index }}
     {{- $scr.Set "lightmode_text_color" ($theme.lightmode_text_color) -}}

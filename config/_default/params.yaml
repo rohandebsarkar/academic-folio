@@ -13,7 +13,7 @@ showRecentPosts: true
 recentNews: 5 # number of recent news to show in home page
 showRecentNews: true
 
-social_navbar: true # show social icons on navbar
-social_index: true # show social icons on index page
+socialNavbar: true # show social icons on navbar
+socialIndex: true # show social icons on index page
 
-color_theme: teal
+colorTheme: teal
