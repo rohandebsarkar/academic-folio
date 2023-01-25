@@ -25,11 +25,11 @@
         "name": "{{ $name }}"
     },
     "url": "{{ .Permalink }}",
-    "@type": "{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else }}WebSite{{ end }}",
+    "@type": "{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else if .IsPage }}WebPage{{ else }}WebSite{{ end }}",
     "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
     "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
     "sameAs": {{ $sameAsLinks }},
-    "name": "{{ $name }}",
+    "name": "{{ .Site.Title }}",
     "@context": "https:\/\/schema.org"
 }
 </script>
