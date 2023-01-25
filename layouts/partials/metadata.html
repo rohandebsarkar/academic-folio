@@ -31,10 +31,10 @@
     "author":
     {
         "@type": "Person",
-        "name": "{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}"
+        "name": "{{ $name }}"
     },
     "url": "{{ .Permalink }}",
-    "@type": "WebSite",
+    "@type": "{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else }}WebSite{{ end }}",
     "description": "{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
     "headline": "{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}",
     "sameAs": {{ $sameAsLinks }},
