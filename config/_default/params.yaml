@@ -5,12 +5,14 @@ email: einstein@example.org
 
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
-# these tags would be added as keywords in metadata for website
-tags:
-- hugo
-- hugo-theme
+tags: # these tags would be added as keywords in metadata for website
+- academic-folio
 - academic-website
 - al-folio
+- hugo
+- hugo-theme
+
+maxWidth: 1024px
 
 footerLastUpdated: true
 
