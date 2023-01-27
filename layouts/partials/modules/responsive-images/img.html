@@ -13,4 +13,4 @@
     Hugo doesn't seem to distinguish between image resources well.
     Therefore, pass the image path as another variant.
 */}}
-{{ partialCached "_img" $opts . .img.Key }}
+{{ partialCached "modules/responsive-images/_img" $opts . .img.Key }}
