@@ -6,15 +6,19 @@
         {{- .Set "lightmode_text_color" ($theme.lightmode_text_color) -}}
         {{- .Set "lightmode_text_color_light" ($theme.lightmode_text_color_light) -}}
         {{- .Set "lightmode_bg_color" ($theme.lightmode_bg_color) -}}
-        {{- .Set "lightmode_bg_color2" ($theme.lightmode_bg_color2) -}}
         {{- .Set "lightmode_theme_color" ($theme.lightmode_theme_color) -}}
+        {{- .Set "lightmode_header_color" ($theme.lightmode_theme_color) -}}
+        {{- .Set "lightmode_footer_color" ($theme.lightmode_theme_color) -}}
+        {{- .Set "lightmode_divider_color" ($theme.lightmode_theme_color) -}}
 
         {{- .Set "darkmode_text_color" ($theme.darkmode_text_color) -}}
         {{- .Set "darkmode_text_color_light" ($theme.darkmode_text_color_light) -}}
         {{- .Set "darkmode_bg_color" ($theme.darkmode_bg_color) -}}
-        {{- .Set "darkmode_bg_color2" ($theme.darkmode_bg_color2) -}}
         {{- .Set "darkmode_theme_color" ($theme.darkmode_theme_color) -}}
+        {{- .Set "darkmode_header_color" ($theme.lightmode_theme_color) -}}
+        {{- .Set "darkmode_footer_color" ($theme.lightmode_theme_color) -}}
+        {{- .Set "darkmode_divider_color" ($theme.lightmode_theme_color) -}}
     {{ else }}
-        {{ errorf "The `%s` color theme was not found! Check that the `color_theme` option in `config/_default/params.toml` matches the name of an installed color theme." $themeIndex }}
+        {{ errorf "The `%s` color theme was not found! Check that the `colorTheme` option in `config/_default/params.yaml` matches the name of an installed color theme." $themeIndex }}
     {{ end }}
 {{ end }}
