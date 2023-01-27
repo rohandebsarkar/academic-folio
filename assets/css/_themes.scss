@@ -4,7 +4,7 @@
 
 :root {
     --global-text-color-primary: #{$lightmode-text-color};
-    --global-text-color-secondary: #{$lightmode-text-color-light};
+    --global-text-color-shade: #{$lightmode-text-color-light};
     --global-bg-color: #{$lightmode-bg-color};
     --global-theme-color: #{$lightmode-theme-color};
     --global-header-color: #{$lightmode-header-color};
@@ -24,7 +24,7 @@
 
 html[class='dark'] {
     --global-text-color-primary: #{$darkmode-text-color};
-    --global-text-color-secondary: #{$darkmode-text-color-dark};
+    --global-text-color-shade: #{$darkmode-text-color-dark};
     --global-bg-color: #{$darkmode-bg-color};
     --global-theme-color: #{$darkmode-theme-color};
     --global-header-color: #{$darkmode-header-color};

@@ -6,7 +6,7 @@ module.exports = {
         extend: {
             colors: {
                 primary: 'var(--global-text-color-primary)',
-                secondary: 'var(--global-text-color-secondary)',
+                secondary: 'var(--global-text-color-shade)',
                 background: 'var(--global-bg-color)',
                 theme: 'var(--global-theme-color)',
                 header: 'var(--global-header-color)',
