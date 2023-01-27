@@ -1,11 +1,11 @@
-<header class="fixed inset-x-0 top-0 bg-inherit z-10 border-b border-divider md:h-16">
+<header class="fixed inset-x-0 top-0 text-sm md:text-base bg-inherit z-10 border-b border-divider md:h-16">
     <nav class="h-full mx-auto p-4">
         <ul class="flex flex-nowrap">
             <li>
-                <a class="text-lg text-primary" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+                <a class="text-primary text-base md:text-lg" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
             </li>
             {{ if .Site.Params.socialNavbar }}
-                <li class="mx-4 flex flex-nowrap text-lg">
+                <li class="mx-4 flex flex-nowrap text-base md:text-lg">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
@@ -38,8 +38,8 @@
                                         </ul>
                                     </li>  */}}
                                 {{ else }}
-                                    <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
-                                        <a href="{{ .URL }}" class="text-primary">
+                                    <li>
+                                        <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
                                             {{ .Pre }}{{ .Name }}
                                         </a>
                                     </li>
