@@ -6,8 +6,10 @@
     --global-text-color: #{$lightmode-text-color};
     --global-text-color-light: #{$lightmode-text-color-light};
     --global-bg-color: #{$lightmode-bg-color};
-    --global-bg-color2: #{$lightmode-bg-color2};
     --global-theme-color: #{$lightmode-theme-color};
+    --global-header-color: #{$lightmode-header-color};
+    --global-footer-color: #{$lightmode-footer-color};
+    --global-divider-color: #{$lightmode-divider-color};
 
     #theme-toggle {
         .icon-sun {
@@ -24,8 +26,10 @@ html[class='dark'] {
     --global-text-color: #{$darkmode-text-color};
     --global-text-color-light: #{$darkmode-text-color-light};
     --global-bg-color: #{$darkmode-bg-color};
-    --global-bg-color2: #{$darkmode-bg-color2};
     --global-theme-color: #{$darkmode-theme-color};
+    --global-header-color: #{$darkmode-header-color};
+    --global-footer-color: #{$darkmode-footer-color};
+    --global-divider-color: #{$darkmode-divider-color};
 
     #theme-toggle {
         .icon-sun {
