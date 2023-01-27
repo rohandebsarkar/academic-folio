@@ -1,6 +1,6 @@
 {{ $site := .Site}}
 {{- with .Scratch -}}
-    {{- $themeIndex := site.Params.colorTheme | default "default" -}}
+    {{- $themeIndex := site.Params.colorTheme -}}
     {{ if (index site.Data.themes $themeIndex) }}
         {{ $theme := index site.Data.themes $themeIndex }}
         {{- .Set "lightmode_text_color" ($theme.lightmode_text_color) -}}
