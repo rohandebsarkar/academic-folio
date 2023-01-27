@@ -11,7 +11,7 @@ module.exports = {
                 theme: 'var(--global-theme-color)',
                 header: 'var(--global-header-color)',
                 footer: 'var(--global-footer-color)',
-                divider: 'var(--global-header-color)',
+                divider: 'var(--global-divider-color)',
             },
         },
     },
