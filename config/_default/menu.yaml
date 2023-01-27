@@ -7,10 +7,6 @@ main:
   url: /teaching/
   weight: 2
 
-# - name: Tags
-#   url: /tags/
-#   weight: 3
-
 social:
 - name: email
   url: mailto:email@example.com
@@ -30,9 +26,8 @@ social:
   params:
     icon: fab fa-github
 
-- name: Mastodon
-  url: https://mastodon.social/username
+- name: RSS Feed
+  url: /index.xml
   weight: 4
   params:
-    icon: fab fa-mastodon
-    rel: me
+    icon: fas fa-square-rss
