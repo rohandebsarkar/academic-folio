@@ -7,7 +7,7 @@ lightmode_footer_color: '#ffffff'
 lightmode_divider_color: '#888888'
 
 darkmode_text_color: '#ffffff'
-darkmode_text_color_light: '#777777'
+darkmode_text_color_dark: '#777777'
 darkmode_bg_color: '#000000'
 darkmode_theme_color: '#ffffff'
 darkmode_header_color: '#000000'
