@@ -14,7 +14,7 @@ tags: # these tags would be added as keywords in metadata for website
 
 maxWidth: 1024px
 
-navbarTitle: true # displays the title in the navbar on non home pages 
+navbarTitle: true # displays the title in the navbar on non home pages
 
 footerLastUpdated: true
 
