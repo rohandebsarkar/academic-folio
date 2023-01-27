@@ -16,6 +16,6 @@ To Install this theme for your own:
 
 ## Features
 
-- Customizable Color palettes (see `data/themes`)
-- Blog Section
-- News Section
+-   Customizable Color palettes (see `data/themes`)
+-   Blog Section
+-   News Section

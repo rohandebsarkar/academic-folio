@@ -1,11 +1,13 @@
-<header class="fixed inset-x-0 top-0 z-10 bg-inherit border-b border-inherit md:h-16">
-    <nav class="h-full mx-auto p-4 max-w-[1024px]">
+<header class="fixed inset-x-0 top-0 text-sm md:text-base bg-inherit z-10 border-b border-divider md:h-14">
+    <nav class="h-full mx-auto p-4">
         <ul class="flex flex-nowrap">
-            <li>
-                <a class="text-lg" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
-            </li>
-            {{ if .Site.Params.social_navbar }}
-                <li class="mx-4 flex flex-nowrap text-lg">
+            {{ if (and .Site.Params.navbarTitle (not .IsHome)) }}
+                <li class="mr-4">
+                    <a class="text-primary" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
+                </li>
+            {{ end }}
+            {{ if (and .Site.Params.socialNavbar (not .IsHome)) }}
+                <li class="mr-4 flex flex-nowrap">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
@@ -13,9 +15,9 @@
                 <ul class="md:space-y-0 md:text-center text-right space-y-2">
                     <li class="md:hidden">
                         <button id="hamburger" class="space-y-1.5 align-middle" onclick="hamburger()" title="menu">
-                            <span class="block w-8 h-0.5 rounded"></span>
-                            <span class="block w-8 h-0.5 rounded"></span>
-                            <span class="block w-8 h-0.5 rounded"></span>
+                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
+                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
+                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
                         </button>
                     </li>
                     <li>
@@ -38,22 +40,26 @@
                                         </ul>
                                     </li>  */}}
                                 {{ else }}
-                                    <li class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}">
-                                        <a href="{{ .URL }}">
+                                    <li>
+                                        <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
                                             {{ .Pre }}{{ .Name }}
                                         </a>
                                     </li>
                                 {{ end }}
                             {{ end }}
-                            <li>
-                                <button id="theme-toggle" onclick="toggleTheme()">
-                                    <span class="icon-sun" title="light theme">{{ partial "svg" "fas fa-sun" }}</span>
-                                    <span class="icon-moon" title="dark theme">{{ partial "svg" "fas fa-moon" }}</span>
-                                </button>
-                            </li>
                         </ul>
                     </li>
                 </ul>
+                <li class="ml-4">
+                    <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
+                        <span class="icon-sun" title="light theme">
+                            {{ partial "svg" "fas fa-sun" }}
+                        </span>
+                        <span class="icon-moon" title="dark theme">
+                            {{ partial "svg" "fas fa-moon" }}
+                        </span>
+                    </button>
+                </li>
             </li>
         </ul>
     </nav>

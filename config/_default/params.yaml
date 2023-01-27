@@ -5,11 +5,16 @@ email: einstein@example.org
 
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
-tags:
-- hugo
-- hugo-theme
+tags: # these tags would be added as keywords in metadata for website
+- academic-folio
 - academic-website
 - al-folio
+- hugo
+- hugo-theme
+
+maxWidth: 1024px
+
+navbarTitle: true # displays the title in the navbar on non home pages
 
 footerLastUpdated: true
 
@@ -19,5 +24,7 @@ showRecentPosts: true
 recentNews: 5 # number of recent news to show in home page
 showRecentNews: true
 
-social_navbar: true # show social icons on navbar
-social_index: true # show social icons on index page
+socialNavbar: true # show social icons on navbar
+socialHomePage: true # show social icons on the home page
+
+colorTheme: blue # choose a theme from `data/themes` folder

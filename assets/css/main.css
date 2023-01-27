@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "variables.scss";
+{{ partial "themes/variables" . }}
+
 @import "themes.scss";
 @import "base.scss";

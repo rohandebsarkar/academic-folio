@@ -1,131 +1,35 @@
-body {
-  color: var(--global-text-color);
-  background-color: var(--global-bg-color);
-  border-color: var(--global-divider-color);
-}
-
 a {
-  color: var(--global-theme-color);
+    color: var(--global-theme-color);
 
-  &:hover {
-    color: var(--global-hover-color);
-    text-decoration: underline;
-  }
+    &:hover {
+        color: var(--global-theme-color);
+        text-decoration: underline;
+    }
 }
 
 code {
-  color: var(--global-theme-color);
+    color: var(--global-theme-color);
+
+    vertical-align: bottom;
 }
 
+pre {
+    overflow: auto hidden;
+}
+
+// https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
-  display: inline;
+    display: inline;
 
-  width: 1em;
-  height: 1em;
+    width: 1em;
+    height: 1em;
 
-  fill: var(--global-text-color);
+    fill: currentColor;
 
-  &:hover {
-    fill: var(--global-hover-color);
-  }
-
-  // see https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
-  vertical-align: -0.14em;
-}
-
-nav a {
-  color: var(--global-text-color);
-}
-
-nav .active a {
-  color: var(--global-theme-color);
-}
-
-#hamburger span {
-  background-color: var(--global-text-color);
-}
-
-.section-header {
-  a {
-    color: var(--global-text-color);
-
-    &:hover {
-      color: var(--global-hover-color);
-      text-decoration: underline;
-    }
-  }
-}
-
-.blog-header {
-  color: var(--global-theme-color);
-}
-
-.list {
-  border-color: var(--global-divider-color);
-
-  li {
-    border-color: var(--global-divider-color);
-
-    a {
-      color: var(--global-text-color);
-
-      &:hover {
-        color: var(--global-hover-color);
-        text-decoration: underline;
-      }
-    }
-
-    .post-date {
-      color: var(--global-text-color-light);
-
-      svg {
-        fill: var(--global-text-color-light);
-      }
-
-      a {
-        color: var(--global-text-color-light);
-
-        &:hover {
-          color: var(--global-theme-color);
-          text-decoration: none;
-
-          svg {
-            fill: var(--global-theme-color);
-          }
-        }
-      }
-    }
-  }
-}
-
-.post-header {
-  p {
-    color: var(--global-text-color-light);
-
-    svg {
-      fill: var(--global-text-color-light);
-
-      &:hover {
-        fill: var(--global-text-color-light);
-      }
-    }
-
-    a {
-      color: var(--global-text-color-light);
-
-      &:hover {
-        color: var(--global-theme-color);
-        text-decoration: none;
-
-        svg {
-          fill: var(--global-theme-color);
-        }
-      }
-    }
-  }
+    vertical-align: -0.14em;
 }
 
 // https://katex.org/docs/issues.html#css-customization
 .katex-display {
-  overflow: auto hidden;
+    overflow: auto hidden;
 }

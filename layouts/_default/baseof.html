@@ -4,17 +4,21 @@
     {{ partial "head" . }}
 
     {{/*  Body  */}}
-    <body class="mx-auto max-w-[1024px]">
+    <body class="mx-auto text-primary bg-background">
 
         {{/*  Header  */}}
-        {{ partial "header" . }}
+        <div class="bg-header">
+            {{ partial "header" . }}
+        </div>
 
         {{/*  Main  */}}
-        <main class="mt-16 mb-10 p-4 space-y-4">
+        <main class="mt-14 mb-10 p-4 space-y-4">
             {{ block "main" . }}{{ end }}
         </main>
 
         {{/*  Footer  */}}
-        {{ partial "footer" . }}
+        <div class="bg-footer">
+            {{ partial "footer" . }}
+        </div>
     </body>
 </html>

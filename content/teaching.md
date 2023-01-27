@@ -1,5 +1,5 @@
 ---
-title: "Teaching"
+title: 'Teaching'
 description: "A brief note on Albert Einstein's teaching experiences"
 ---
 

@@ -3,47 +3,41 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$grey-color-light};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$grey-color-dark};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$theme-light-color};
-  --global-hover-color: #{$theme-light-color-hover};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{grey-color-dark};
-  --global-footer-link-color: #{$theme-light-color};
-  --global-distill-app-color: #{$grey-color-dark};
-  --global-divider-color: #{$grey-color};
-  --global-card-bg-color: #{$white-color};
+    --global-text-color-primary: #{$lightmode-text-color};
+    --global-text-color-shade: #{$lightmode-text-color-light};
+    --global-bg-color: #{$lightmode-bg-color};
+    --global-theme-color: #{$lightmode-theme-color};
+    --global-header-color: #{$lightmode-header-color};
+    --global-footer-color: #{$lightmode-footer-color};
+    --global-divider-color: #{$lightmode-divider-color};
 
-  .icon-sun {
-    display: none;
-  }
+    #theme-toggle {
+        .icon-sun {
+            display: none;
+        }
 
-  .icon-moon {
-    display: inline;
-  }
+        .icon-moon {
+            display: inline;
+        }
+    }
 }
 
-html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$theme-dark-color};
-  --global-hover-color: #{$theme-dark-color-hover};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$theme-dark-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #{$grey-color};
-  --global-card-bg-color: #{$black-color};
+html[class='dark'] {
+    --global-text-color-primary: #{$darkmode-text-color};
+    --global-text-color-shade: #{$darkmode-text-color-dark};
+    --global-bg-color: #{$darkmode-bg-color};
+    --global-theme-color: #{$darkmode-theme-color};
+    --global-header-color: #{$darkmode-header-color};
+    --global-footer-color: #{$darkmode-footer-color};
+    --global-divider-color: #{$darkmode-divider-color};
 
-  .icon-sun {
-    display: inline;
-  }
+    #theme-toggle {
+        .icon-sun {
+            display: inline;
+        }
 
-  .icon-moon {
-    display: none;
-  }
+        .icon-moon {
+            display: none;
+        }
+    }
 }
