@@ -25,4 +25,4 @@ showRecentNews: true
 socialNavbar: true # show social icons on navbar
 socialIndex: true # show social icons on index page
 
-colorTheme: teal # choose a theme from `data/themes` folder
+colorTheme: blue # choose a theme from `data/themes` folder
