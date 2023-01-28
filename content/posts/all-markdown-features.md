@@ -179,7 +179,7 @@ Second Term
 ## Emoji
 
 Taken from [here](https://emojipedia.org/heart-hands/)
-🫶
+🫶 :joy:
 
 ## Using Emoji Shortcodes
 
