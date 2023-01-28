@@ -1,18 +1,18 @@
 <header class="fixed inset-x-0 top-0 bg-inherit z-10 border-b border-divider md:h-14">
     <nav class="h-full mx-auto p-4 text-sm md:text-base font-medium">
-        <ul class="flex flex-nowrap">
+        <ul class="flex flex-row flex-nowrap">
             {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
                 <li class="mr-4">
                     <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                 </li>
             {{ end }}
             {{ if .Site.Params.socialNavbar }}
-                <li class="mr-4 flex flex-nowrap">
+                <li class="mr-4">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
             <li class="ml-auto">
-                <ul class="md:space-y-0 md:text-center text-right space-y-2">
+                <ul class="flex flex-col md:space-y-0 md:text-center text-right">
                     <li class="md:hidden">
                         <button id="hamburger" class="space-y-1.5 align-middle" onclick="hamburger()" title="menu">
                             <span class="bg-primary block w-8 h-0.5 rounded"></span>
@@ -21,7 +21,7 @@
                         </button>
                     </li>
                     <li>
-                        <ul id="hamburger-menu" class="hidden md:flex md:flex-nowrap md:space-x-8 md:space-y-0 space-y-4">
+                        <ul id="hamburger-menu" class="hidden md:flex md:flex-row md:flex-nowrap md:space-x-8 md:space-y-0 md:mt-0 mt-4 space-y-4">
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.main }}
                                 {{ if .HasChildren }}
@@ -47,19 +47,19 @@
                                     </li>
                                 {{ end }}
                             {{ end }}
+                            <li>
+                                <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
+                                    <span class="icon-sun" title="light theme">
+                                        {{ partial "svg" "fas fa-sun" }}
+                                    </span>
+                                    <span class="icon-moon" title="dark theme">
+                                        {{ partial "svg" "fas fa-moon" }}
+                                    </span>
+                                </button>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                <li class="ml-8">
-                    <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
-                        <span class="icon-sun" title="light theme">
-                            {{ partial "svg" "fas fa-sun" }}
-                        </span>
-                        <span class="icon-moon" title="dark theme">
-                            {{ partial "svg" "fas fa-moon" }}
-                        </span>
-                    </button>
-                </li>
             </li>
         </ul>
     </nav>
