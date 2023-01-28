@@ -6,7 +6,7 @@
                     <a class="text-primary" href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }}</strong></a>
                 </li>
             {{ end }}
-            {{ if (and .Site.Params.socialNavbar (not .IsHome)) }}
+            {{ if .Site.Params.socialNavbar }}
                 <li class="mr-4 flex flex-nowrap">
                     {{ partial "social" . }}
                 </li>
@@ -50,7 +50,7 @@
                         </ul>
                     </li>
                 </ul>
-                <li class="ml-4">
+                <li class="ml-8">
                     <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
                         <span class="icon-sun" title="light theme">
                             {{ partial "svg" "fas fa-sun" }}

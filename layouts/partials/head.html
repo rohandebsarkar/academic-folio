@@ -15,7 +15,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{/*  Stylesheet Configuarations */}}
-    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
+    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.scss" . | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}

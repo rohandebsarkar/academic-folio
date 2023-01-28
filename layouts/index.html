@@ -15,12 +15,14 @@
             </h2>
         {{ end }}
 
-        <div class="md:float-right md:max-w-[25%] md:ml-4 text-center">
+        <div class="md:float-right md:max-w-[25%] md:ml-4 text-center space-y-2">
             {{ with resources.Get "img/prof_pic.jpg" }}
                 {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
             {{ end }}
             {{ with .Site.Params.email }}
-                {{ partial "scripts/cloakemail" . }}
+                <p>
+                    {{ partial "scripts/cloakemail" . }}
+                </p>
             {{ end }}
         </div>
 
