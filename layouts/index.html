@@ -1,16 +1,16 @@
 {{ define "main" }}
     <article class="space-y-4">
-        <h1 class="text-4xl -mb-2">
+        <h1 class="text-4xl -mb-2 font-medium">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
-                <strong>{{ .Site.Params.firstName }}</strong>
+                <span class="font-bold">{{ .Site.Params.firstName }}</span>
                 {{ .Site.Params.lastName }}
             {{ else }}
-                <strong>{{ .Site.Title }}</strong>
+                {{ .Site.Title }}
             {{ end }}
         </h1>
 
         {{ with .Site.Params.description }}
-            <h2>
+            <h2 class="font-medium">
                 {{ . }}
             </h2>
         {{ end }}
@@ -20,7 +20,7 @@
                 {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
             {{ end }}
             {{ with .Site.Params.email }}
-                <p>
+                <p class="font-medium">
                     {{ partial "scripts/cloakemail" . }}
                 </p>
             {{ end }}
