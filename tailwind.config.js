@@ -35,7 +35,7 @@ module.exports = {
                         '--tw-prose-td-borders': theme('colors.secondary'),
                     },
                 },
-            })
+            }),
         },
     },
     plugins: [
