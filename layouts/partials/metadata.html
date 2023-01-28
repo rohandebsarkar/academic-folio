@@ -17,7 +17,7 @@
 />
 
 {{ if (eq .RelPermalink "/404.html") }}
-    <meta http-equiv="refresh" content="10; url={{ .Site.BaseURL }}">
+    <meta http-equiv="refresh" content="10; url={{ .Site.BaseURL }}" />
 {{ end }}
 
 {{ template "_internal/opengraph.html" . }}

@@ -15,7 +15,10 @@
             </h2>
         {{ end }}
 
-        <div class="md:float-right md:max-w-[25%] md:ml-4 text-center space-y-2">
+
+        <div
+            class="md:float-right md:max-w-[25%] md:ml-4 text-center space-y-2"
+        >
             {{ with resources.Get "img/prof_pic.jpg" }}
                 {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
             {{ end }}
@@ -35,14 +38,20 @@
 
         <div class="space-y-2">
             <h3 class=" text-2xl -mb-2">
-                <a href="/posts/" class="text-primary font-semibold no-underline">Recent Posts</a>
+                <a
+                    href="/posts/"
+                    class="text-primary font-semibold no-underline"
+                    >Recent Posts</a
+                >
             </h3>
             {{ partial "posts/recents" . }}
         </div>
 
         <div class="space-y-2">
             <h3 class="text-2xl -mb-2">
-                <a href="/news/" class="text-primary font-semibold no-underline">Recent News</a>
+                <a href="/news/" class="text-primary font-semibold no-underline"
+                    >Recent News</a
+                >
             </h3>
             {{ partial "news/recents" . }}
         </div>

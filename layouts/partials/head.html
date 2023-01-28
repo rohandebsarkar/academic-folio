@@ -15,7 +15,7 @@
     {{/* Canonical URL */}}
     <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{/*  Stylesheet Configuarations */}}
+    {{/* Stylesheet Configuarations */}}
     {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.scss" . | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
@@ -26,12 +26,12 @@
 
     {{/* Stylesheets */}}
     {{ partial "styles/layout" . }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}
 
-    {{/*  Scripts  */}}
+    {{/* Scripts */}}
     {{ partial "scripts/theme" . }}
     {{ if .Params.math }}
         {{ partial "scripts/katex" . }}
