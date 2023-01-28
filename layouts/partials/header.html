@@ -3,7 +3,7 @@
         <ul class="flex flex-nowrap">
             {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
                 <li class="mr-4">
-                    <a class="text-primary font-bold" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                 </li>
             {{ end }}
             {{ if .Site.Params.socialNavbar }}
@@ -41,7 +41,7 @@
                                     </li>  */}}
                                 {{ else }}
                                     <li>
-                                        <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
+                                        <a href="{{ .URL }}" class="no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
                                             {{ .Pre }}{{ .Name }}
                                         </a>
                                     </li>
