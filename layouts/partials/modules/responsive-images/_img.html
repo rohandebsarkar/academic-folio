@@ -1,36 +1,36 @@
 {{ with .img }}
-  <picture>
-    {{ $opts := dict
-      "img" $.img
-      "quality" $.quality
-      "webpHint" $.webpHint
-    }}
+    <picture>
+        {{ $opts := dict
+            "img" $.img
+            "quality" $.quality
+            "webpHint" $.webpHint
+        }}
 
-    {{/* For each breakpoint, convert image to WebP and resize according to `$widths` */}}
-    {{ range $i, $v := $.breakpoints }}
-      {{ $width := index $.widths (add $i 1) | default -1 }}
-      {{ $opts = dict "breakpoint" $v "width" $width | merge $opts }}
-      {{ partialCached "modules/responsive-images/__img" $opts $.img.Key $opts }}
-    {{ end }}
+        {{/* For each breakpoint, convert image to WebP and resize according to `$widths` */}}
+        {{ range $i, $v := $.breakpoints }}
+            {{ $width := index $.widths (add $i 1) | default -1 }}
+            {{ $opts = dict "breakpoint" $v "width" $width | merge $opts }}
+            {{ partialCached "modules/responsive-images/__img" $opts $.img.Key $opts }}
+        {{ end }}
 
-    {{/* Handle the smallest breakpoint */}}
-    {{ $width := index $.widths 0 }}
-    {{ $width = cond (lt $.img.Width $width) -1 $width }}
-    {{ $opts = dict "breakpoint" nil "width" $width | merge $opts }}
-    {{ partialCached "modules/responsive-images/__img" $opts $.img.Key $opts }}
+        {{/* Handle the smallest breakpoint */}}
+        {{ $width := index $.widths 0 }}
+        {{ $width = cond (lt $.img.Width $width) -1 $width }}
+        {{ $opts = dict "breakpoint" nil "width" $width | merge $opts }}
+        {{ partialCached "modules/responsive-images/__img" $opts $.img.Key $opts }}
 
-    {{/* Original, unresized image as fallback */}}
-    {{ $attributes := "" }}
-    {{ range $i, $v := slice "class" "alt" "loading" "sizes" }}
-      {{ with index $ . }}
-        {{ $attributes = printf `%s %s="%s"` $attributes $v . }}
-      {{ end }}
-    {{ end }}
-    <img
-      src="{{ .RelPermalink }}"
-      height="{{ .Height }}"
-      width="{{ .Width }}"
-      {{ $attributes|safeHTMLAttr }}
-    />
-  </picture>
+        {{/* Original, unresized image as fallback */}}
+        {{ $attributes := "" }}
+        {{ range $i, $v := slice "class" "alt" "loading" "sizes" }}
+            {{ with index $ . }}
+                {{ $attributes = printf `%s %s="%s"` $attributes $v . }}
+            {{ end }}
+        {{ end }}
+        <img
+            src="{{ .RelPermalink }}"
+            height="{{ .Height }}"
+            width="{{ .Width }}"
+            {{ $attributes|safeHTMLAttr }}
+        />
+    </picture>
 {{ end }}

@@ -1,14 +1,16 @@
 <footer
-  class="fixed inset-x-0 bottom-0 p-2 bg-inherit text-center text-xs md:text-sm border-t border-divider md:h-10"
+    class="fixed inset-x-0 bottom-0 p-2 bg-inherit text-center text-xs md:text-sm border-t border-divider md:h-10"
 >
-  {{ with .Site.Copyright }}
-    {{ . }}
-  {{ end }}
-  &bull; Powered by <a href="https://gohugo.io">Hugo</a> with
-  <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a>
-  theme
-  {{ if .Site.Params.footerLastUpdated }}
-    &bull; Last updated:
-    {{ now.Format "02 Jan 2006" }}
-  {{ end }}
+    {{ with .Site.Copyright }}
+        {{ . }}
+    {{ end }}
+    &bull; Powered by <a href="https://gohugo.io">Hugo</a> with
+    <a href="https://github.com/rohandebsarkar/academic-folio"
+        >Academic Folio</a
+    >
+    theme
+    {{ if .Site.Params.footerLastUpdated }}
+        &bull; Last updated:
+        {{ now.Format "02 Jan 2006" }}
+    {{ end }}
 </footer>

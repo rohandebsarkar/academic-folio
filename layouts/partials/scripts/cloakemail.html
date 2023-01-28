@@ -8,18 +8,18 @@
 {{/* Reverse username */}}
 {{- $userReversed := slice -}}
 {{- range seq (len $user) -}}
-  {{- $userReversed = $userReversed | append (index $user (sub (len $user) .)) }}
+    {{- $userReversed = $userReversed | append (index $user (sub (len $user) .)) }}
 {{- end -}}
 
 {{/* Reverse domain */}}
 {{- $domainReversed := slice -}}
 {{- range seq (len $domain) -}}
-  {{- $domainReversed = $domainReversed | append (index $domain (sub (len $domain) .)) }}
+    {{- $domainReversed = $domainReversed | append (index $domain (sub (len $domain) .)) }}
 {{- end -}}
 
 
 <span
-  class="e-mail font-mono"
-  data-user="{{ delimit $userReversed "" }}"
-  data-domain="{{ delimit $domainReversed "" }}"
+    class="e-mail font-mono"
+    data-user="{{ delimit $userReversed "" }}"
+    data-domain="{{ delimit $domainReversed "" }}"
 ></span>

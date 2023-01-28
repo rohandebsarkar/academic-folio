@@ -1,55 +1,58 @@
 <ul class="list border-t border-dashed border-divider">
-  {{ range .Pages }}
-    <li class="py-4 space-y-2 border-b border-dashed border-divider">
-      <p class="text-sm font-mono">
-        {{ with .Date }}
-          {{ .Format "January 2, 2006" }}
-        {{ end }}
-        {{ with .Page.Params.author }}
-          &nbsp; &bull; &nbsp;
-          {{ . }}
-        {{ end }}
-      </p>
+    {{ range .Pages }}
+        <li class="py-4 space-y-2 border-b border-dashed border-divider">
+            <p class="text-sm font-mono">
+                {{ with .Date }}
+                    {{ .Format "January 2, 2006" }}
+                {{ end }}
+                {{ with .Page.Params.author }}
+                    &nbsp; &bull; &nbsp;
+                    {{ . }}
+                {{ end }}
+            </p>
 
-      <span>
-        <h3>
-          <a
-            class="text-2xl font-medium text-primary"
-            href="{{ .RelPermalink }}"
-          >
-            {{ .Title }}
-          </a>
-        </h3>
+            <span>
+                <h3>
+                    <a
+                        class="text-2xl font-medium text-primary"
+                        href="{{ .RelPermalink }}"
+                    >
+                        {{ .Title }}
+                    </a>
+                </h3>
 
-        <p>{{ .Params.Description }}</p>
-      </span>
+                <p>{{ .Params.Description }}</p>
+            </span>
 
-      {{ $currentPage := . }}
-      <p class="text-sm italic text-secondary">
-        {{ with .Page.ReadingTime }}
-          <span
-            >{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span
-          >
-        {{ end }}
-        {{ with .Page.Params.tags }}
-          &nbsp; &bull; &nbsp;
-          {{ range . }}
-            <a href="/tags/{{ . }}" class="text-secondary hover:no-underline"
-              >{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a
-            >
-          {{ end }}
-        {{ end }}
-        {{ with .Page.Params.categories }}
-          &nbsp; &bull; &nbsp;
-          {{ range . }}
-            <a
-              href="/categories/{{ . }}"
-              class="text-secondary hover:no-underline"
-              >{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a
-            >
-          {{ end }}
-        {{ end }}
-      </p>
-    </li>
-  {{ end }}
+            {{ $currentPage := . }}
+            <p class="text-sm italic text-secondary">
+                {{ with .Page.ReadingTime }}
+                    <span
+                        >{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min
+                        read</span
+                    >
+                {{ end }}
+                {{ with .Page.Params.tags }}
+                    &nbsp; &bull; &nbsp;
+                    {{ range . }}
+                        <a
+                            href="/tags/{{ . }}"
+                            class="text-secondary hover:no-underline"
+                            >{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a
+                        >
+                    {{ end }}
+                {{ end }}
+                {{ with .Page.Params.categories }}
+                    &nbsp; &bull; &nbsp;
+                    {{ range . }}
+                        <a
+                            href="/categories/{{ . }}"
+                            class="text-secondary hover:no-underline"
+                            >{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a
+                        >
+                    {{ end }}
+                {{ end }}
+            </p>
+        </li>
+    {{ end }}
 </ul>

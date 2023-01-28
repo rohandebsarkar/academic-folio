@@ -2,17 +2,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta
-  name="author"
-  content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}"
+    name="author"
+    content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}"
 />
 <meta name="description" content="{{ .Site.Params.description }}" />
 <meta
-  name="keywords"
-  content="{{ with .Params.tags }}
-    {{ delimit . ", " }}
-  {{ else }}
-    {{ delimit .Site.Params.tags ", " }}
-  {{ end }}
+    name="keywords"
+    content="{{ with .Params.tags }}
+        {{ delimit . ", " }}
+    {{ else }}
+        {{ delimit .Site.Params.tags ", " }}
+    {{ end }}
   "
 />
 
@@ -22,7 +22,7 @@
 
 {{ $sameAsLinks := "]" }}
 {{ range .Site.Menus.social }}
-  {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
+    {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
 {{ end }}
 {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s%s" "[" | printf "%s" }}
 

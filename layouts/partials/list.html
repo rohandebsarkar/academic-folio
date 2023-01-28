@@ -1,18 +1,18 @@
 <ul class="list border-t border-dashed">
-  {{ range .Pages }}
-    <li class="py-4 space-y-2 border-b border-dashed">
-      <span>
-        <h3>
-          <a
-            class="text-2xl font-medium text-primary"
-            href="{{ .RelPermalink }}"
-            >{{ .Title }}</a
-          >
-        </h3>
-        <p>
-          {{ .Params.Description }}
-        </p>
-      </span>
-    </li>
-  {{ end }}
+    {{ range .Pages }}
+        <li class="py-4 space-y-2 border-b border-dashed">
+            <span>
+                <h3>
+                    <a
+                        class="text-2xl font-medium text-primary"
+                        href="{{ .RelPermalink }}"
+                        >{{ .Title }}</a
+                    >
+                </h3>
+                <p>
+                    {{ .Params.Description }}
+                </p>
+            </span>
+        </li>
+    {{ end }}
 </ul>

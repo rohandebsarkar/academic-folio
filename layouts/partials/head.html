@@ -1,44 +1,44 @@
 <head>
-  {{/* Metadata */}}
-  {{ partial "metadata" . }}
+    {{/* Metadata */}}
+    {{ partial "metadata" . }}
 
-  {{/* Title */}}
-  <title>
-    {{ if eq .Title .Site.Title }}
-      {{ .Site.Title }}
-    {{ else }}
-      {{ .Title }} -
-      {{ .Site.Title }}
+    {{/* Title */}}
+    <title>
+        {{ if eq .Title .Site.Title }}
+            {{ .Site.Title }}
+        {{ else }}
+            {{ .Title }} -
+            {{ .Site.Title }}
+        {{ end }}
+    </title>
+
+    {{/* Canonical URL */}}
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    {{/* Stylesheet Configuarations */}}
+    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
+
+    {{ if hugo.IsProduction }}
+        {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+    {{ else if .Site.IsServer }}
+        {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
-  </title>
 
-  {{/* Canonical URL */}}
-  <link rel="canonical" href="{{ .Permalink }}" />
+    {{/* Stylesheets */}}
+    {{ partial "styles/layout" . }}
+    <link
+        rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+    />
+    {{ if .Site.Params.email }}
+        {{ partial "styles/cloakemail" . }}
+    {{ end }}
 
-  {{/* Stylesheet Configuarations */}}
-  {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
-
-  {{ if hugo.IsProduction }}
-    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-  {{ else if .Site.IsServer }}
-    {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
-  {{ end }}
-
-  {{/* Stylesheets */}}
-  {{ partial "styles/layout" . }}
-  <link
-    rel="stylesheet"
-    href="{{ $styles.RelPermalink }}"
-    integrity="{{ $styles.Data.Integrity }}"
-  />
-  {{ if .Site.Params.email }}
-    {{ partial "styles/cloakemail" . }}
-  {{ end }}
-
-  {{/* Scripts */}}
-  {{ partial "scripts/hamburger" . }}
-  {{ partial "scripts/theme" . }}
-  {{ if .Params.math }}
-    {{ partial "scripts/katex" . }}
-  {{ end }}
+    {{/* Scripts */}}
+    {{ partial "scripts/hamburger" . }}
+    {{ partial "scripts/theme" . }}
+    {{ if .Params.math }}
+        {{ partial "scripts/katex" . }}
+    {{ end }}
 </head>
