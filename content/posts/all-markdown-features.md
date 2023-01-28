@@ -20,6 +20,8 @@ categories: [blog]
 
 ###### Heading level 6
 
+Normal Text
+
 ## Alternate Syntax
 
 # Heading level 1
@@ -98,6 +100,97 @@ At the command prompt, type `nano`.
 
 ---
 
-https://www.markdownguide.org/tools/hugo/
+[Reference 1](https://www.markdownguide.org/tools/hugo/)
 
-https://www.markdownguide.org/basic-syntax/
+[Reference 2](https://www.markdownguide.org/basic-syntax/)
+
+## Markdown Extended Syntax
+
+[Reference](https://www.markdownguide.org/extended-syntax/)
+
+## Tables
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+| Syntax    | Description |   Test Text |
+| :-------- | :---------: | ----------: |
+| Header    |    Title    | Here's this |
+| Paragraph |    Text     |    And more |
+
+## Fenced Code Blocks
+
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+## Syntax Highlighting
+
+```json
+{
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25
+}
+```
+
+## Footnotes
+
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+
+## My Great Heading {#custom-id}
+
+Linking to [Heading IDs](#custom-id)
+
+## Definition List
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+## Strikethrough
+
+~~The world is flat.~~ We now know that the world is round.
+
+## Task List
+
+-   [x] Write the press release
+-   [ ] Update the website
+-   [ ] Contact the media
+
+## Emoji
+
+Taken from [here](https://emojipedia.org/heart-hands/)
+🫶 :joy:
+
+## Using Emoji Shortcodes
+
+Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
+
+## Automatic URL Linking
+
+http://www.example.com
+
+## Disabling Automatic URL Linking
+
+`http://www.example.com`

@@ -1,22 +1,3 @@
-a {
-    color: var(--global-theme-color);
-
-    &:hover {
-        color: var(--global-theme-color);
-        text-decoration: underline;
-    }
-}
-
-code {
-    color: var(--global-theme-color);
-
-    vertical-align: bottom;
-}
-
-pre {
-    overflow: auto hidden;
-}
-
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
     display: inline;
