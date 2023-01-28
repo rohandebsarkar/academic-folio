@@ -2,7 +2,7 @@
 title: Why Socialism?
 author: Albert Einstein
 
-date: '1949-05-01'
+date: "1949-05-01"
 
 tags: [socialism, politics]
 categories: [blog-posts]
@@ -21,13 +21,13 @@ _Source: Monthly Review, May 1949_
 ```html
 {{ define "main" }}
 <article class="space-y-4">
-    <h1 class="text-4xl -mb-2">{{ .Page.Title }}</h1>
+  <h1 class="text-4xl -mb-2">{{ .Page.Title }}</h1>
 
-    {{ with .Page.Params.description }}
-    <h2>{{ . }}</h2>
-    {{ end }}
+  {{ with .Page.Params.description }}
+  <h2>{{ . }}</h2>
+  {{ end }}
 
-    <div class="space-y-4">{{ .Content }}</div>
+  <div class="space-y-4">{{ .Content }}</div>
 </article>
 {{ end }}
 ```

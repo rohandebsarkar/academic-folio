@@ -1,16 +1,15 @@
 {{/* Set defaults */}}
 {{ $opts := . | merge (dict
-    "alt" ""
-    "class" ""
-    "loading" ""
-    "webpHint" "photo"
-    "breakpoints" (slice 600 768 1024 1280 1536)
-    "widths" (slice 600 768 1024 1280 1536 -1)
-    "quality" 75)
+  "alt" ""
+  "class" ""
+  "loading" ""
+  "webpHint" "photo"
+  "breakpoints" (slice 600 768 1024 1280 1536)
+  "widths" (slice 600 768 1024 1280 1536 -1)
+  "quality" 75)
 }}
 
-{{/*
-    Hugo doesn't seem to distinguish between image resources well.
-    Therefore, pass the image path as another variant.
+{{/* Hugo doesn't seem to distinguish between image resources well.
+  Therefore, pass the image path as another variant.
 */}}
 {{ partialCached "modules/responsive-images/_img" $opts . .img.Key }}

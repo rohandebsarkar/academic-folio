@@ -1,35 +1,35 @@
 a {
-    color: var(--global-theme-color);
+  color: var(--global-theme-color);
 
-    &:hover {
-        color: var(--global-theme-color);
-        text-decoration: underline;
-    }
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
 }
 
 code {
-    color: var(--global-theme-color);
+  color: var(--global-theme-color);
 
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 pre {
-    overflow: auto hidden;
+  overflow: auto hidden;
 }
 
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
-    display: inline;
+  display: inline;
 
-    width: 1em;
-    height: 1em;
+  width: 1em;
+  height: 1em;
 
-    fill: currentColor;
+  fill: currentColor;
 
-    vertical-align: -0.14em;
+  vertical-align: -0.14em;
 }
 
 // https://katex.org/docs/issues.html#css-customization
 .katex-display {
-    overflow: auto hidden;
+  overflow: auto hidden;
 }

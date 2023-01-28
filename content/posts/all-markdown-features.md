@@ -2,7 +2,7 @@
 title: All Markdown features
 author: Amir Pourmand
 
-date: '2022-04-18T21:10:00+07:00'
+date: "2022-04-18T21:10:00+07:00"
 
 tags: [markdown, features]
 categories: [blog]
@@ -56,10 +56,10 @@ This text is **_really important_**.
 
 > #### The quarterly results look great!
 >
-> -   Revenue was off the chart.
-> -   Profits were higher than ever.
+> - Revenue was off the chart.
+> - Profits were higher than ever.
 >
->     _Everything_ is going according to **plan**.
+>   _Everything_ is going according to **plan**.
 
 ## Ordered Lists
 
@@ -70,10 +70,10 @@ This text is **_really important_**.
 
 ## Unordered Lists
 
--   First item
--   Second item
--   Third item
--   Fourth item
+- First item
+- Second item
+- Third item
+- Fourth item
 
 ## Code Blocks
 

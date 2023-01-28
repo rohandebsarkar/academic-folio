@@ -4,13 +4,12 @@
 {{- partial "themes/parse" . -}}
 
 $lightmode-text-color: {{ $scr.Get "lightmode_text_color" }} !default;
-$lightmode-text-color-light: {{ $scr.Get "lightmode_text_color_light" }} !default;
-$lightmode-bg-color: {{ $scr.Get "lightmode_bg_color" }} !default;
+$lightmode-text-color-light: {{ $scr.Get "lightmode_text_color_light" }}
+!default; $lightmode-bg-color: {{ $scr.Get "lightmode_bg_color" }} !default;
 $lightmode-theme-color: {{ $scr.Get "lightmode_theme_color" }} !default;
 $lightmode-header-color: {{ $scr.Get "lightmode_header_color" }} !default;
 $lightmode-footer-color: {{ $scr.Get "lightmode_footer_color" }} !default;
 $lightmode-divider-color: {{ $scr.Get "lightmode_divider_color" }} !default;
-
 $darkmode-text-color: {{ $scr.Get "darkmode_text_color" }} !default;
 $darkmode-text-color-dark: {{ $scr.Get "darkmode_text_color_dark" }} !default;
 $darkmode-bg-color: {{ $scr.Get "darkmode_bg_color" }} !default;

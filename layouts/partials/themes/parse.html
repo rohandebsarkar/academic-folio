@@ -1,24 +1,24 @@
-{{ $site := .Site}}
+{{ $site := .Site }}
 {{- with .Scratch -}}
-    {{- $themeIndex := site.Params.colorTheme -}}
-    {{ if (index site.Data.themes $themeIndex) }}
-        {{ $theme := index site.Data.themes $themeIndex }}
-        {{- .Set "lightmode_text_color" ($theme.lightmode_text_color) -}}
-        {{- .Set "lightmode_text_color_light" ($theme.lightmode_text_color_light) -}}
-        {{- .Set "lightmode_bg_color" ($theme.lightmode_bg_color) -}}
-        {{- .Set "lightmode_theme_color" ($theme.lightmode_theme_color) -}}
-        {{- .Set "lightmode_header_color" ($theme.lightmode_header_color) -}}
-        {{- .Set "lightmode_footer_color" ($theme.lightmode_footer_color) -}}
-        {{- .Set "lightmode_divider_color" ($theme.lightmode_divider_color) -}}
+  {{- $themeIndex := site.Params.colorTheme -}}
+  {{ if (index site.Data.themes $themeIndex) }}
+    {{ $theme := index site.Data.themes $themeIndex }}
+    {{- .Set "lightmode_text_color" ($theme.lightmode_text_color) -}}
+    {{- .Set "lightmode_text_color_light" ($theme.lightmode_text_color_light) -}}
+    {{- .Set "lightmode_bg_color" ($theme.lightmode_bg_color) -}}
+    {{- .Set "lightmode_theme_color" ($theme.lightmode_theme_color) -}}
+    {{- .Set "lightmode_header_color" ($theme.lightmode_header_color) -}}
+    {{- .Set "lightmode_footer_color" ($theme.lightmode_footer_color) -}}
+    {{- .Set "lightmode_divider_color" ($theme.lightmode_divider_color) -}}
 
-        {{- .Set "darkmode_text_color" ($theme.darkmode_text_color) -}}
-        {{- .Set "darkmode_text_color_dark" ($theme.darkmode_text_color_dark) -}}
-        {{- .Set "darkmode_bg_color" ($theme.darkmode_bg_color) -}}
-        {{- .Set "darkmode_theme_color" ($theme.darkmode_theme_color) -}}
-        {{- .Set "darkmode_header_color" ($theme.darkmode_header_color) -}}
-        {{- .Set "darkmode_footer_color" ($theme.darkmode_footer_color) -}}
-        {{- .Set "darkmode_divider_color" ($theme.darkmode_divider_color) -}}
-    {{ else }}
-        {{ errorf "The `%s` color theme was not found! Check that the `colorTheme` option in `config/_default/params.yaml` matches the name of an installed color theme." $themeIndex }}
-    {{ end }}
+    {{- .Set "darkmode_text_color" ($theme.darkmode_text_color) -}}
+    {{- .Set "darkmode_text_color_dark" ($theme.darkmode_text_color_dark) -}}
+    {{- .Set "darkmode_bg_color" ($theme.darkmode_bg_color) -}}
+    {{- .Set "darkmode_theme_color" ($theme.darkmode_theme_color) -}}
+    {{- .Set "darkmode_header_color" ($theme.darkmode_header_color) -}}
+    {{- .Set "darkmode_footer_color" ($theme.darkmode_footer_color) -}}
+    {{- .Set "darkmode_divider_color" ($theme.darkmode_divider_color) -}}
+  {{ else }}
+    {{ errorf "The `%s` color theme was not found! Check that the `colorTheme` option in `config/_default/params.yaml` matches the name of an installed color theme." $themeIndex }}
+  {{ end }}
 {{ end }}
