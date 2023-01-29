@@ -16,6 +16,24 @@ module.exports = {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
+                        h2: {
+                            'margin-top': 0,
+                        },
+                        h5: {
+                            'font-weight': 500,
+                        },
+                        'ul li input': {
+                            margin: 0,
+                        },
+                        'h1, h2, h3, h4, h5, h6, sup, .footnotes ol li': {
+                            'scroll-margin-top': '5rem',
+                        },
+                        'code::before': {
+                            content: '',
+                        },
+                        'code::after': {
+                            content: '',
+                        },
                         'max-width': 'none',
                         '--tw-prose-body': theme('colors.primary'),
                         '--tw-prose-headings': theme('colors.primary'),
