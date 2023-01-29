@@ -13,7 +13,7 @@
 
 {{ template "_internal/schema.html" . }}
 
-{{ $sameAsLinks := "]" }}
+{{/*  {{ $sameAsLinks := "]" }}
 {{ range .Site.Menus.social }}
     {{ $sameAsLinks = printf "%s" $sameAsLinks | printf "%s, %s" (.URL | htmlUnescape ) | printf "%s" }}
 {{ end }}
@@ -36,4 +36,4 @@
     "name": "{{ .Title }}",
     "@context": "https:\/\/schema.org"
 }
-</script>
+</script>  */}}
