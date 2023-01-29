@@ -1,5 +1,5 @@
-<ul class="flex flex-wrap space-x-4 justify-center">
+<ul class="flex flex-row flex-wrap space-x-4 justify-center">
     {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }}
-        <li><a href="/{{ $taxonomyName }}/">{{ $taxonomyName }}</a></li>
+        <li><a href="/{{ $taxonomyName }}/" class="text-theme no-underline hover:underline">{{ $taxonomyName }}</a></li>
     {{ end }}
 </ul>

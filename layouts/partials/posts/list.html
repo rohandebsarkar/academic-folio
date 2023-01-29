@@ -3,39 +3,39 @@
         <li class="py-4 space-y-2 border-b border-dashed border-divider">
             <p class="text-sm font-mono">
                 {{ with .Date }}
-                    {{ .Format "January 2, 2006" }}
+                    {{ .Format "January 2, 2006" }}&nbsp;
                 {{ end }}
                 {{ with .Page.Params.author }}
-                    &nbsp; &bull; &nbsp;
+                    &bull;&nbsp;
                     {{ . }}
                 {{ end }}
             </p>
 
-            <span>
+            <div>
                 <h3>
-                    <a class="text-2xl font-medium text-primary" href="{{ .RelPermalink }}">
+                    <a class="text-2xl font-medium text-primary no-underline" href="{{ .RelPermalink }}">
                         {{ .Title }}
                     </a>
                 </h3>
 
                 <p>{{ .Params.Description }}</p>
-            </span>
+            </div>
 
             {{ $currentPage := . }}
             <p class="text-sm italic text-secondary">
                 {{ with .Page.ReadingTime }}
-                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
+                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
                 {{ end }}
                 {{ with .Page.Params.tags }}
-                    &nbsp; &bull; &nbsp;
+                    &bull;&nbsp;
                     {{ range . }}
-                        <a href="/tags/{{ . }}" class="text-secondary hover:no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
                 {{ with .Page.Params.categories }}
-                    &nbsp; &bull; &nbsp;
+                    &bull;&nbsp;
                     {{ range . }}
-                        <a href="/categories/{{ . }}" class="text-secondary hover:no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
             </p>
