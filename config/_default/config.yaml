@@ -9,7 +9,7 @@ enableRobotsTXT: true
 
 markup:
   highlight:
-    style: dracula  # syntax hilighting style for markdown code blocks
+    style: dracula  # syntax highlighting style for markdown code blocks
                     # choose a style from https://xyproto.github.io/splash/docs/all.html
 
 module:
