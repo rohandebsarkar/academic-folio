@@ -9,6 +9,7 @@ enableRobotsTXT: true
 
 markup:
   highlight:
+    guessSyntax: true
     style: dracula  # syntax highlighting style for markdown code blocks
                     # choose a style from https://xyproto.github.io/splash/docs/all.html
 
