@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }} itemscope itemtype="http://schema.org/{{ if strings.Contains .RelPermalink "/posts/" }}Article{{ else if .IsPage }}WebPage{{ else }}WebSite{{ end }}">
+<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }} itemscope itemtype="http://schema.org/{{ if .IsHome }}WebSite{{ else if .IsPage }}Article{{ else }}WebPage{{ end }}">
     {{/*  Head  */}}
     {{ partial "head" . }}
 
