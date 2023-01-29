@@ -4,12 +4,12 @@
             <li>
                 <ul class="flex flex-row">
                     {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
-                    <li class="mr-4 whitespace-nowrap">
+                    <li class="mr-8 whitespace-nowrap">
                         <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                     </li>
                     {{ end }}
                     {{ if .Site.Params.socialNavbar }}
-                        <li class="ml-auto md:ml-0">
+                        <li class="ml-auto md:ml-0 text-[1.25rem]">
                             {{ partial "social" . }}
                         </li>
                     {{ end }}
