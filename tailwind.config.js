@@ -25,7 +25,7 @@ module.exports = {
                         'ul li input': {
                             margin: 0,
                         },
-                        'sup, .footnotes ol li': {
+                        'h1, h2, h3, h4, h5, h6, sup, .footnotes ol li': {
                             'scroll-margin-top': '5rem',
                         },
                         'code::before': {
