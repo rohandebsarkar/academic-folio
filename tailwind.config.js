@@ -17,22 +17,25 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         h2: {
-                            'margin-top': 0,
+                            'margin-top': '0',
                         },
                         h5: {
-                            'font-weight': 500,
+                            'font-weight': '500',
                         },
                         'ul li input': {
-                            margin: 0,
+                            margin: '0',
                         },
                         'h1, h2, h3, h4, h5, h6, sup, .footnotes ol li': {
                             'scroll-margin-top': '5rem',
                         },
+                        code: {
+                            'font-size': '1rem',
+                        },
                         'code::before': {
-                            content: '',
+                            content: '""',
                         },
                         'code::after': {
-                            content: '',
+                            content: '""',
                         },
                         'max-width': 'none',
                         '--tw-prose-body': theme('colors.primary'),
