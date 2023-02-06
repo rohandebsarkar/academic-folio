@@ -7,7 +7,7 @@
                     <li class="mr-2 whitespace-nowrap">
                         <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                     </li>
-                    <li class="mr-6">
+                    <li class="mr-2">
                         <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
                             <span class="icon-sun" title="light theme">
                                 {{ partial "svg" "fas fa-sun" }}
@@ -17,6 +17,7 @@
                             </span>
                         </button>
                     </li>
+                    <li class="mr-4"><strong>|</strong></li>
                     {{ end }}
                     {{ if .Site.Params.socialNavbar }}
                         <li class="ml-auto md:ml-0 text-[1.25em]">
