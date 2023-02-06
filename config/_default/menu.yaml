@@ -7,6 +7,14 @@ main:
   url: /teaching/
   weight: 2
 
+- name: Biography
+  url: /bio/
+  weight: 3
+
+- name: Curriculum Vitae
+  url: /cv/
+  weight: 4
+
 social:
 - name: email
   url: mailto:email@example.com
