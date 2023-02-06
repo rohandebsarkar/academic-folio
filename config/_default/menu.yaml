@@ -11,9 +11,13 @@ main:
   url: /bio/
   weight: 3
 
-- name: Curriculum Vitae
+- name: CV
   url: /cv/
   weight: 4
+
+- name: Projects
+  url: /projects/
+  weight: 5
 
 social:
 - name: email

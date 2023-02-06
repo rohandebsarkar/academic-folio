@@ -4,8 +4,18 @@
             <li>
                 <ul class="flex flex-row">
                     {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
-                    <li class="mr-8 whitespace-nowrap">
+                    <li class="mr-2 whitespace-nowrap">
                         <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    </li>
+                    <li class="mr-6">
+                        <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
+                            <span class="icon-sun" title="light theme">
+                                {{ partial "svg" "fas fa-sun" }}
+                            </span>
+                            <span class="icon-moon" title="dark theme">
+                                {{ partial "svg" "fas fa-moon" }}
+                            </span>
+                        </button>
                     </li>
                     {{ end }}
                     {{ if .Site.Params.socialNavbar }}
@@ -15,9 +25,9 @@
                     {{ end }}
                 </ul>
             </li>
-            <li class="md:ml-auto md:mt-0 mt-4 md:max-w-[60%]">
+            <li class="md:ml-auto md:mt-0 mt-4 overflow-auto">
                 <ul class="flex flex-row md:space-x-8">
-                    <li class="w-3/4 md:w-fit md:max-w-[90%]">
+                    <li class="md:w-fit">
                         <ul class="flex flex-row flex-nowrap overflow-auto space-x-4 md:space-x-8">
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.main }}
@@ -46,16 +56,7 @@
                             {{ end }}
                         </ul>
                     </li>
-                    <li class="ml-auto">
-                        <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
-                            <span class="icon-sun" title="light theme">
-                                {{ partial "svg" "fas fa-sun" }}
-                            </span>
-                            <span class="icon-moon" title="dark theme">
-                                {{ partial "svg" "fas fa-moon" }}
-                            </span>
-                        </button>
-                    </li>
+
                 </ul>
             </li>
         </ul>
