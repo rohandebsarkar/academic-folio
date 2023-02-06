@@ -28,3 +28,5 @@ socialNavbar: true # show social icons on navbar
 socialHomePage: true # show social icons on the home page
 
 colorTheme: blue # choose a theme from `data/themes` folder
+
+staticFooter: false # true means static footer, false means fixed footer
