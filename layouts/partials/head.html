@@ -1,20 +1,21 @@
 <head>
-    {{/*  Metadata  */}}
+    {{/* Metadata */}}
     {{ partial "metadata" . }}
 
-    {{/*  Title  */}}
+    {{/* Title */}}
     <title>
         {{ if eq .Title .Site.Title }}
             {{ .Site.Title }}
         {{ else }}
-            {{ .Title }} - {{ .Site.Title }}
+            {{ .Title }} -
+            {{ .Site.Title }}
         {{ end }}
     </title>
 
-    {{/*  Canonical URL  */}}
-    <link rel="canonical" href="{{ .Permalink }}">
+    {{/* Canonical URL */}}
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{/*  Stylesheet Configuarations */}}
+    {{/* Stylesheet Configuarations */}}
     {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.scss" . | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
@@ -23,17 +24,17 @@
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
 
-    {{/*  Stylesheets  */}}
+    {{/* Stylesheets */}}
     {{ partial "styles/layout" . }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}
 
-    {{/*  Scripts  */}}
+    {{/* Scripts */}}
     {{ partial "scripts/hamburger" . }}
     {{ partial "scripts/theme" . }}
-    {{ if .Params.math}}
+    {{ if .Params.math }}
         {{ partial "scripts/katex" . }}
     {{ end }}
 </head>
