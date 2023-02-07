@@ -11,7 +11,7 @@ main:
   url: /bio/
   weight: 3
 
-- name: CV
+- name: Ciculum Vitae
   url: /cv/
   weight: 4
 
