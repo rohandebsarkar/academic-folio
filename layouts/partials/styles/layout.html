@@ -1,9 +1,17 @@
 <style>
     body {
-        max-width: {{ .Site.Params.maxWidth }};
+        max-width: {
+             {
+                .Site.Params.maxWidth;
+            }
+        }
     }
 
     header nav {
-        max-width: {{ .Site.Params.maxWidth }};
+        max-width: {
+             {
+                .Site.Params.maxWidth;
+            }
+        }
     }
 </style>

@@ -1,6 +1,2 @@
-{{ $args := dict "icon" . }}
-{{ if reflect.IsMap . }}
-    {{ $args = . }}
-{{ end }}
-
+{{ $args := dict "icon" . }} {{ if reflect.IsMap . }} {{ $args = . }} {{ end }}
 {{ return partialCached "modules/svg-icons/_svg" $args $args }}

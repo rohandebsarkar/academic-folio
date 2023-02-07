@@ -1,58 +1,50 @@
 {{ define "main" }}
-    <article class="space-y-4">
-        <h1 class="text-4xl -mb-2 font-medium">
-            {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
-                <span class="font-bold">{{ .Site.Params.firstName }}</span>
-                {{ .Site.Params.lastName }}
-            {{ else }}
-                {{ .Site.Title }}
-            {{ end }}
-        </h1>
+<article class="space-y-4">
+    <h1 class="text-4xl -mb-2 font-medium">
+        {{ if (or .Site.Params.firstName .Site.Params.middleName
+        .Site.Params.lastName) }}
+        <span class="font-bold">{{ .Site.Params.firstName }}</span>
+        {{ .Site.Params.lastName }} {{ else }} {{ .Site.Title }} {{ end }}
+    </h1>
 
-        {{ with .Site.Params.description }}
-            <h2 class="font-medium">
-                {{ . }}
-            </h2>
+    {{ with .Site.Params.description }}
+    <h2 class="font-medium">{{ . }}</h2>
+    {{ end }}
+
+    <div class="md:float-right md:max-w-[25%] md:ml-4 text-center space-y-2">
+        {{ with resources.Get "img/prof_pic.jpg" }} {{ partial "img" (dict "img"
+        . "class" "rounded" "alt" .RelPermalink) }} {{ end }} {{ with
+        .Site.Params.email }}
+        <p class="font-medium">{{ partial "scripts/cloakemail" . }}</p>
         {{ end }}
+    </div>
 
-        <div class="md:float-right md:max-w-[25%] md:ml-4 text-center space-y-2">
-            {{ with resources.Get "img/prof_pic.jpg" }}
-                {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
-            {{ end }}
-            {{ with .Site.Params.email }}
-                <p class="font-medium">
-                    {{ partial "scripts/cloakemail" . }}
-                </p>
-            {{ end }}
-        </div>
+    {{ with .Content }}
+    <div class="markdown">{{ . }}</div>
+    {{ end }}
 
-        {{ with .Content }}
-            <div class="markdown">
-                {{ . }}
-            </div>
-        {{ end }}
+    <div class="space-y-2">
+        <h3 class="text-2xl -mb-2">
+            <a href="/news/" class="text-primary font-semibold no-underline"
+                >Recent News</a
+            >
+        </h3>
+        {{ partial "news/recents" . }}
+    </div>
 
-        <div class="space-y-2">
-            <h3 class="text-2xl -mb-2">
-                <a href="/news/" class="text-primary font-semibold no-underline">Recent News</a>
-            </h3>
-            {{ partial "news/recents" . }}
-        </div>
+    <div class="space-y-2">
+        <h3 class="text-2xl -mb-2">
+            <a href="/posts/" class="text-primary font-semibold no-underline"
+                >Recent Posts</a
+            >
+        </h3>
+        {{ partial "posts/recents" . }}
+    </div>
 
-        <div class="space-y-2">
-            <h3 class="text-2xl -mb-2">
-                <a href="/posts/" class="text-primary font-semibold no-underline">Recent Posts</a>
-            </h3>
-            {{ partial "posts/recents" . }}
-        </div>
-
-
-        {{ if .Site.Params.socialHomePage }}
-            <div class="pt-4 text-4xl">
-                {{ if .Site.Menus.social }}
-                    {{ partial "social" . }}
-                {{ end }}
-            </div>
-        {{ end  }}
-    </article>
+    {{ if .Site.Params.socialHomePage }}
+    <div class="pt-4 text-4xl">
+        {{ if .Site.Menus.social }} {{ partial "social" . }} {{ end }}
+    </div>
+    {{ end }}
+</article>
 {{ end }}

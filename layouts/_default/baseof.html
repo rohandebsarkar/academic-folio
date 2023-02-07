@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
-    {{/*  Head  */}}
-    {{ partial "head" . }}
-
-    {{/*  Body  */}}
+<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+    {{/* Head */}} {{ partial "head" . }} {{/* Body */}}
     <body class="mx-auto text-primary bg-background">
+        {{/* Header */}}
+        <div class="bg-header">{{ partial "header" . }}</div>
 
-        {{/*  Header  */}}
-        <div class="bg-header">
-            {{ partial "header" . }}
-        </div>
-
-        {{/*  Main  */}}
+        {{/* Main */}}
         <main class="mt-14 mb-10 p-4 space-y-4">
             {{ block "main" . }}{{ end }}
         </main>
 
-        {{/*  Footer  */}}
-        <div class="bg-footer">
-            {{ partial "footer" . }}
-        </div>
+        {{/* Footer */}}
+        <div class="bg-footer">{{ partial "footer" . }}</div>
     </body>
 </html>
