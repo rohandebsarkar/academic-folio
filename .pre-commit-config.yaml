@@ -49,4 +49,3 @@ repos:
     additional_dependencies:
     - prettier@2.3.0
     - prettier-plugin-go-template@0.0.13
-
