@@ -7,7 +7,7 @@
                 title="{{ .Name }}"
                 target="_blank"
                 rel="external nofollow noopener {{ .Params.rel }}"
-                class="text-primary"
+                class="text-primary {{ .Params.class }}"
             >
                 {{ with .Params.icon }}
                     {{ partial "svg" . }}

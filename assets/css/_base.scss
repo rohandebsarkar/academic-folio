@@ -1,3 +1,12 @@
+a {
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--global-theme-color);
+    }
+}
+
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css
 .icon {
     display: inline;
