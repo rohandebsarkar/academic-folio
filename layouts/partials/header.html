@@ -7,21 +7,16 @@
                 {{ end }}
             </li>
             {{ if .Site.Params.socialNavbar }}
-                <li class="ml-auto pl-4 text-[1.25em]">
+                <li class="ml-auto pl-4 mr-8 md:mr-0 text-[1.25em]">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
-            {{/*  <li class="hidden">
-                <button>
-                    {{ partial "svg" "fas fa-angles-down" }}
-                </button>
-            </li>  */}}
         </ul>
         <ul class="md:ml-auto">
             <li class="md:mt-0 mt-4">
                 <ul class="flex md:flex-row">
                     <li class="md:w-fit overflow-auto">
-                        <ul class="flex flex-row flex-nowrap space-x-4 md:space-x-8">
+                        <ul class="flex flex-row flex-nowrap space-x-4">
                             {{ $currentPage := . }}
                             {{ range .Site.Menus.main }}
                                 {{ if .HasChildren }}
@@ -49,7 +44,7 @@
                             {{ end }}
                         </ul>
                     </li>
-                    <li class="ml-auto pl-4">
+                    <li class="ml-auto md:ml-4 -mt-10 md:mt-0">
                         <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
                             <span class="icon-sun" title="light theme">
                                 {{ partial "svg" "fas fa-sun" }}
