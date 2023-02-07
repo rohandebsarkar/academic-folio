@@ -1,20 +1,10 @@
 a {
-    color: var(--global-theme-color);
+    font-weight: 500;
+    text-decoration: underline;
 
     &:hover {
         color: var(--global-theme-color);
-        text-decoration: underline;
     }
-}
-
-code {
-    color: var(--global-theme-color);
-
-    vertical-align: bottom;
-}
-
-pre {
-    overflow: auto hidden;
 }
 
 // https://github.com/hugo-mods/icons/blob/main/assets/mod-icons/style.css

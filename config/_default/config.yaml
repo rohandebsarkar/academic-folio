@@ -3,7 +3,15 @@ languageCode: en
 title: Academic Folio
 copyright: © Copyright 2023 The Academic Folio Contributors
 
+enableEmoji: true
+
 enableRobotsTXT: true
+
+markup:
+  highlight:
+    guessSyntax: true
+    style: dracula  # syntax highlighting style for markdown code blocks
+                    # choose a style from https://xyproto.github.io/splash/docs/all.html
 
 module:
   imports:
