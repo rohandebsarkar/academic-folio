@@ -41,6 +41,12 @@
             </p>
         </div>
 
+        <div>
+            {{ if (and .IsPage .TableOfContents) }}
+                    {{ partial "posts/toc" . }}  
+            {{ end }}
+        </div>
+
         <div class="markdown">
             {{ .Content }}
         </div>
