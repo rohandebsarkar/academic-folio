@@ -15,17 +15,17 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{/*  Stylesheet Configuarations */}}
-    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS | postCSS }}
+    {{ $styles := resources.Get "css/main.css" | resources.ExecuteAsTemplate "main.scss" . | toCSS | postCSS }}
 
     {{ if hugo.IsProduction }}
-        {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+        {{ $styles = $styles | minify | resources.PostProcess }}
     {{ else if .Site.IsServer }}
         {{ $styles = $styles | resources.ExecuteAsTemplate (printf "main.dev.%v.css" now.UnixMilli) . }}
     {{ end }}
 
     {{/*  Stylesheets  */}}
     {{ partial "styles/layout" . }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}

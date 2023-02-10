@@ -1,6 +1,15 @@
 {{ define "main" }}
     <article class="space-y-4">
-        <h1 class="text-4xl">404: Page not found!</h1>
-        <p>Looks like there has been a mistake. Try going back to the <a href="{{ .Site.BaseURL }}">homepage</a>.</p>
+        <h1 class="text-4xl font-medium">
+            Page not found!
+        </h1>
+
+        <h2 class="font-medium">
+            Sorry, but the page you are looking for does not exist.
+        </h2>
+
+        <p>
+            Try going back to the <a href="{{ .Site.BaseURL }}">homepage</a> for more content.
+        </p>
     </article>
 {{ end }}

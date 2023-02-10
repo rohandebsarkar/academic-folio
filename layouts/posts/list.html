@@ -5,13 +5,13 @@
         </h1>
 
         {{ with .Page.Params.description }}
-            <h2 class="text-2xl text-center">
+            <h2 class="text-2xl text-center font-medium">
                 {{ . }}
             </h2>
         {{ end }}
 
         {{ with .Content }}
-            <div class="space-y-4">
+            <div class="markdown">
                 {{ . }}
             </div>
         {{ end }}
