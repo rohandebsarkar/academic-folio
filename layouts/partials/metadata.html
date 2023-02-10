@@ -5,6 +5,10 @@
 <meta name="description" content="{{ .Site.Params.description }}">
 <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.tags ", " }}{{ end }}' />
 
+{{ if (eq .RelPermalink "/404.html") }}
+    <meta http-equiv="refresh" content="10; url={{ .Site.BaseURL }}">
+{{ end }}
+
 {{ template "_internal/opengraph.html" . }}
 
 {{ template "_internal/schema.html" . }}
