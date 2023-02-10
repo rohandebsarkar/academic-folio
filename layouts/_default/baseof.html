@@ -7,7 +7,7 @@
     <body class="text-primary bg-background">
 
         {{/*  Header  */}}
-        <header class="fixed inset-x-0 top-0 bg-header z-10 border-b border-divider">
+        <header class="{{ if .Site.Params.staticHeader }} static {{ else }} fixed {{ end }} inset-x-0 top-0 bg-header z-10 border-b border-divider">
             {{ partial "header" . }}
         </header>
 
@@ -17,7 +17,7 @@
         </main>
 
         {{/*  Footer  */}}
-        <footer class="{{if .Site.Params.staticFooter}} static {{else}} fixed {{end}} inset-x-0 bottom-0 p-2 bg-footer text-center text-xs font-light border-t border-divider">
+        <footer class="{{ if .Site.Params.staticFooter }} static {{ else }} fixed {{ end }} inset-x-0 bottom-0 p-2 bg-footer text-center text-xs font-light border-t border-divider">
             {{ partial "footer" . }}
         </footer>
     </body>
