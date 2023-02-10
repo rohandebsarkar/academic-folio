@@ -3,18 +3,18 @@
     <table class="text-left">
         <tbody>
             {{ range ( where .Site.RegularPages "Type" "news" | first .Site.Params.recentNews ) }}
-            <tr>
-                <th class="pr-2 py-1">
-                    {{ .Date.Format "January 02, 2006" }}
-                </th>
-                <td class="pl-2 py-1">
-                    {{ if .Content }}
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    {{ else }}
-                        <span class="font-medium">{{ .Title }}</span>
-                    {{ end }}
-                </td>
-            </tr>
+                <tr>
+                    <th class="pr-2 py-1">
+                        {{ .Date.Format "January 02, 2006" }}
+                    </th>
+                    <td class="pl-2 py-1">
+                        {{ if .Content }}
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        {{ else }}
+                            <span class="font-medium">{{ .Title }}</span>
+                        {{ end }}
+                    </td>
+                </tr>
             {{ end }}
         </tbody>
     </table>

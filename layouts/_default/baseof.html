@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }} itemscope itemtype="http://schema.org/{{ if .IsHome }}WebSite{{ else if .IsPage }}Article{{ else }}WebPage{{ end }}">
-    {{/*  Head  */}}
+<html
+    {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}
+    itemscope
+    itemtype="http://schema.org/{{ if .IsHome }}
+        WebSite
+    {{ else if .IsPage }}
+        Article
+    {{ else }}
+        WebPage
+    {{ end }}"
+>
+    {{/* Head */}}
     {{ partial "head" . }}
 
-    {{/*  Body  */}}
+    {{/* Body */}}
     <body class="mx-auto text-primary bg-background">
-
-        {{/*  Header  */}}
+        {{/* Header */}}
         {{ partial "header" . }}
 
-        {{/*  Main  */}}
+        {{/* Main */}}
         <main class="mt-24 md:mt-14 mb-12 md:mb-8 p-4 space-y-4">
             {{ block "main" . }}{{ end }}
         </main>
 
-        {{/*  Footer  */}}
+        {{/* Footer */}}
         {{ partial "footer" . }}
     </body>
 </html>

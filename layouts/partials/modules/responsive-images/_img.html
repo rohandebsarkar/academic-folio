@@ -26,7 +26,11 @@
                 {{ $attributes = printf `%s %s="%s"` $attributes $v . }}
             {{ end }}
         {{ end }}
-        <img src="{{.RelPermalink}}" height="{{.Height}}" width="{{.Width}}"
-            {{$attributes|safeHTMLAttr}} />
+        <img
+            src="{{ .RelPermalink }}"
+            height="{{ .Height }}"
+            width="{{ .Width }}"
+            {{ $attributes|safeHTMLAttr }}
+        />
     </picture>
 {{ end }}
