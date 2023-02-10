@@ -4,7 +4,6 @@ Work in Progress: Hugo port of the popular Jekyll theme al-folio
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-
 ## Installation
 
 To Install this theme for your own:
