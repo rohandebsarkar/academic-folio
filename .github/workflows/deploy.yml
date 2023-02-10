@@ -36,18 +36,13 @@ jobs:
         hugo-version: latest
         extended: true
 
-    - name: Cache Hugo
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.cache/go-build
-          ~/go/pkg/mod
-        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-        restore-keys: |
-          ${{ runner.os }}-go-
-
     - name: Build
       run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+    - name: HTML5Validator
+      uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      with:
+        root: ./public
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
@@ -55,3 +50,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
+        user_name: github-actions[bot]
+        user_email: github-actions[bot]@users.noreply.github.com
