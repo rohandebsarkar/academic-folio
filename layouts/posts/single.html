@@ -1,15 +1,17 @@
 {{ define "main" }}
     <article class="space-y-4">
         <div class="post-header space-y-2">
-            <h1 class="text-4xl font-medium">
-                {{ .Page.Title }}
-            </h1>
+            <header>
+                <h1 class="text-4xl font-medium">
+                    {{ .Page.Title }}
+                </h1>
 
-            {{ with .Page.Params.description }}
-                <h2 class="font-medium">
-                    {{ . }}
-                </h2>
-            {{ end }}
+                {{ with .Page.Params.description }}
+                    <h2 class="font-medium">
+                        {{ . }}
+                    </h2>
+                {{ end }}
+            </header>
 
             <h3 class="text-sm font-mono">
                 {{ with .Date }}
