@@ -8,10 +8,10 @@
                     {{ .Date.Format "January 02, 2006" }}
                 </th>
                 <td class="pl-2 py-1">
-                    {{ if .Params.inline }}
-                        <span class="font-medium">{{ .Title }}</span>
-                    {{ else }}
+                    {{ if .Content }}
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    {{ else }}
+                        <span class="font-medium">{{ .Title }}</span>
                     {{ end }}
                 </td>
             </tr>
