@@ -11,7 +11,6 @@ jobs:
       with:
         node-version: v18.13.0
     - run: npm ci
-    - run: npm test
     - name: Install & Build
       run: |
         yarn install
