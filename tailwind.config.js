@@ -16,6 +16,9 @@ module.exports = {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
+                        a: {
+                            'text-decoration': 'none',
+                        },
                         h2: {
                             'margin-top': '0',
                         },
@@ -41,7 +44,7 @@ module.exports = {
                         '--tw-prose-body': theme('colors.primary'),
                         '--tw-prose-headings': theme('colors.primary'),
                         '--tw-prose-lead': theme('colors.primary'),
-                        '--tw-prose-links': theme('colors.primary'),
+                        '--tw-prose-links': theme('colors.theme'),
                         '--tw-prose-bold': theme('colors.primary'),
                         '--tw-prose-counters': theme('colors.primary'),
                         '--tw-prose-bullets': theme('colors.primary'),

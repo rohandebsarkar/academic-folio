@@ -27,4 +27,4 @@ showRecentNews: true
 socialNavbar: true # show social icons on navbar
 socialHomePage: true # show social icons on the home page
 
-colorTheme: blue # choose a theme from `data/themes` folder
+colorTheme: green # choose a theme from `data/themes` folder

@@ -1,0 +1,27 @@
+# https://github.com/marketplace/actions/lighthouse-ci-action
+name: Lighthouse CI for Netlify sites
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: v18.13.0
+    - run: npm ci
+
+    - name: Wait for the Netlify Preview
+      uses: jakepartusch/wait-for-netlify-action@v1
+      id: netlify
+      with:
+        site_name: academic-folio
+    - name: Audit URLs using Lighthouse
+      uses: treosh/lighthouse-ci-action@v9
+      with:
+        urls: |
+          ${{ steps.netlify.outputs.url }}
+          ${{ steps.netlify.outputs.url }}/posts/
+        budgetPath: ./budget.json
+        uploadArtifacts: true
