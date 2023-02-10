@@ -1,19 +1,21 @@
 {{ define "main" }}
     <article class="space-y-4">
-        <h1 class="text-4xl -mb-2 font-medium">
-            {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
-                <span class="font-bold">{{ .Site.Params.firstName }}</span>
-                {{ .Site.Params.lastName }}
-            {{ else }}
-                {{ .Site.Title }}
+        <header>
+            <h1 class="text-4xl font-medium">
+                {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
+                    <span class="font-bold">{{ .Site.Params.firstName }}</span>
+                    {{ .Site.Params.lastName }}
+                {{ else }}
+                    {{ .Site.Title }}
+                {{ end }}
+            </h1>
+    
+            {{ with .Site.Params.description }}
+                <h2 class="font-medium">
+                    {{ . }}
+                </h2>
             {{ end }}
-        </h1>
-
-        {{ with .Site.Params.description }}
-            <h2 class="font-medium">
-                {{ . }}
-            </h2>
-        {{ end }}
+        </header>
 
         <div class="sm:float-right sm:w-1/3 md:w-1/4 sm:ml-4 text-center space-y-2">
             {{ with resources.Get "img/prof_pic.jpg" }}
@@ -32,15 +34,15 @@
             </div>
         {{ end }}
 
-        <div class="space-y-2">
-            <h3 class="text-2xl -mb-2">
+        <div class="space-y-1">
+            <h3 class="text-2xl">
                 <a href="/news/" class="text-primary font-semibold no-underline">Recent News</a>
             </h3>
             {{ partial "news/recents" . }}
         </div>
 
-        <div class="space-y-2">
-            <h3 class="text-2xl -mb-2">
+        <div class="space-y-1">
+            <h3 class="text-2xl">
                 <a href="/posts/" class="text-primary font-semibold no-underline">Recent Posts</a>
             </h3>
             {{ partial "posts/recents" . }}
