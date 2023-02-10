@@ -24,7 +24,6 @@
     {{ end }}
 
     {{/*  Stylesheets  */}}
-    {{ partial "styles/layout" . }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
