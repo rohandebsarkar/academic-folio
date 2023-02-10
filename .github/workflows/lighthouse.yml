@@ -1,3 +1,4 @@
+# https://github.com/marketplace/actions/lighthouse-ci-action
 name: Lighthouse CI for Netlify sites
 on: pull_request
 jobs:
