@@ -13,7 +13,10 @@
 
             <span>
                 <h3>
-                    <a class="text-2xl font-medium text-primary" href="{{ .RelPermalink }}">
+                    <a
+                        class="text-2xl font-medium text-primary"
+                        href="{{ .RelPermalink }}"
+                    >
                         {{ .Title }}
                     </a>
                 </h3>
@@ -24,18 +27,29 @@
             {{ $currentPage := . }}
             <p class="text-sm italic text-secondary">
                 {{ with .Page.ReadingTime }}
-                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read</span>
+                    <span
+                        >{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min
+                        read</span
+                    >
                 {{ end }}
                 {{ with .Page.Params.tags }}
                     &nbsp; &bull; &nbsp;
                     {{ range . }}
-                        <a href="/tags/{{ . }}" class="text-secondary hover:no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a
+                            href="/tags/{{ . }}"
+                            class="text-secondary hover:no-underline"
+                            >{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a
+                        >
                     {{ end }}
                 {{ end }}
                 {{ with .Page.Params.categories }}
                     &nbsp; &bull; &nbsp;
                     {{ range . }}
-                        <a href="/categories/{{ . }}" class="text-secondary hover:no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
+                        <a
+                            href="/categories/{{ . }}"
+                            class="text-secondary hover:no-underline"
+                            >{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a
+                        >
                     {{ end }}
                 {{ end }}
             </p>

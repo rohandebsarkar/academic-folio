@@ -15,6 +15,7 @@
             </h2>
         {{ end }}
 
+
         <div class="md:float-right md:max-w-[25%] md:ml-4 text-center">
             {{ with resources.Get "img/prof_pic.jpg" }}
                 {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
@@ -29,6 +30,7 @@
                 {{ . }}
             </div>
         {{ end }}
+
 
         <div class="space-y-2">
             <h3 class="section-header text-2xl font-semibold -mb-2">
@@ -50,6 +52,6 @@
                     {{ partial "social" . }}
                 {{ end }}
             </div>
-        {{ end  }}
+        {{ end }}
     </article>
 {{ end }}

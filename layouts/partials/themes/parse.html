@@ -1,4 +1,4 @@
-{{ $site := .Site}}
+{{ $site := .Site }}
 {{- with .Scratch -}}
     {{- $themeIndex := site.Params.colorTheme -}}
     {{ if (index site.Data.themes $themeIndex) }}

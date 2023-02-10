@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
-    {{/*  Head  */}}
+    {{/* Head */}}
     {{ partial "head" . }}
 
-    {{/*  Body  */}}
+    {{/* Body */}}
     <body class="mx-auto text-primary bg-background">
-
-        {{/*  Header  */}}
+        {{/* Header */}}
         <div class="bg-header">
             {{ partial "header" . }}
         </div>
 
-        {{/*  Main  */}}
+        {{/* Main */}}
         <main class="mt-14 mb-10 p-4 space-y-4">
             {{ block "main" . }}{{ end }}
         </main>
 
-        {{/*  Footer  */}}
+        {{/* Footer */}}
         <div class="bg-footer">
             {{ partial "footer" . }}
         </div>

@@ -1,10 +1,14 @@
 <script>
     function toggleTheme() {
         document.documentElement.classList.toggle('dark');
-        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
-    };
+        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+    }
 
-    if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || localStorage.theme === 'dark') {
+    if (
+        (!('theme' in localStorage) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+        localStorage.theme === 'dark'
+    ) {
         document.documentElement.classList.add('dark');
         localStorage.theme = 'dark';
     } else {
