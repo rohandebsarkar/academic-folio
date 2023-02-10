@@ -16,6 +16,9 @@ module.exports = {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
+                        a: {
+                            'text-decoration': 'none',
+                        },
                         h2: {
                             'margin-top': '0',
                         },
