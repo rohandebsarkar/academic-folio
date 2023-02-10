@@ -1,9 +1,9 @@
 a {
     font-weight: 500;
-    text-decoration: underline;
-
+    color: var(--global-theme-color);
+    text-decoration: none;
     &:hover {
-        color: var(--global-theme-color);
+        text-decoration: underline;
     }
 }
 
