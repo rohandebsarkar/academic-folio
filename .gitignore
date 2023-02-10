@@ -144,6 +144,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-# lighthouse integration test will fail otherwise
-package-lock.json
