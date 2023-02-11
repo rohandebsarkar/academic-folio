@@ -5,12 +5,11 @@
                 {{ .Page.Title }}
             </h1>
 
-                {{ with .Page.Params.description }}
-                    <h2 class="font-medium">
-                        {{ . }}
-                    </h2>
-                {{ end }}
-            </header>
+            {{ with .Page.Params.description }}
+                <h2 class="font-medium">
+                    {{ . }}
+                </h2>
+            {{ end }}
 
             <h3 class="text-sm font-mono">
                 {{ with .Date }}
@@ -40,10 +39,6 @@
                     {{ end }}
                 {{ end }}
             </p>
-
-            {{ if .TableOfContents }}
-
-            {{ end }}
         </header>
 
         {{ if .TableOfContents }}
