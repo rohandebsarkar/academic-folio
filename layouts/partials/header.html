@@ -1,65 +1,59 @@
-<header class="fixed inset-x-0 top-0 bg-inherit z-10 border-b border-divider md:h-14">
-    <nav class="h-full mx-auto p-4 text-sm md:text-base font-medium">
-        <ul class="flex flex-row flex-nowrap">
-            {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
-                <li class="mr-4">
-                    <a class="text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-                </li>
-            {{ end }}
+<header class="fixed inset-x-0 top-0 bg-header z-10 border-b border-divider">
+    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col">
+        <ul class="flex flex-row">
+            <li>
+                {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
+                    <a class="whitespace-nowrap text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                {{ end }}
+            </li>
             {{ if .Site.Params.socialNavbar }}
-                <li class="mr-4">
+                <li class="ml-auto pl-4 text-[1.25em] overflow-x-auto overflow-y-hidden">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
-            <li class="ml-auto">
-                <ul class="flex flex-col md:space-y-0 md:text-center text-right">
-                    <li class="md:hidden">
-                        <button id="hamburger" class="space-y-1.5 align-middle" onclick="hamburger()" title="menu">
-                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
-                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
-                            <span class="bg-primary block w-8 h-0.5 rounded"></span>
-                        </button>
-                    </li>
-                    <li>
-                        <ul id="hamburger-menu" class="hidden md:flex md:flex-row md:flex-nowrap md:space-x-8 md:space-y-0 md:mt-0 mt-4 space-y-4">
-                            {{ $currentPage := . }}
-                            {{ range .Site.Menus.main }}
-                                {{ if .HasChildren }}
-                                    {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
-                                        <a class="text-inherit" href="#">
-                                            {{ .Pre }}{{ .Name }}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <ul class="sub-menu">
-                                            {{ range .Children }}
-                                                <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                                    <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
-                                                </li>
-                                            {{ end }}
-                                        </ul>
-                                    </li>  */}}
-                                {{ else }}
-                                    <li>
-                                        <a href="{{ .URL }}" class="no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
-                                            {{ .Pre }}{{ .Name }}
-                                        </a>
-                                    </li>
-                                {{ end }}
-                            {{ end }}
-                            <li>
-                                <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
-                                    <span class="icon-sun" title="light theme">
-                                        {{ partial "svg" "fas fa-sun" }}
-                                    </span>
-                                    <span class="icon-moon" title="dark theme">
-                                        {{ partial "svg" "fas fa-moon" }}
-                                    </span>
-                                </button>
+            <li class="md:hidden ml-4 w-4">
+                {{/*  Blank list to reserve space for theme toggle button in small screen devices  */}}
+            </li>
+        </ul>
+        <ul class="flex flex-row md:ml-auto md:mt-0 mt-4">
+            <li class="md:w-fit overflow-auto">
+                <ul class="flex flex-row flex-nowrap space-x-4">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
+                                <a class="text-inherit" href="#">
+                                    {{ .Pre }}{{ .Name }}
+                                </a>
                             </li>
-                        </ul>
-                    </li>
+                            <li>
+                                <ul class="sub-menu">
+                                    {{ range .Children }}
+                                        <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
+                                            <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            </li>  */}}
+                        {{ else }}
+                            <li>
+                                <a href="{{ .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
+                                    {{ .Name }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
                 </ul>
+            </li>
+            <li class="absolute md:relative top-4 md:top-auto right-4 md:right-auto md:ml-4 md:mt-0">
+                <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
+                    <span class="icon-sun" title="light theme">
+                        {{ partial "svg" "fas fa-sun" }}
+                    </span>
+                    <span class="icon-moon" title="dark theme">
+                        {{ partial "svg" "fas fa-moon" }}
+                    </span>
+                </button>
             </li>
         </ul>
     </nav>
