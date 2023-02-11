@@ -24,18 +24,18 @@
             {{ $currentPage := . }}
             <p class="text-sm italic text-secondary">
                 {{ with .Page.ReadingTime }}
-                    <span>{{ partial "svg" "fas fa-clock" }}{{ . }}&nbsp;min read&nbsp;</span>
+                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
                 {{ end }}
                 {{ with .Page.Params.tags }}
                     &bull;&nbsp;
                     {{ range . }}
-                        <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}{{. }}&nbsp;</a>
+                        <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
                 {{ with .Page.Params.categories }}
                     &bull;&nbsp;
                     {{ range . }}
-                        <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}{{. }}&nbsp;</a>
+                        <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
                     {{ end }}
                 {{ end }}
             </p>
