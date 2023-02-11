@@ -41,9 +41,9 @@
             </p>
         </header>
 
-        {{ if .TableOfContents }}
+        <aside class="2xl:absolute 2xl:left-0 2xl:p-4 2xl:w-[256px]">
             {{ partial "posts/toc" . }}
-        {{ end }}
+        </aside>
 
         <div class="markdown">
             {{ .Content }}
