@@ -1,6 +1,8 @@
-<aside class="md:absolute md:left-4 p-4 md:w-[256px] text-secondary text-sm overflow-auto">
-    <h3 class="text-lg font-base border-b border-dashed border-secondary w-fit">
-        Contents
-    </h3>
-    {{ .TableOfContents }}
+<aside class="md:absolute md:left-4 md:pr-4 md:w-[256px] text-secondary text-sm">
+    <details class="border border-dashed border-secondary p-2">
+        <summary class="text-lg font-base md:w-fit">
+            Table of Contents
+        </summary>
+        {{ .TableOfContents }}
+    </details>
 </aside>
