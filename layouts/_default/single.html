@@ -1,19 +1,17 @@
 {{ define "main" }}
-    <article class="space-y-4">
-        <header>
-            <h1 class="text-4xl font-medium">
-                {{ .Page.Title }}
-            </h1>
+    <header>
+        <h1 class="text-4xl font-medium">
+            {{ .Page.Title }}
+        </h1>
 
-            {{ with .Page.Params.description }}
-                <h2 class="font-medium">
-                    {{ . }}
-                </h2>
-            {{ end }}
-        </header>
+        {{ with .Page.Params.description }}
+            <h2 class="font-medium">
+                {{ . }}
+            </h2>
+        {{ end }}
+    </header>
 
-        <div class="markdown">
-            {{ .Content }}
-        </div>
+    <article class="markdown">
+        {{ .Content }}
     </article>
 {{ end }}

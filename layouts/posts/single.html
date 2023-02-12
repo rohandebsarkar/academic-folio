@@ -1,50 +1,48 @@
 {{ define "main" }}
-    <article class="space-y-4">
-        <div class="post-header space-y-2">
-            <header>
-                <h1 class="text-4xl font-medium">
-                    {{ .Page.Title }}
-                </h1>
+    <div class="post-header space-y-2">
+        <header>
+            <h1 class="text-4xl font-medium">
+                {{ .Page.Title }}
+            </h1>
 
-                {{ with .Page.Params.description }}
-                    <h2 class="font-medium">
-                        {{ . }}
-                    </h2>
-                {{ end }}
-            </header>
-
-            <h3 class="text-sm font-mono">
-                {{ with .Date }}
-                    {{ .Format "January 2, 2006" }}&nbsp;
-                {{ end }}
-                {{ with .Page.Params.author }}
-                    &bull;&nbsp;
+            {{ with .Page.Params.description }}
+                <h2 class="font-medium">
                     {{ . }}
-                {{ end }}
-            </h3>
+                </h2>
+            {{ end }}
+        </header>
 
-            {{ $currentPage := . }}
-            <p class="text-sm italic text-secondary">
-                {{ with .Page.ReadingTime }}
-                    <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
-                {{ end }}
-                {{ with .Page.Params.tags }}
-                    &bull;&nbsp;
-                    {{ range . }}
-                        <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
-                    {{ end }}
-                {{ end }}
-                {{ with .Page.Params.categories }}
-                    &bull;&nbsp;
-                    {{ range . }}
-                        <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
-                    {{ end }}
-                {{ end }}
-            </p>
-        </div>
+        <h3 class="text-sm font-mono">
+            {{ with .Date }}
+                {{ .Format "January 2, 2006" }}&nbsp;
+            {{ end }}
+            {{ with .Page.Params.author }}
+                &bull;&nbsp;
+                {{ . }}
+            {{ end }}
+        </h3>
 
-        <div class="markdown">
-            {{ .Content }}
-        </div>
+        {{ $currentPage := . }}
+        <p class="text-sm italic text-secondary">
+            {{ with .Page.ReadingTime }}
+                <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
+            {{ end }}
+            {{ with .Page.Params.tags }}
+                &bull;&nbsp;
+                {{ range . }}
+                    <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
+                {{ end }}
+            {{ end }}
+            {{ with .Page.Params.categories }}
+                &bull;&nbsp;
+                {{ range . }}
+                    <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
+                {{ end }}
+            {{ end }}
+        </p>
+    </div>
+
+    <article class="markdown">
+        {{ .Content }}
     </article>
 {{ end }}
