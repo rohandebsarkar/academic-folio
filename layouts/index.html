@@ -27,7 +27,7 @@
             {{ end }}
 
             {{ if (and .Site.Params.socialHomePage .Site.Menus.social) }}
-                <div class="text-2xl">
+                <div class="text-2xl overflow-auto">
                     {{ partial "social" . }}
                 </div>
             {{ end }}
