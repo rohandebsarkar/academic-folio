@@ -27,5 +27,6 @@ To Install this theme for your own:
 ## Contribution Welcome
 
 What you can do?
-- [ ] Add Better Color Palettes for this theme
-- [ ] Choose One of the issues and make a PR 
+
+-   [ ] Add Better Color Palettes for this theme
+-   [ ] Choose One of the issues and make a PR
