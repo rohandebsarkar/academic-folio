@@ -12,7 +12,7 @@
                 </li>
             {{ end }}
             <li class="md:hidden ml-4 w-4">
-                {{/*  Blank list to reserve space for theme toggle button in small screen devices  */}}
+                {{/*  Blank list item to reserve space for theme toggle button in small screen devices  */}}
             </li>
         </ul>
         <ul class="flex flex-row md:ml-auto md:mt-0 mt-4">
@@ -45,7 +45,7 @@
                     {{ end }}
                 </ul>
             </li>
-            <li class="absolute md:relative top-4 md:top-auto right-4 md:right-auto md:ml-4 md:mt-0">
+            <li class="absolute md:static top-4 right-4 md:ml-4 md:mt-0">
                 <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
                     <span class="icon-sun" title="light theme">
                         {{ partial "svg" "fas fa-sun" }}
