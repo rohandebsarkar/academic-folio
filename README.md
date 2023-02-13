@@ -23,3 +23,9 @@ To Install this theme for your own:
 -   Customizable Color palettes (see `data/themes`)
 -   Blog Section
 -   News Section
+
+## Contribution Welcome
+
+What you can do?
+- [ ] Add Better Color Palettes for this theme
+- [ ] Choose One of the issues and make a PR 
