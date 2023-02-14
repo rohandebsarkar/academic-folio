@@ -16,12 +16,12 @@
         {{ end }}
     </header>
 
-    <figure class="sm:float-right sm:w-1/3 md:w-1/4 sm:ml-4 text-center space-y-2">
+    <figure class="sm:float-right w-3/4 sm:w-1/3 md:w-1/4 mx-auto sm:ml-4 space-y-2">
         {{ with resources.Get (printf "img/%s" .Params.profPic) }}
             {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
         {{ end }}
 
-        <address class="font-medium">
+        <address class="font-medium text-center">
             {{ with .Site.Params.email }}
                 {{ partial "scripts/cloakemail" . }}
             {{ end }}
