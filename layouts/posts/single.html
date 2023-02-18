@@ -10,7 +10,7 @@
             </h2>
         {{ end }}
 
-        <p class="text-sm font-mono">
+        <h3 class="text-sm font-mono">
             {{ with .Date }}
                 {{ .Format "January 2, 2006" }}&nbsp;
             {{ end }}
@@ -18,9 +18,9 @@
                 &bull;&nbsp;
                 {{ . }}
             {{ end }}
-        </p>
+        </h3>
 
-        <p class="text-sm italic text-secondary">
+        <h3 class="text-sm italic text-secondary">
             {{ with .Page.ReadingTime }}
                 <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
             {{ end }}
@@ -38,7 +38,7 @@
                     <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
                 {{ end }}
             {{ end }}
-        </p>
+        </h3>
     </header>
 
     <article class="markdown">
