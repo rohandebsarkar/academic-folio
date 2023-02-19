@@ -1,18 +1,18 @@
 <header class="fixed inset-x-0 top-0 bg-header z-10 border-b border-divider">
-    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col">
+    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col text-primary">
         <ul class="flex flex-row">
             <li>
                 {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
-                    <a class="whitespace-nowrap text-primary font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                    <a class="whitespace-nowrap font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
                 {{ end }}
             </li>
-            {{ if .Site.Params.socialNavbar }}
+            {{ if (and .Site.Params.socialNavbar (not .IsHome)) }}
                 <li class="ml-auto pl-4 text-[1.25em] overflow-x-auto overflow-y-hidden">
                     {{ partial "social" . }}
                 </li>
             {{ end }}
             <li class="md:hidden ml-4 w-4">
-                {{/*  Blank list to reserve space for theme toggle button in small screen devices  */}}
+                {{/*  Blank list item to reserve space for theme toggle button in small screen devices  */}}
             </li>
         </ul>
         <ul class="flex flex-row md:ml-auto md:mt-0 mt-4">
@@ -37,7 +37,7 @@
                             </li>  */}}
                         {{ else }}
                             <li>
-                                <a href="{{ .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ else }}text-primary{{ end }}">
+                                <a href="{{ .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
                                     {{ .Name }}
                                 </a>
                             </li>
@@ -45,7 +45,7 @@
                     {{ end }}
                 </ul>
             </li>
-            <li class="absolute md:relative top-4 md:top-auto right-4 md:right-auto md:ml-4 md:mt-0">
+            <li class="absolute md:static top-4 right-4 md:ml-4 md:mt-0">
                 <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
                     <span class="icon-sun" title="light theme">
                         {{ partial "svg" "fas fa-sun" }}

@@ -1,5 +1,7 @@
 ---
 title: Academic Folio
+
+profPic: prof_pic.jpg
 ---
 
 **Albert Einstein** was a German-born theoretical physicist, widely acknowledged to be one of the greatest and most influential physicists of all time. He is best known for developing the **_theory of relativity_**, but he also made important contributions to the development of **_quantum mechanics_**. Together **_relativity_** and **_quantum mechanics_** formed the two pillars of modern physics.
