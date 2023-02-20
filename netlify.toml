@@ -1,16 +1,16 @@
 [build]
-command = "hugo --minify -b $URL"
+command = "hugo -s exampleSite --minify -b $URL"
 publish = "public"
 
 [build.environment]
 HUGO_ENABLEGITINFO = "true"
-HUGO_VERSION = "0.109.0"
+HUGO_VERSION = "0.110.0"
 
 [context.branch-deploy]
-command = "hugo --minify -b $DEPLOY_PRIME_URL"
+command = "hugo -s exampleSite --minify -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview]
-command = "hugo --minify --buildFuture -b $DEPLOY_PRIME_URL"
+command = "hugo -s exampleSite --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.production.environment]
 HUGO_ENV = "production"
