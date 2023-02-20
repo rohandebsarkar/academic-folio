@@ -3,7 +3,13 @@
     "version": "0.0.0",
     "description": "",
     "main": "index.js",
-    "keywords": ["academic-folio", "academic-website", "al-folio", "hugo", "hugo-theme"],
+    "keywords": [
+        "academic-folio",
+        "academic-website",
+        "al-folio",
+        "hugo",
+        "hugo-theme"
+    ],
     "author": "Rohan Deb Sarkar and The Academic Folio Contributors",
     "license": "MIT",
     "devDependencies": {
