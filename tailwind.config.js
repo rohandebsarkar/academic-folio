@@ -2,8 +2,7 @@
 module.exports = {
     darkMode: 'class',
     content: [
-        './content/**/*.{md,html}',
-        './themes/academic-folio/layouts/**/*.{html,js}',
+        './layouts/**/*.{html,js}',
     ],
     theme: {
         extend: {
