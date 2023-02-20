@@ -1,0 +1,25 @@
+name: Generate TailwindCSS
+on: push
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate TailwindCSS
+        run: npx tailwindcss -i ./assets/main.css -o ./static/main.css
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: 'Generated TailwindCSS from commit {{ GITHUB_SHA::8 }}'
+          add: 'static/main.css'
