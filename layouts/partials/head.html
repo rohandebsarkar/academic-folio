@@ -14,23 +14,23 @@
     {{/*  Canonical URL  */}}
     <link rel="canonical" href="{{ .Permalink }}">
 
-    {{/*  Stylesheet Configuarations */}}
-    {{ $tailwindCSS := resources.Get "css/tailwind.css" | postCSS }}
-
+    {{/*  Stylesheets  */}}
     {{ if hugo.IsProduction }}
-        {{ $tailwindCSS = $tailwindCSS | minify | resources.PostProcess }}
-    {{ else if .Site.IsServer }}
+        <link rel="stylesheet" href="/tailwind.css">
+    {{ else }}
+        {{ $tailwindCSS := resources.Get "css/tailwind.css" | postCSS }}
         {{ $tailwindCSS = $tailwindCSS | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
+        <link rel="stylesheet" href="{{ $tailwindCSS.RelPermalink }}">
     {{ end }}
 
-    {{/*  Stylesheets  */}}
     {{ partial "styles/layout" . }}
+
     {{ with resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | toCSS  | minify }}
         <style>
             {{ safeCSS .Content }}
         </style>
     {{ end }}
-    <link rel="stylesheet" href="{{ $tailwindCSS.RelPermalink }}">
+
     {{ if .Site.Params.email }}
         {{ partial "styles/cloakemail" . }}
     {{ end }}
