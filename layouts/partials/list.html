@@ -1,14 +1,17 @@
 <ul class="list border-t border-dashed">
     {{ range .Pages }}
         <li class="py-4 space-y-2 border-b border-dashed">
-            <div>
+            <hgroup>
                 <h3>
-                    <a class="text-2xl font-medium text-primary no-underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a class="text-2xl font-medium text-primary no-underline" href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a>
                 </h3>
-                <p>
+
+                <h4>
                     {{ .Params.Description }}
-                </p>
-            </div>
+                </h4>
+            </hgroup>
         </li>
     {{ end }}
 </ul>

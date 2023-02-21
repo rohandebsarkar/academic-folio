@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <article class="space-y-4">
+    <header>
         <h1 class="text-4xl font-medium">
             Page not found!
         </h1>
@@ -7,9 +7,9 @@
         <h2 class="font-medium">
             Sorry, but the page you are looking for does not exist.
         </h2>
+    </header>
 
-        <p>
-            Try going back to the <a href="{{ .Site.BaseURL }}">homepage</a> for more content.
-        </p>
+    <article>
+        Try going back to the <a href="{{ .Site.BaseURL }}">homepage</a> for more content.
     </article>
 {{ end }}
