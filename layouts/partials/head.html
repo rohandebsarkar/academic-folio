@@ -23,8 +23,6 @@
         <link rel="stylesheet" href="/tailwind.css">
     {{ end }}
 
-    {{ partial "styles/layout" . }}
-
     {{ with resources.Get "css/main.scss" | resources.ExecuteAsTemplate "main.scss" . | toCSS  | minify }}
         <style>
             {{ safeCSS .Content }}
