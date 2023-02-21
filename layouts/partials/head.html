@@ -15,12 +15,12 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{/*  Stylesheets  */}}
-    {{ if hugo.IsProduction }}
-        <link rel="stylesheet" href="/tailwind.css">
-    {{ else }}
+    {{ if (eq hugo.Environment "dev") }}
         {{ $tailwindCSS := resources.Get "css/tailwind.css" | postCSS }}
         {{ $tailwindCSS = $tailwindCSS | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
         <link rel="stylesheet" href="{{ $tailwindCSS.RelPermalink }}">
+    {{ else }}
+        <link rel="stylesheet" href="/tailwind.css">
     {{ end }}
 
     {{ partial "styles/layout" . }}
