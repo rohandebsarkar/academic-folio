@@ -1,6 +1,6 @@
 [build]
 command = "hugo -s exampleSite --minify -b $URL"
-publish = "public"
+publish = "exampleSite/public"
 
 [build.environment]
 HUGO_ENABLEGITINFO = "true"
