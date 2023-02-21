@@ -2,7 +2,7 @@
     {{ $currentPage := . }}
     {{ range .Site.Menus.social }}
         <li>
-            <a href="{{ .URL }}" title="{{ .Name }}" target="_blank" rel="nofollow noopener me" {{with .Params.class }}class="{{ . }}"{{ end }}>
+            <a href="{{ safeHTMLAttr .URL }}" title="{{ .Name }}" target="_blank" rel="nofollow noopener me" {{with .Params.class }}class="{{ . }}"{{ end }}>
                 {{ with .Params.icon }}
                     {{ partial "svg" . }}
                 {{ end }}

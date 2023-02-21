@@ -30,14 +30,14 @@
                                 <ul class="sub-menu">
                                     {{ range .Children }}
                                         <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                            <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+                                            <a class="text-inherit" href="{{ safeHTMLAttr .URL }}">{{ .Name }}</a>
                                         </li>
                                     {{ end }}
                                 </ul>
                             </li>  */}}
                         {{ else }}
                             <li>
-                                <a href="{{ .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
+                                <a href="{{ safeHTMLAttr .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink (safeHTMLAttr .URL) }}text-theme{{ end }}">
                                     {{ .Name }}
                                 </a>
                             </li>
