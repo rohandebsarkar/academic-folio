@@ -1,2 +1,3 @@
 # Ignore main.scss file since it contains go functions
-assets/css/main.css
+assets/css/main.scss
+static/tailwind.css
