@@ -1,9 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 {{ partial "themes/variables" . }}
 
+$maxWidth: {{ .Site.Params.maxWidth }};
+
 @import "themes.scss";
+@import "layout.scss";
 @import "base.scss";
 @import "custom.scss";
