@@ -15,11 +15,11 @@ jobs:
       run: npm install
 
     - name: Generate TailwindCSS
-      run: npx tailwindcss -i ./assets/css/tailwind.css -o ./static/tailwind.css
+      run: npx tailwindcss -m -i ./assets/css/tailwind.css -o ./static/tailwind.css
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
-        message: Generated TailwindCSS from commit $GITHUB_SHA
+        message: Generated TailwindCSS
         add: static/tailwind.css
