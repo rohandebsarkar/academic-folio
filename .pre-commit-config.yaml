@@ -12,6 +12,7 @@ repos:
   - id: check-xml
   - id: check-yaml
   - id: end-of-file-fixer
+    exclude: static/tailwind.css
   - id: mixed-line-ending
   - id: trailing-whitespace
     args: [--markdown-linebreak-ext=md]
