@@ -6,6 +6,8 @@ copyright: >
           Powered by <a href="https://gohugo.io">Hugo</a> with
           <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
 
+theme: academic-folio
+
 enableEmoji: true
 
 enableRobotsTXT: true

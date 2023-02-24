@@ -19,6 +19,9 @@ jobs:
       id: pages
       uses: actions/configure-pages@v3
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+
     - name: Install NPM dependencies
       run: npm install
 
@@ -27,9 +30,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Install NPM dependencies
-      run: npm install
-
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -37,18 +37,18 @@ jobs:
         extended: true
 
     - name: Build
-      run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      run: hugo -s exampleSite --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: HTML5Validator
       uses: Cyb3r-Jak3/html5validator-action@v7.2.0
       with:
-        root: ./public
+        root: ./exampleSite/public
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.ref == 'refs/heads/main' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
+        publish_dir: ./exampleSite/public
         user_name: github-actions[bot]
         user_email: github-actions[bot]@users.noreply.github.com

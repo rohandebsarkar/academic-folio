@@ -1,13 +1,16 @@
 {
     "name": "academic-folio",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "academic-folio",
+        "academic-website",
+        "al-folio",
+        "hugo",
+        "hugo-theme"
+    ],
+    "author": "Rohan Deb Sarkar and The Academic Folio Contributors",
     "license": "MIT",
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.9",
