@@ -4,11 +4,6 @@ on:
   push:
     branches:
     - main
-
-  workflow_run:
-    workflows: [generate_css]
-    types: [completed]
-
   pull_request:
 
 jobs:
