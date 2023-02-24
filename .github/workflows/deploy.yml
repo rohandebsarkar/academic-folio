@@ -6,7 +6,7 @@ on:
     - main
 
   workflow_run:
-    workflows: [Generate TailwindCSS]
+    workflows: [generate_css]
     types: [completed]
 
   pull_request:
