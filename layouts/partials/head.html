@@ -38,4 +38,12 @@
     {{ if .Params.math}}
         {{ partial "scripts/katex" . }}
     {{ end }}
+    {{ if .Params.distill }}
+        <script src="https://distill.pub/template.v2.js"></script>
+    {{ end }}
+    {{ if .Params.vega }}
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+    {{ end }}
 </head>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}">
+
+    <head>
+        {{ partial "head" . }}
+    </head>
+
+    <body>
+        {{ block "body" . }}
+            {{ partial "distill/d-front-matter" . }}
+
+            {{ partial "distill/d-title" . }}
+
+            {{ partial "distill/d-article" . }}
+
+            {{ partial "distill/d-appendix" . }}
+        {{ end }}
+    </body>
+
+</html>
