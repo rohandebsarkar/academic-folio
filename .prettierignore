@@ -1,3 +1,4 @@
 # Ignore main.scss file since it contains go functions
 assets/css/main.scss
-static
+static/tailwind.css
+static/distillpub/template.v2.js
