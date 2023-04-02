@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language }}">
+<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }} itemscope itemtype="http://schema.org/{{ if .IsHome }}WebSite{{ else if .IsPage }}Article{{ else }}WebPage{{ end }}">
 
-    <head>
-        {{ partial "head" . }}
-    </head>
+    {{ partial "head" . }}
 
-    <body>
+    <body class="bg-background">
         {{ block "body" . }}
+            {{ partial "header" . }}
+
             {{ partial "distill/d-front-matter" . }}
 
             {{ partial "distill/d-title" . }}
@@ -14,6 +14,8 @@
             {{ partial "distill/d-article" . }}
 
             {{ partial "distill/d-appendix" . }}
+
+            {{ partial "footer" . }}
         {{ end }}
     </body>
 
