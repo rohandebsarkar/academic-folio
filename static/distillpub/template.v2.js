@@ -1182,7 +1182,7 @@ ${math}
 
         // ensure we have citations
         if (!frontMatter.citationsCollected) {
-          // console.debug('onCiteKeyCreated, but unresolved dependency ("citations"). Enqueing.');
+          // console.debug('onCiteKeyCreated, but unresolved dependency ("citations"). Enqueuing.');
           Controller.waitingOn.citations.push(() =>
             Controller.listeners.onCiteKeyCreated(event)
           );
@@ -1191,7 +1191,7 @@ ${math}
 
         // ensure we have a loaded bibliography
         if (!frontMatter.bibliographyParsed) {
-          // console.debug('onCiteKeyCreated, but unresolved dependency ("bibliography"). Enqueing.');
+          // console.debug('onCiteKeyCreated, but unresolved dependency ("bibliography"). Enqueuing.');
           Controller.waitingOn.bibliography.push(() =>
             Controller.listeners.onCiteKeyCreated(event)
           );
@@ -1683,7 +1683,7 @@ d-appendix > distill-appendix {
   (function(exports) {
 
       function BibtexParser() {
-          
+
           this.months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
           this.notKey = [',','{','}',' ','='];
           this.pos = 0;
@@ -1819,7 +1819,7 @@ d-appendix > distill-appendix {
                       return k.toLowerCase();
                   else
                       throw "Value expected:" + this.input.substring(start) + ' for key: ' + k;
-              
+
               }        };
 
           this.value = function() {
@@ -1842,7 +1842,7 @@ d-appendix > distill-appendix {
                       return this.input.substring(start, this.pos);
                   } else {
                       this.pos++;
-                      
+
                   }            }        };
 
           this.key_equals_value = function() {
@@ -1917,7 +1917,7 @@ d-appendix > distill-appendix {
                   }
                   this.match("}");
               }        };
-      }    
+      }
       exports.toJSON = function(bibtex) {
           var b = new BibtexParser();
           b.setInput(bibtex);
@@ -1947,7 +1947,7 @@ d-appendix > distill-appendix {
               out += '}\n\n';
           }
           return out;
-          
+
       };
 
   })( exports);
@@ -3735,7 +3735,7 @@ d-citation-list .references .title {
   		},
   		'variable': insideString.variable,
   		'function': {
-  			pattern: /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|aptitude|apt-cache|apt-get|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|mke2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
+  			pattern: /(^|[\s;|&]|[<>]\()(?:add|apropos|apt|aptitude|apt-cache|apt-get|aspell|automysqlbackup|awk|basename|bash|bc|bconsole|bg|bzip2|cal|cat|cfdisk|chgrp|chkconfig|chmod|chown|chroot|cksum|clear|cmp|column|comm|cp|cron|crontab|csplit|curl|cut|date|dc|dd|ddrescue|debootstrap|df|diff|diff3|dig|dir|dircolors|dirname|dirs|dmesg|du|egrep|eject|env|ethtool|expand|expect|expr|fdformat|fdisk|fg|fgrep|file|find|fmt|fold|format|free|fsck|ftp|fuser|gawk|git|gparted|grep|groupadd|groupdel|groupmod|groups|grub-mkconfig|gzip|halt|head|hg|history|host|hostname|htop|iconv|id|ifconfig|ifdown|ifup|import|install|ip|jobs|join|kill|killall|less|link|ln|locate|logname|logrotate|look|lpc|lpr|lprint|lprintd|lprintq|lprm|ls|lsof|lynx|make|man|mc|mdadm|mkconfig|mkdir|make2fs|mkfifo|mkfs|mkisofs|mknod|mkswap|mmv|more|most|mount|mtools|mtr|mutt|mv|nano|nc|netstat|nice|nl|nohup|notify-send|npm|nslookup|op|open|parted|passwd|paste|pathchk|ping|pkill|pnpm|popd|pr|printcap|printenv|ps|pushd|pv|quota|quotacheck|quotactl|ram|rar|rcp|reboot|remsync|rename|renice|rev|rm|rmdir|rpm|rsync|scp|screen|sdiff|sed|sendmail|seq|service|sftp|sh|shellcheck|shuf|shutdown|sleep|slocate|sort|split|ssh|stat|strace|su|sudo|sum|suspend|swapon|sync|tac|tail|tar|tee|time|timeout|top|touch|tr|traceroute|tsort|tty|umount|uname|unexpand|uniq|units|unrar|unshar|unzip|update-grub|uptime|useradd|userdel|usermod|users|uudecode|uuencode|v|vdir|vi|vim|virsh|vmstat|wait|watch|wc|wget|whereis|which|who|whoami|write|xargs|xdg-open|yarn|yes|zenity|zip|zsh|zypper)(?=$|[)\s;|&])/,
   			lookbehind: true
   		},
   		'keyword': {
