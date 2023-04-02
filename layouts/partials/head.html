@@ -35,21 +35,13 @@
 
     {{/*  Scripts  */}}
     {{ partial "scripts/theme" . }}
-    {{ if .Params.math}}
+    {{ if (and .Params.math (not .Params.distill)) }}
         {{ partial "scripts/katex" . }}
     {{ end }}
     {{ if .Params.distill }}
-        <script src="/distillpub/template.v2.js"></script>
-        <script src="/distillpub/overrides.js"></script>
-        {{ with resources.Get "css/distill.scss" | toCSS | minify }}
-            <style>
-                {{ safeCSS .Content }}
-            </style>
-        {{ end }}
-        {{ end }}
+        {{ partial "scripts/distillpub" . }}
+    {{ end }}
     {{ if .Params.vega }}
-        {{/*  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>  */}}
+        {{ partial "scripts/vega" . }}
     {{ end }}
 </head>

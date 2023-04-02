@@ -1,0 +1,7 @@
+<script src="/distillpub/template.v2.js"></script>
+<script src="/distillpub/overrides.js"></script>
+{{ with resources.Get "css/distill.scss" | toCSS | minify }}
+    <style>
+        {{ safeCSS .Content }}
+    </style>
+{{ end }}
