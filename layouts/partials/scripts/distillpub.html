@@ -1,5 +1,11 @@
-<script src="/distillpub/template.v2.js"></script>
-<script src="/distillpub/overrides.js"></script>
+{{ with resources.GetRemote "https://distill.pub/template.v2.js" | minify }}
+    <script src="{{ .RelPermalink }}"></script>
+{{ end }}
+{{ with resources.Get "js/distillpub/overrides.js" | minify }}
+    <script>
+        {{ safeJS .Content }}
+    </script>
+{{ end }}
 {{ with resources.Get "css/distill.scss" | toCSS | minify }}
     <style>
         {{ safeCSS .Content }}

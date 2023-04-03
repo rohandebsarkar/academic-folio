@@ -43,7 +43,7 @@ Test for owner’s possessive. Test for "quoting a passage." And another sentenc
 
 Here’s a test of an inline equation {{<math>}}c = a^2 + b^2{{</math>}}. And then there’s a block equation:
 {{<math block="true">}}
-c = \pm \sqrt{ \sum\_{i=0}^{n}{a^{222} + b^2}}
+c = \pm \sqrt{ \sum\limits_{i=0}^{n}{a^{222} + b^2}}
 {{</math>}}
 
 We can {{<cite bib="mercier2011humans">}} also cite {{<cite bib="gregor2015draw,mercier2011humans">}} external publications. {{<cite bib="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism">}}.
