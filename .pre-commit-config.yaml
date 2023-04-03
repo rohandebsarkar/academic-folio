@@ -17,11 +17,6 @@ repos:
   - id: trailing-whitespace
     args: [--markdown-linebreak-ext=md]
 
-- repo: https://github.com/crate-ci/typos
-  rev: typos-dict-v0.9.14
-  hooks:
-  - id: typos
-
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.6.0
   hooks:
