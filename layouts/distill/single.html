@@ -4,19 +4,17 @@
     {{ partial "head" . }}
 
     <body class="bg-background">
-        {{ block "body" . }}
-            {{ partial "header" . }}
+        {{ partial "header" . }}
 
-            {{ partial "distill/d-front-matter" . }}
+        {{ partial "distill/d-front-matter" . }}
 
-            {{ partial "distill/d-title" . }}
+        {{ partial "distill/d-title" . }}
 
-            {{ partial "distill/d-article" . }}
+        {{ partial "distill/d-article" . }}
 
-            {{ partial "distill/d-appendix" . }}
+        {{ partial "distill/d-appendix" . }}
 
-            {{ partial "footer" . }}
-        {{ end }}
-    </body>
+        {{ partial "footer" . }}
+</body>
 
 </html>
