@@ -1,6 +1,0 @@
-{{ if (and .Params.math (not .Params.distill)) }}
-    {{ partial "scripts/katex" . }}
-{{ end }}
-{{ if .Params.distill }}
-    {{ partial "scripts/distillpub" . }}
-{{ end }}
