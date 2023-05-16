@@ -1,5 +1,6 @@
 # Ignore main.scss file since it contains go functions
 assets/css/main.scss
 assets/js/distillpub/template.v2.js
+exampleSite/content/distill/example/index.md
 static/tailwind.css
 static/distillpub/template.v2.js
