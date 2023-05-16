@@ -2,6 +2,10 @@
  * Style overrides for distill blog posts.
  ******************************************************************************/
 
+a {
+    color: inherit;
+}
+
 d-byline {
     border-top-color: var(--global-divider-color) !important;
 }
