@@ -37,7 +37,7 @@
                             </li>  */}}
                         {{ else }}
                             <li>
-                                <a href="{{ .URL }}" class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
+                                <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
                                     {{ .Name }}
                                 </a>
                             </li>
