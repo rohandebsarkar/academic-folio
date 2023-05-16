@@ -35,7 +35,6 @@
 
     {{/*  Scripts  */}}
     {{ partial "scripts/theme" . }}
-    {{ if .Params.math}}
-        {{ partial "scripts/katex" . }}
-    {{ end }}
+    {{ partial "scripts/katex" . }}
+    {{ partial "scripts/distillpub" . }}
 </head>

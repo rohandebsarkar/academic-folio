@@ -1,5 +1,5 @@
-<header class="fixed inset-x-0 top-0 bg-header z-10 border-b border-divider">
-    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col text-primary">
+<header class="fixed inset-x-0 top-0 text-primary bg-header z-10 border-b border-divider">
+    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col">
         <ul class="flex flex-row">
             <li>
                 {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
