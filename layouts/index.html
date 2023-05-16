@@ -16,7 +16,7 @@
         {{ end }}
     </header>
 
-    <figure class="sm:float-right w-3/4 sm:w-1/3 md:w-1/4 mx-auto sm:ml-4 space-y-2">
+    <figure class="sm:float-right w-3/4 md:w-1/4 sm:w-1/3 mx-auto sm:ml-4 space-y-2">
         {{ with resources.Get (printf "img/%s" .Params.profPic) }}
             {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
         {{ end }}
@@ -40,7 +40,7 @@
         </article>
     {{ end }}
 
-    {{ if .Site.Paramas.showRecentNews }}
+    {{ if .Site.Params.showRecentNews }}
         <article class="space-y-1">
             <h3 class="text-2xl">
                 <a href="/news/" class="text-primary font-semibold no-underline">Recent News</a>
@@ -49,7 +49,7 @@
         </article>
     {{ end }}
 
-    {{ if .Site.Paramas.showRecentPosts }}
+    {{ if .Site.Params.showRecentPosts }}
         <article class="space-y-1">
             <h3 class="text-2xl">
                 <a href="/posts/" class="text-primary font-semibold no-underline">Recent Posts</a>
