@@ -18,7 +18,11 @@
 
     <figure class="sm:float-right w-3/4 md:w-1/4 sm:w-1/3 mx-auto sm:ml-4 space-y-2">
         {{ with resources.Get (printf "img/%s" .Params.profPic) }}
-            {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
+            {{ if (hasSuffix . ".svg") }}
+                <object data="{{ .RelPermalink }}" type="image/svg+xml" width="auto" height="auto" title="{{ .RelPermalink }}"></object>
+            {{ else }}
+                {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
+            {{ end }}
         {{ end }}
 
         <address class="font-medium text-center">
