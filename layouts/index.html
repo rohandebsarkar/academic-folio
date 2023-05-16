@@ -16,7 +16,7 @@
         {{ end }}
     </header>
 
-    <figure class="sm:float-right w-3/4 md:w-1/4 sm:w-1/3 mx-auto sm:ml-4 space-y-2">
+    <figure class="sm:float-right w-3/4 md:w-1/4 sm:w-1/3 mx-auto sm:ml-4 space-y-4">
         {{ with resources.Get (printf "img/%s" .Params.profPic) }}
             {{ if (strings.HasSuffix . ".svg") }}
                 <object data="{{ .RelPermalink }}" type="image/svg+xml" width="auto" height="auto" title="{{ .RelPermalink }}"></object>
@@ -25,13 +25,13 @@
             {{ end }}
         {{ end }}
 
-        <address class="font-medium text-center">
+        <address class="font-medium text-center space-y-2">
             {{ with .Site.Params.email }}
                 {{ partial "scripts/cloakemail" . }}
             {{ end }}
 
             {{ if (and .Site.Params.socialHomePage .Site.Menus.social) }}
-                <div class="text-2xl overflow-auto">
+                <div class="text-3xl overflow-auto">
                     {{ partial "social" . }}
                 </div>
             {{ end }}
