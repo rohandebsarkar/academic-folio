@@ -1,6 +1,6 @@
 {{ define "main" }}
-    <header>
-        <h1 class="text-4xl font-medium">
+    <header class="space-y-2">
+        <h1 class="text-5xl font-medium">
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
                 <span class="font-bold">{{ .Site.Params.firstName }}</span>
                 {{ .Site.Params.lastName }}
