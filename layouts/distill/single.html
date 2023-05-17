@@ -15,6 +15,12 @@
         {{ partial "distill/d-appendix" . }}
 
         {{ partial "footer" . }}
+
+        {{ if (and .Site.Params.giscusScript (not .Params.disableGiscusComments)) }}
+            <div id="comments">
+                {{ partial "scripts/giscus" . }}
+            </div>
+        {{ end }}
     </body>
 
 </html>
