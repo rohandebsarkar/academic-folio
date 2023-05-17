@@ -7,7 +7,7 @@
             if (!iframe) return;
             iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
         }
-        
+
         sendMessage({
             setConfig: {
                 theme: theme

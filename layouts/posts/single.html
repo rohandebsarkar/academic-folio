@@ -52,6 +52,6 @@
     {{ if (and .Site.Params.giscusScript (not .Params.disableGiscusComments)) }}
         <div id="comments">
             {{ partial "scripts/giscus" . }}
-        </div>    
+        </div>
     {{ end }}
 {{ end }}
