@@ -1,0 +1,19 @@
+{{ safeHTML .Site.Params.giscusScript }}
+
+<script>
+    function setGiscusTheme(theme) {
+        function sendMessage(message) {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        
+        sendMessage({
+            setConfig: {
+                theme: theme
+            }
+        });
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://giscus.app/?ref_noscript">comments powered by giscus.</a></noscript>

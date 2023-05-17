@@ -1,7 +1,8 @@
 <script>
     function toggleTheme() {
         document.documentElement.classList.toggle('dark');
-        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
+        localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark';
+        if(typeof setGiscusTheme == "function") setGiscusTheme(localStorage.theme);
     };
 
     if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || localStorage.theme === 'dark') {

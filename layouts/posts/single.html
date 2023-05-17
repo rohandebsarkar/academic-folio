@@ -48,4 +48,10 @@
     <article class="markdown">
         {{ .Content }}
     </article>
+
+    {{ if (and .Site.Params.giscusScript (not .Params.disableGiscusComments)) }}
+        <div id="comments">
+            {{ partial "scripts/giscus" . }}
+        </div>    
+    {{ end }}
 {{ end }}
