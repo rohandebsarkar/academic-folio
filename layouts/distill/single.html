@@ -17,7 +17,7 @@
         {{ partial "footer" . }}
 
         {{ if (and .Site.Params.giscusScript (not .Params.disableGiscusComments)) }}
-            <div id="comments">
+            <div id="comments" class="max-w-[800px] mx-auto mb-8 pb-8">
                 {{ partial "scripts/giscus" . }}
             </div>
         {{ end }}
