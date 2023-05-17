@@ -59,6 +59,9 @@ d-article {
     b i {
         display: inline;
     }
+    ul li {
+        list-style: disc;
+    }
 
     d-contents {
         align-self: start;
