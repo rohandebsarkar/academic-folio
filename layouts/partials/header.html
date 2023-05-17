@@ -2,9 +2,7 @@
     <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col">
         <ul class="flex flex-row">
             <li>
-                {{ if (and .Site.Params.navbarTitle (ne .Site.Title (printf "%s %s" .Site.Params.firstName .Site.Params.lastName))) }}
-                    <a class="whitespace-nowrap font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-                {{ end }}
+                <a class="whitespace-nowrap font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </li>
             {{ if (and .Site.Params.socialNavbar (not .IsHome)) }}
                 <li class="ml-auto pl-4 text-[1.25em] overflow-x-auto overflow-y-hidden">
