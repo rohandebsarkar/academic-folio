@@ -5,6 +5,8 @@ email: einstein@example.org
 
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
+favicon: ⚛️ # You can either enter an emoji or the name of an image file present in `assets/img` folder
+
 tags: # these tags would be added as keywords in metadata for website
 - academic-folio
 - academic-website
