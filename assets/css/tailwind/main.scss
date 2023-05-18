@@ -23,16 +23,15 @@
 
     .blog-header {
         h1 {
-           @apply text-6xl;
-           @apply text-center;
-           @apply text-theme;
+            @apply text-6xl;
+            @apply text-center;
+            @apply text-theme;
         }
 
         h2 {
-           @apply text-2xl;
-           @apply text-center;
+            @apply text-2xl;
+            @apply text-center;
         }
-
     }
 
     .post-date {

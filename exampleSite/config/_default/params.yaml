@@ -8,8 +8,8 @@ description: Albert Einstein's personal website powered by the Academic Folio th
 favicon: ⚛️ # You can either enter an emoji or the name of an image file present in `assets/img` folder
 
 footerText: >
-        Powered by <a href="https://gohugo.io">Hugo</a> with
-        <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
+  Powered by <a href="https://gohugo.io">Hugo</a> with
+  <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
 
 tags: # these tags would be added as keywords in metadata for website
 - academic-folio

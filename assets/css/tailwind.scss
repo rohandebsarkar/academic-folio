@@ -5,9 +5,9 @@
 @layer base {
     body {
         @apply mx-auto;
-        @apply text-primary; 
+        @apply text-primary;
         @apply bg-background;
-        
+
         a {
             @apply text-theme;
             @apply hover:underline;
@@ -25,8 +25,8 @@
             }
         }
 
-        @import "tailwind/nav.scss";
-        @import "tailwind/main.scss";
-        @import "tailwind/footer.scss";
+        @import 'tailwind/nav.scss';
+        @import 'tailwind/main.scss';
+        @import 'tailwind/footer.scss';
     }
 }
