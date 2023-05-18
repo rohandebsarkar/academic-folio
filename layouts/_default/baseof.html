@@ -16,5 +16,8 @@
 
         {{/*  Footer  */}}
         {{ partial "footer" . }}
+
+        {{/*  Anlytics Script  */}}
+        {{ safeHTML .Site.Params.analyticsScript }}
     </body>
 </html>
