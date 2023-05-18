@@ -13,6 +13,6 @@
     }
 
     .social a {
-        @apply text-primary
+        @apply text-primary;
     }
 }
