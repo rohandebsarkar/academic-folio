@@ -47,4 +47,4 @@ giscusScript: >
     async
   ></script>
 
-analyticsScript: > # Google Analytics, Panelbear Analytics, etc. Just paste the tracking script below.
+analyticsScript: >
