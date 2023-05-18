@@ -26,6 +26,7 @@
                 @apply whitespace-nowrap;
                 @apply font-bold;
                 @apply no-underline;
+                @apply text-primary;
             }
 
             .nav-social {
@@ -45,7 +46,7 @@
             @apply md:ml-auto;
             @apply md:mt-0;
 
-            .nav-menu-list {
+            ul {
                 @apply flex;
                 @apply flex-row;
                 @apply flex-nowrap;
@@ -54,9 +55,10 @@
 
                 @apply md:w-fit;
 
-                .nav-link {
+                a {
                     @apply whitespace-nowrap;
-                    @apply no-underline; 
+                    @apply no-underline;
+                    @apply text-primary;
                 }
             }
 

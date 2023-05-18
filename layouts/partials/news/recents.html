@@ -1,4 +1,3 @@
-<!-- You can change blog to anything else and build recent item for that thing -->
 <table class="text-left">
     <tbody>
         {{ range ( where .Site.RegularPages "Type" "news" | first .Site.Params.recentNews ) }}

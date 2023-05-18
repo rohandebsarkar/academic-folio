@@ -8,8 +8,10 @@
         @apply text-primary; 
         @apply bg-background;
         
-        @import "tailwind/nav.scss";
-        @import "tailwind/main.scss";
+        a {
+            @apply text-theme;
+            @apply hover:underline;
+        }
 
         .social {
             @apply flex;
@@ -17,6 +19,14 @@
             @apply flex-nowrap;
             @apply space-x-4;
             @apply justify-center;
+
+            a {
+                @apply text-primary;
+            }
         }
+
+        @import "tailwind/nav.scss";
+        @import "tailwind/main.scss";
+        @import "tailwind/footer.scss";
     }
 }

@@ -11,7 +11,7 @@
         </span>
     </div>
     <div class="nav-menu">
-        <ul class="nav-menu-list">
+        <ul>
             {{ $currentPage := . }}
             {{ range .Site.Menus.main }}
                 {{ if .HasChildren }}
@@ -31,7 +31,7 @@
                     </li>  */}}
                 {{ else }}
                     <li>
-                        <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} class="nav-link {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
+                        <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} {{ if eq $currentPage.RelPermalink .URL }}class="text-theme"{{ end }}>
                             {{ .Name }}
                         </a>
                     </li>

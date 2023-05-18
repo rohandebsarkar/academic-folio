@@ -1,10 +1,9 @@
-<footer class="fixed inset-x-0 bottom-0 p-2 bg-footer text-primary text-center text-xs font-light border-t border-divider">
+<footer>
     {{ with .Site.Copyright }}
         {{ . }}
     {{ end }}
         &bull;
-        Powered by <a href="https://gohugo.io">Hugo</a> with
-        <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
+        {{ safeHTML .Site.Params.footerText }}
     {{ if .Site.Params.footerLastUpdated }}
         &bull;
         Last updated: {{ now.Format "02 Jan 2006"}}
