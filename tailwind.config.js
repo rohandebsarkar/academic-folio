@@ -60,6 +60,7 @@ module.exports = {
         },
     },
     plugins: [
+        require( 'autoprefixer' ),
         require('@tailwindcss/typography')({
             className: 'markdown',
         }),
