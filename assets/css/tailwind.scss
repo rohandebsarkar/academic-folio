@@ -9,5 +9,14 @@
         @apply bg-background;
         
         @import "tailwind/nav.scss";
+        @import "tailwind/main.scss";
+
+        .social {
+            @apply flex;
+            @apply flex-row;
+            @apply flex-nowrap;
+            @apply space-x-4;
+            @apply justify-center;
+        }
     }
 }

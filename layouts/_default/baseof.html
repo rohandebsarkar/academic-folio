@@ -7,10 +7,12 @@
     <body>
 
         {{/*  Header  */}}
-        {{ partial "header" . }}
+        <header>
+            {{ partial "header" . }}
+        </header>
 
         {{/*  Main  */}}
-        <main class="mt-24 md:mt-14 mb-12 md:mb-8 px-4 py-8 space-y-8">
+        <main>
             {{ block "main" . }}{{ end }}
         </main>
 
