@@ -11,4 +11,8 @@
     nav a {
         @apply text-primary;
     }
+
+    .social a {
+        @apply text-primary
+    }
 }
