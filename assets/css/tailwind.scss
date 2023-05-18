@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply mx-auto;
+        @apply text-primary; 
+        @apply bg-background;
+        
+        @import "tailwind/nav.scss";
+    }
+}

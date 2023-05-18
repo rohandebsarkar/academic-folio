@@ -1,58 +1,52 @@
-<header class="fixed inset-x-0 top-0 text-primary bg-header z-10 border-b border-divider">
-    <nav class="mx-auto p-4 text-base font-medium flex md:flex-row flex-col">
-        <ul class="flex flex-row">
-            <li>
-                <a class="whitespace-nowrap font-bold no-underline" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            </li>
+<header>
+    <nav>
+        <div class="nav-logo">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             {{ if (and .Site.Params.socialNavbar (not .IsHome)) }}
-                <li class="ml-auto pl-4 text-[1.25em] overflow-x-auto overflow-y-hidden">
+                <div class="nav-social">
                     {{ partial "social" . }}
-                </li>
+                </div>
             {{ end }}
-            <li class="md:hidden ml-4 w-4">
+            <span class="md:hidden ml-4 w-4">
                 {{/*  Blank list item to reserve space for theme toggle button in small screen devices  */}}
-            </li>
-        </ul>
-        <ul class="flex flex-row md:ml-auto md:mt-0 mt-4">
-            <li class="md:w-fit overflow-auto">
-                <ul class="flex flex-row flex-nowrap space-x-4">
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                        {{ if .HasChildren }}
-                            {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
-                                <a class="text-inherit" href="#">
-                                    {{ .Pre }}{{ .Name }}
-                                </a>
-                            </li>
-                            <li>
-                                <ul class="sub-menu">
-                                    {{ range .Children }}
-                                        <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                            <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
-                                        </li>
-                                    {{ end }}
-                                </ul>
-                            </li>  */}}
-                        {{ else }}
-                            <li>
-                                <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} class="whitespace-nowrap no-underline {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
-                                    {{ .Name }}
-                                </a>
-                            </li>
-                        {{ end }}
+            </span>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-menu-list">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                        {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
+                            <a class="text-inherit" href="#">
+                                {{ .Pre }}{{ .Name }}
+                            </a>
+                        </li>
+                        <li>
+                            <ul class="sub-menu">
+                                {{ range .Children }}
+                                    <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
+                                        <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        </li>  */}}
+                    {{ else }}
+                        <li>
+                            <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} class="nav-link {{ if eq $currentPage.RelPermalink .URL }}text-theme{{ end }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
                     {{ end }}
-                </ul>
-            </li>
-            <li class="absolute md:static top-4 right-4 md:ml-4 md:mt-0">
-                <button id="theme-toggle" class="hover:text-theme" onclick="toggleTheme()">
-                    <span class="icon-sun" title="light theme">
-                        {{ partial "svg" "fas fa-sun" }}
-                    </span>
-                    <span class="icon-moon" title="dark theme">
-                        {{ partial "svg" "fas fa-moon" }}
-                    </span>
-                </button>
-            </li>
-        </ul>
+                {{ end }}
+            </ul>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <span class="icon-sun" title="light theme">
+                    {{ partial "svg" "fas fa-sun" }}
+                </span>
+                <span class="icon-moon" title="dark theme">
+                    {{ partial "svg" "fas fa-moon" }}
+                </span>
+            </button>
+        </div>
     </nav>
 </header>

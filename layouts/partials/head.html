@@ -26,7 +26,7 @@
 
     {{/*  Stylesheets  */}}
     {{ if (eq hugo.Environment "dev") }}
-        {{ $tailwindCSS := resources.Get "css/tailwind.css" | postCSS }}
+        {{ $tailwindCSS := resources.Get "css/tailwind.scss" | toCSS | postCSS }}
         {{ $tailwindCSS = $tailwindCSS | resources.ExecuteAsTemplate (printf "tailwind.dev.%v.css" now.UnixMilli) . }}
         <link rel="stylesheet" href="{{ $tailwindCSS.RelPermalink }}">
     {{ else }}
