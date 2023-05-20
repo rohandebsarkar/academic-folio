@@ -46,6 +46,10 @@
 
         md:w-1/4;
 
+        img {
+            @apply rounded;
+        }
+
         address {
             @apply
             font-medium 
@@ -70,9 +74,23 @@
     .recent {
         @apply space-y-1;
 
-            h3 a {
-                @apply text-2xl text-primary font-semibold no-underline;
+        h3 a {
+            @apply text-2xl text-primary font-semibold no-underline;
+        }
+
+        table {
+            @apply text-left;
+
+            tr {
+                th{
+                    @apply pr-2 py-1;
+                }
+
+                td {
+                    @apply pl-2 py-1;
+                }
             }
+        }
     }
 
     .post-date {
@@ -108,7 +126,25 @@
                 @apply font-medium;
                 @apply text-primary;
                 @apply no-underline;
+
+                @apply hover:text-theme hover:underline;
             }
+        }
+    }
+
+    .taxonomy-list {
+        @apply 
+        flex 
+        flex-row 
+        flex-wrap 
+        space-x-4 
+        justify-center;
+
+        li a {
+            @apply 
+            text-theme 
+            no-underline 
+            hover:underline;
         }
     }
 

@@ -3,8 +3,10 @@
 
     {{ partial "head" . }}
 
-    <body class="bg-background">
-        {{ partial "header" . }}
+    <body>
+        <header>
+            {{ partial "header" . }}
+        </header>
 
         {{ partial "distill/d-front-matter" . }}
 
@@ -17,7 +19,7 @@
         {{ partial "footer" . }}
 
         {{ if (and .Site.Params.giscusScript (not .Params.disableGiscusComments)) }}
-            <div id="comments">
+            <div class="comments">
                 {{ partial "scripts/giscus" . }}
             </div>
         {{ end }}

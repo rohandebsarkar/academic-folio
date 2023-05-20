@@ -13,7 +13,7 @@
             {{ range .Site.Menus.main }}
                 {{ if .HasChildren }}
                     {{/*  <li class='{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}'>
-                        <a class="text-inherit" href="#">
+                        <a class="" href="#">
                             {{ .Pre }}{{ .Name }}
                         </a>
                     </li>
@@ -21,14 +21,14 @@
                         <ul class="sub-menu">
                             {{ range .Children }}
                                 <li class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}'>
-                                    <a class="text-inherit" href="{{ .URL }}">{{ .Name }}</a>
+                                    <a class="" href="{{ .URL }}">{{ .Name }}</a>
                                 </li>
                             {{ end }}
                         </ul>
                     </li>  */}}
                 {{ else }}
                     <li>
-                        <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} {{ if eq $currentPage.RelPermalink .URL }}class="text-theme"{{ end }}>
+                        <a href="{{ safeURL .URL }}" {{ if (or (strings.HasPrefix .URL "http") (strings.HasSuffix .URL ".pdf")) }} target="_blank" rel="external nofollow noopener"{{ end }} {{ if eq $currentPage.RelPermalink .URL }}class="active"{{ end }}>
                             {{ .Name }}
                         </a>
                     </li>

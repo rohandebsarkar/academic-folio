@@ -6,7 +6,7 @@
             "webpHint" $.webpHint
         }}
 
-        {{/* For each breakpoint, convert image to WebP and resize according to `$widths` */}}
+        {{/* For each breakpoint, convert image to WebP and Resize according to `$widths` */}}
         {{ range $i, $v := $.breakpoints }}
             {{ $width := index $.widths (add $i 1) | default -1 }}
             {{ $opts = dict "breakpoint" $v "width" $width | merge $opts }}

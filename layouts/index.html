@@ -2,7 +2,7 @@
     <header>
         <h1>
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
-                <span class="font-bold">{{ .Site.Params.firstName }}</span>
+                <b>{{ .Site.Params.firstName }}</b>
                 {{ .Site.Params.lastName }}
             {{ else }}
                 {{ .Site.Title }}
@@ -21,7 +21,7 @@
             {{ if (strings.HasSuffix . ".svg") }}
                 <object data="{{ .RelPermalink }}" type="image/svg+xml" width="auto" height="auto" title="{{ .RelPermalink }}"></object>
             {{ else }}
-                {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
+                {{ partial "img" (dict "img" . "class" "" "alt" .RelPermalink) }}
             {{ end }}
         {{ end }}
 

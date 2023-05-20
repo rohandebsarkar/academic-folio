@@ -1,9 +1,9 @@
-<ul class="list border-t border-dashed border-divider">
+<ul class="post-list">
     {{ range .Pages }}
-        <li class="py-4 space-y-2 border-b border-dashed border-divider">
+        <li>
             <hgroup>
                 <h3>
-                    <a class="text-2xl font-medium text-primary no-underline" href="{{ .RelPermalink }}">
+                    <a href="{{ .RelPermalink }}">
                         {{ .Title }}
                     </a>
                 </h3>

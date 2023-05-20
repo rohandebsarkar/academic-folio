@@ -66,6 +66,10 @@
                     hover:text-theme 
                     hover:underline;
                 }
+
+                .active {
+                    @apply text-theme;
+                }
             }
 
             #theme-toggle {
