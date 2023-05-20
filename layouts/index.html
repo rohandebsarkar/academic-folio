@@ -1,6 +1,6 @@
 {{ define "main" }}
-    <header class="space-y-2">
-        <h1 class="text-4xl font-medium">
+    <header>
+        <h1>
             {{ if (or .Site.Params.firstName .Site.Params.middleName .Site.Params.lastName) }}
                 <span class="font-bold">{{ .Site.Params.firstName }}</span>
                 {{ .Site.Params.lastName }}
@@ -10,13 +10,13 @@
         </h1>
 
         {{ with .Site.Params.description }}
-            <h2 class="font-medium">
+            <h2>
                 {{ safeHTML . }}
             </h2>
         {{ end }}
     </header>
 
-    <figure class="sm:float-right w-3/4 md:w-1/4 sm:w-1/3 mx-auto sm:ml-4 space-y-4">
+    <figure class="index-fig">
         {{ with resources.Get (printf "img/%s" .Params.profPic) }}
             {{ if (strings.HasSuffix . ".svg") }}
                 <object data="{{ .RelPermalink }}" type="image/svg+xml" width="auto" height="auto" title="{{ .RelPermalink }}"></object>
@@ -25,13 +25,13 @@
             {{ end }}
         {{ end }}
 
-        <address class="font-medium text-center space-y-2">
+        <address>
             {{ with .Site.Params.email }}
                 {{ partial "scripts/cloakemail" . }}
             {{ end }}
 
             {{ if (and .Site.Params.socialHomePage .Site.Menus.social) }}
-                <div class="text-3xl overflow-auto">
+                <div class="index-social">
                     {{ partial "social" . }}
                 </div>
             {{ end }}

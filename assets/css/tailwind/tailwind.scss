@@ -8,25 +8,25 @@
         @apply text-primary;
         @apply bg-background;
 
-        a {
-            @apply text-theme;
-            @apply hover:underline;
-        }
-
-        .social {
-            @apply flex;
-            @apply flex-row;
-            @apply flex-nowrap;
-            @apply space-x-4;
-            @apply justify-center;
-
-            a {
-                @apply text-primary;
-            }
-        }
-
         @import 'nav.scss';
         @import 'main.scss';
         @import 'footer.scss';
+    }
+
+    a {
+        @apply text-theme;
+        @apply hover:underline;
+    }
+
+    .social {
+        @apply flex;
+        @apply flex-row;
+        @apply flex-nowrap;
+        @apply space-x-4;
+        @apply justify-center;
+
+        a {
+            @apply text-primary;
+        }
     }
 }

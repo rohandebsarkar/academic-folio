@@ -34,6 +34,33 @@
         }
     }
 
+    .index-fig {
+        @apply 
+        w-3/4  
+        mx-auto  
+        space-y-4 
+        
+        sm:w-1/3 
+        sm:float-right
+        sm:ml-4
+
+        md:w-1/4;
+
+        address {
+            @apply
+            font-medium 
+            text-center 
+            space-y-2;
+
+            .index-social {
+                @apply 
+                text-3xl 
+                overflow-auto;
+            }
+        }
+
+    }
+
     .post-date {
         @apply text-sm;
         @apply font-mono;
@@ -67,6 +94,34 @@
                 @apply font-medium;
                 @apply text-primary;
                 @apply no-underline;
+            }
+        }
+    }
+
+    .toc {
+        @apply
+        2xl:fixed 
+        2xl:top-14 
+        2xl:left-0 
+        2xl:p-4 
+        2xl:w-[256px];
+
+        details {
+            @apply 
+            p-2 
+            text-secondary 
+            text-sm 
+            border 
+            border-dashed 
+            border-secondary 
+            cursor-zoom-in 
+            open:cursor-zoom-out 
+            max-h-[80vh] 
+            overflow-auto;
+
+            summary {
+                @apply
+                text-lg;
             }
         }
     }
