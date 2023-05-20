@@ -1,16 +1,16 @@
 {{ define "main" }}
-    <header class="space-y-2">
-        <h1 class="text-4xl font-medium">
+    <header class="post-header">
+        <h1>
             {{ .Page.Title }}
         </h1>
 
         {{ with .Page.Params.description }}
-            <h2 class="font-medium">
+            <h2>
                 {{ . }}
             </h2>
         {{ end }}
 
-        <h3 class="text-sm font-mono">
+        <h3 class="post-date">
             {{ with .Date }}
                 {{ .Format "January 2, 2006" }}&nbsp;
             {{ end }}
@@ -20,7 +20,7 @@
             {{ end }}
         </h3>
 
-        <h3 class="text-sm italic text-secondary">
+        <h3 class="post-tags">
             {{ with .Page.ReadingTime }}
                 <span>{{ partial "svg" "fas fa-clock" }}&nbsp;{{ . }}&nbsp;min read&nbsp;</span>
             {{ end }}
@@ -28,20 +28,20 @@
             {{ with .Page.Params.tags }}
                 &bull;&nbsp;
                 {{ range . }}
-                    <a href="/tags/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
+                    <a href="/tags/{{ . }}">{{ partial "svg" "fas fa-hashtag" }}&nbsp;{{ . }}&nbsp;</a>
                 {{ end }}
             {{ end }}
 
             {{ with .Page.Params.categories }}
                 &bull;&nbsp;
                 {{ range . }}
-                    <a href="/categories/{{ . }}" class="text-secondary no-underline">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
+                    <a href="/categories/{{ . }}">{{ partial "svg" "fas fa-tag" }}&nbsp;{{ . }}&nbsp;</a>
                 {{ end }}
             {{ end }}
         </h3>
     </header>
 
-    <aside class="2xl:fixed 2xl:top-14 2xl:left-0 2xl:p-4 2xl:w-[256px]">
+    <aside class="toc">
         {{ partial "posts/toc" . }}
     </aside>
 

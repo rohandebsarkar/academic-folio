@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply mx-auto;
+        @apply text-primary;
+        @apply bg-background;
+
+        @import 'nav.scss';
+        @import 'main.scss';
+        @import 'footer.scss';
+    }
+
+    a {
+        @apply text-theme;
+        @apply hover:underline;
+    }
+
+    .social {
+        @apply flex;
+        @apply flex-row;
+        @apply flex-nowrap;
+        @apply space-x-4;
+        @apply justify-center;
+
+        a {
+            @apply text-primary;
+
+            @apply hover:text-theme;
+        }
+    }
+}

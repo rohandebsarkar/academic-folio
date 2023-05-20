@@ -24,8 +24,16 @@ d-article d-byline a {
 }
 
 d-title {
+    margin-top: 6rem;
+
     h1 {
         color: var(--global-text-color-primary) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    d-title {
+        margin-top: 3.5rem;
     }
 }
 
@@ -58,6 +66,9 @@ d-article {
     }
     b i {
         display: inline;
+    }
+    ul li {
+        list-style: disc;
     }
 
     d-contents {
@@ -154,4 +165,10 @@ d-appendix {
             }
         }
     }
+}
+
+.comments {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0 0 2rem 0;
 }

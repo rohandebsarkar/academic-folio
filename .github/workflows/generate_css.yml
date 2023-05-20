@@ -15,7 +15,9 @@ jobs:
       run: npm install
 
     - name: Generate TailwindCSS
-      run: npx tailwindcss -m -i ./assets/css/tailwind.css -o ./static/tailwind.css
+      run: |
+        npx sass assets/css/tailwind/tailwind.scss assets/css/tailwind.css
+        npx tailwindcss -m -i ./assets/css/tailwind.css -o ./static/tailwind.css
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v9

@@ -1,11 +1,11 @@
 {{ define "main" }}
     <header>
-        <h1 class="text-4xl font-medium">
+        <h1>
             {{ .Page.Title }}
         </h1>
 
         {{ with .Page.Params.description }}
-            <h2 class="font-medium">
+            <h2>
                 {{ . }}
             </h2>
         {{ end }}

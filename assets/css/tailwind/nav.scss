@@ -1,0 +1,87 @@
+> header {
+    @apply fixed;
+    @apply inset-x-0;
+    @apply top-0;
+    @apply text-primary;
+    @apply bg-header;
+    @apply z-10;
+    @apply border-b;
+    @apply border-divider;
+
+    nav {
+        @apply mx-auto;
+        @apply p-4;
+        @apply text-base;
+        @apply font-medium;
+        @apply flex;
+        @apply flex-col;
+
+        @apply md:flex-row;
+
+        .nav-logo {
+            @apply flex;
+            @apply flex-row;
+
+            a {
+                @apply whitespace-nowrap;
+                @apply font-bold;
+                @apply no-underline;
+                @apply text-primary;
+
+                @apply hover:text-theme;
+            }
+
+            .nav-social {
+                @apply ml-auto;
+                @apply pl-4;
+                @apply text-[1.25em];
+                @apply overflow-x-auto;
+                @apply overflow-y-hidden;
+            }
+        }
+
+        .nav-menu {
+            @apply flex;
+            @apply flex-row;
+            @apply mt-4;
+
+            @apply md:ml-auto;
+            @apply md:mt-0;
+
+            ul {
+                @apply flex;
+                @apply flex-row;
+                @apply flex-nowrap;
+                @apply space-x-4;
+                @apply overflow-auto;
+
+                @apply md:w-fit;
+
+                a {
+                    @apply whitespace-nowrap;
+                    @apply no-underline;
+                    @apply text-primary;
+
+                    @apply hover:text-theme
+                    hover:underline;
+                }
+
+                .active {
+                    @apply text-theme;
+                }
+            }
+
+            #theme-toggle {
+                @apply hover:text-theme;
+
+                @apply absolute;
+                @apply top-4;
+                @apply right-4;
+
+                @apply md:static;
+                @apply md:ml-4;
+                @apply md:mt-0;
+            }
+        }
+    }
+}

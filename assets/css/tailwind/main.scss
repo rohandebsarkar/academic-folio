@@ -1,0 +1,168 @@
+> main {
+    @apply mt-24;
+    @apply mb-12;
+    @apply px-4;
+    @apply py-8;
+    @apply space-y-8;
+
+    @apply md:mt-14;
+    @apply md:mb-8;
+
+    > header {
+        @apply space-y-2;
+
+        h1 {
+            @apply text-4xl;
+            @apply font-medium;
+        }
+
+        h2 {
+            @apply font-medium;
+        }
+    }
+
+    .blog-header {
+        h1 {
+            @apply text-6xl;
+            @apply text-center;
+            @apply text-theme;
+        }
+
+        h2 {
+            @apply text-2xl;
+            @apply text-center;
+        }
+    }
+
+    .index-fig {
+        @apply w-3/4
+        mx-auto
+        space-y-4
+
+        sm:w-1/3
+        sm:float-right
+        sm:ml-4
+
+        md:w-1/4;
+
+        img {
+            @apply rounded;
+        }
+
+        address {
+            @apply font-medium
+            text-center
+            space-y-2;
+
+            .e-mail {
+                @apply not-italic
+                font-mono;
+            }
+
+            .index-social {
+                @apply text-3xl
+                overflow-auto;
+            }
+        }
+    }
+
+    .recent {
+        @apply space-y-1;
+
+        h3 a {
+            @apply text-2xl text-primary font-semibold no-underline;
+        }
+
+        table {
+            @apply text-left;
+
+            tr {
+                th {
+                    @apply pr-2 py-1;
+                }
+
+                td {
+                    @apply pl-2 py-1;
+                }
+            }
+        }
+    }
+
+    .post-date {
+        @apply text-sm;
+        @apply font-mono;
+    }
+
+    .post-tags {
+        @apply text-sm;
+        @apply italic;
+        @apply text-secondary;
+
+        a {
+            @apply text-secondary;
+            @apply no-underline;
+        }
+    }
+
+    .post-list {
+        @apply border-t;
+        @apply border-dashed;
+        @apply border-divider;
+
+        li {
+            @apply py-4;
+            @apply space-y-2;
+            @apply border-b;
+            @apply border-dashed;
+            @apply border-divider;
+
+            hgroup h3 a {
+                @apply text-2xl;
+                @apply font-medium;
+                @apply text-primary;
+                @apply no-underline;
+
+                @apply hover:text-theme hover:underline;
+            }
+        }
+    }
+
+    .taxonomy-list {
+        @apply flex
+        flex-row
+        flex-wrap
+        space-x-4
+        justify-center;
+
+        li a {
+            @apply text-theme
+            no-underline
+            hover:underline;
+        }
+    }
+
+    .toc {
+        @apply 2xl:fixed
+        2xl:top-14
+        2xl:left-0
+        2xl:p-4
+        2xl:w-[256px];
+
+        details {
+            @apply p-2
+            text-secondary
+            text-sm
+            border
+            border-dashed
+            border-secondary
+            cursor-zoom-in
+            open:cursor-zoom-out
+            max-h-[80vh]
+            overflow-auto;
+
+            summary {
+                @apply text-lg;
+            }
+        }
+    }
+}

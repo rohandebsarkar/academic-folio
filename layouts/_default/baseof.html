@@ -4,17 +4,22 @@
     {{ partial "head" . }}
 
     {{/*  Body  */}}
-    <body class="mx-auto text-primary bg-background">
+    <body>
 
         {{/*  Header  */}}
-        {{ partial "header" . }}
+        <header>
+            {{ partial "header" . }}
+        </header>
 
         {{/*  Main  */}}
-        <main class="mt-24 md:mt-14 mb-12 md:mb-8 p-4 space-y-4">
+        <main>
             {{ block "main" . }}{{ end }}
         </main>
 
         {{/*  Footer  */}}
         {{ partial "footer" . }}
+
+        {{/*  Anlytics Script  */}}
+        {{ safeHTML .Site.Params.analyticsScript }}
     </body>
 </html>
