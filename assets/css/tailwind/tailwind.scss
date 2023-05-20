@@ -27,6 +27,8 @@
 
         a {
             @apply text-primary;
+
+            @apply hover:text-theme;
         }
     }
 }

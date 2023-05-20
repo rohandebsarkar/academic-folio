@@ -52,6 +52,12 @@
             text-center 
             space-y-2;
 
+            .e-mail {
+                @apply 
+                not-italic 
+                font-mono;
+            }
+
             .index-social {
                 @apply 
                 text-3xl 
@@ -59,6 +65,14 @@
             }
         }
 
+    }
+
+    .recent {
+        @apply space-y-1;
+
+            h3 a {
+                @apply text-2xl text-primary font-semibold no-underline;
+            }
     }
 
     .post-date {
