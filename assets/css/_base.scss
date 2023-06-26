@@ -2,15 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
-    font-weight: 500;
-    text-decoration: underline;
-
-    &:hover {
-        color: var(--global-theme-color);
-    }
-}
-
 #TableOfContents {
     ul {
         li {

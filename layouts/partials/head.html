@@ -11,6 +11,16 @@
         {{ end }}
     </title>
 
+    {{ if not (strings.Contains .Site.Params.favicon ".") }}
+        {{ with resources.Get "svg/favicon.svg" | resources.ExecuteAsTemplate "favicon.svg" . }}
+            <link rel="shortcut icon" href="{{ .RelPermalink }}" type="image/svg+xml">
+        {{ end }}
+    {{ else }}
+        {{ with resources.Get (printf "%s%s" "img/" .Site.Params.favicon) | resources.Copy .Site.Params.favicon }}
+            <link rel="shortcut icon" href="{{ .RelPermalink }}" type='{{ if strings.HasSuffix . ".svg" }}image/svg+xml{{ else }}image/x-icon{{ end }}'>
+        {{ end }}
+    {{ end }}
+
     {{/*  Canonical URL  */}}
     <link rel="canonical" href="{{ .Permalink }}">
 

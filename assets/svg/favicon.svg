@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 20">
+  <text y="18" font-size="18">{{ .Site.Params.favicon }}</text>
+</svg>

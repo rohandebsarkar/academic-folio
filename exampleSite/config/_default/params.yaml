@@ -5,6 +5,12 @@ email: einstein@example.org
 
 description: Albert Einstein's personal website powered by the Academic Folio theme
 
+favicon: ⚛️ # You can either enter an emoji or the name of an image file present in `assets/img` folder
+
+footerText: >
+  Powered by <a href="https://gohugo.io">Hugo</a> with
+  <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
+
 tags: # these tags would be added as keywords in metadata for website
 - academic-folio
 - academic-website
@@ -31,18 +37,20 @@ colorTheme: blue # choose a theme from `data/themes` folder
 
 giscusScript: >
   <script src="https://giscus.app/client.js"
-      data-repo="rohandebsarkar/academic-folio"
-      data-repo-id="R_kgDOI0baIw"
-      data-category="Comments (giscus)"
-      data-category-id="DIC_kwDOI0baI84CWhyL"
-      data-mapping="og:title"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="preferred_color_scheme"
-      data-lang="en"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async
+    data-repo="rohandebsarkar/academic-folio"
+    data-repo-id="R_kgDOI0baIw"
+    data-category="Comments (giscus)"
+    data-category-id="DIC_kwDOI0baI84CWhyL"
+    data-mapping="og:title"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
   ></script>
+
+analyticsScript: >
