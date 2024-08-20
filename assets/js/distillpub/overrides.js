@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('readystatechange', () => {
     // Override styles of the footnotes.
     document.querySelectorAll('d-footnote').forEach(function (footnote) {
         footnote.shadowRoot
