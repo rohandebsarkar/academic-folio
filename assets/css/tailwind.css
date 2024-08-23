@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a {
+        @apply text-theme;
+        @apply hover:underline;
+    }
+
+    nav a {
+        @apply text-primary;
+    }
+
+    .social a {
+        @apply text-primary;
+    }
+}
