@@ -2,9 +2,6 @@
     {{ with resources.Get "js/distillpub/template.v2.js" | minify }}
         <script src="{{ .RelPermalink }}"></script>
     {{ end }}
-    {{ with resources.Get "js/distillpub/transforms.v2.js" | minify }}
-        <script src="{{ .RelPermalink }}"></script>
-    {{ end }}
     {{ with resources.Get "css/distill.scss" | toCSS | minify }}
         <style>
             {{ safeCSS .Content }}
