@@ -2,6 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: var(--global-text-color-primary);
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--global-theme-color);
+    }
+}
+
 #TableOfContents {
     ul {
         li {
