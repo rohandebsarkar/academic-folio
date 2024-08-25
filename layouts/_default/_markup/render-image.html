@@ -1,0 +1,3 @@
+{{ with .Page.Resources.Get .Destination }}
+    {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
+{{ end }}
