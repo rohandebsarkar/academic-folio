@@ -1,3 +1,4 @@
+{{ $description := .Text }}
 {{ with .Page.Resources.Get .Destination }}
-    {{ partial "img" (dict "img" . "class" "rounded" "alt" .RelPermalink) }}
+    {{ partial "img" (dict "img" . "loading" "lazy" "alt" $description) }}
 {{ end }}
