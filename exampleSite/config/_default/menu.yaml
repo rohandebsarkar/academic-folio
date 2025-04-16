@@ -21,19 +21,19 @@ main:
 
 social:
 - name: email
-  url: mailto:email@example.com
+  url: mailto:sanjeets1900@gmail.com
   weight: 1
   params:
     icon: fas fa-envelope
 
 - name: LinkedIn
-  url: https://www.linkedin.com/username
+  url: https://www.linkedin.com/in/sanjeetshukla/
   weight: 2
   params:
     icon: fab fa-linkedin
 
 - name: GitHub
-  url: https://github.com/username
+  url: https://github.com/sanjeet-shukla
   weight: 3
   params:
     icon: fab fa-github

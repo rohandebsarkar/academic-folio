@@ -1,19 +1,19 @@
-firstName: Albert
-lastName: Einstein
+firstName: Sanjeet
+lastName: Shukla
 
-email: einstein@example.org
+email: sanjeets1900@gmail.com
 
-description: Albert Einstein's personal website powered by the Academic Folio theme
+description: Sanjeet Shukla's portfolio website powered by github pages
 
 favicon: ⚛️ # You can either enter an emoji or the name of an image file present in `assets/img` folder
 
 footerText: >
   Powered by <a href="https://gohugo.io">Hugo</a> with
-  <a href="https://github.com/rohandebsarkar/academic-folio">Academic Folio</a> theme
+  <a href="https://github.com/sanjeet-shukla/sanjeet-shukla.github.io">Sanjeet Shukla</a> theme
 
 tags: # these tags would be added as keywords in metadata for website
-- academic-folio
-- academic-website
+- Sanjeet-Shukla
+- Data-Engineer
 - al-folio
 - hugo
 - hugo-theme
@@ -37,7 +37,7 @@ colorTheme: blue # choose a theme from `data/themes` folder
 
 giscusScript: >
   <script src="https://giscus.app/client.js"
-    data-repo="rohandebsarkar/academic-folio"
+    data-repo="sanjeet-shukla/sanjeet-shukla.github.io"
     data-repo-id="R_kgDOI0baIw"
     data-category="Comments (giscus)"
     data-category-id="DIC_kwDOI0baI84CWhyL"

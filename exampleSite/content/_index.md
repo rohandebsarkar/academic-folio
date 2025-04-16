@@ -1,5 +1,5 @@
 ---
-title: Academic Folio
+title: Sanjeet Shukla
 
 profPic: prof_pic.jpg
 ---

@@ -3,8 +3,8 @@
 Work in Progress: Hugo port of the popular Jekyll theme al-folio
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
-![GitHub](https://img.shields.io/github/license/rohandebsarkar/academic-folio)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Facademic-folio.netlify.app%2F)
+![GitHub](https://img.shields.io/github/license/sanjeet-shukla/sanjeet-shukla.github.io)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fsanjeet-shukla.github.io%2F)
 
 ## Installation
 
