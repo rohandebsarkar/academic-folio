@@ -1,4 +1,4 @@
-module github.com/rohandebsarkar/academic-folio
+module github.com/sanjeet-shukla/sanjeet-shukla.github.io
 
 go 1.19
 
