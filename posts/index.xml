@@ -1,12 +1,151 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/posts/</link><description>Recent content in Blog on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>Heading level 1 Heading level 2 Heading level 3 Heading level 4 Heading level 5 Heading level 6 Normal Text
-Alternate Syntax Heading level 1 Heading level 2 Bold and Italic I just love bold text. I just love bold text. Loveisbold
-Italicized text is the cat&amp;rsquo;s meow.
-This text is really important.
-Blockquotes Dorothy followed her through many of the beautiful rooms in her castle.
-Blockquotes with Multiple Paragraphs Dorothy followed her through many of the beautiful rooms in her castle.</description></item><item><title>First blog</title><link>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</guid><description>Add the stuff here.
-This is my stuff that I&amp;rsquo;ve written here.</description></item><item><title>Math stuff</title><link>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</guid><description>Introduction Many articles like this in the towardsdatascience tell us how to use Bayesian Linear Regression and why. I am not going to repeat that. I want to derive the formulas from scratch entirely.
-I also understand that comprehending this stuff is slightly challenging if you don&amp;rsquo;t have a strong mathematics background.
-Note: All of my notation is from Bishop’s book.
-The main difference between Bayesian and Non-Bayesian regression is that Bayesian regression assumes that weights are Random variables.</description></item><item><title>Why Socialism?</title><link>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</link><pubDate>Sun, 01 May 1949 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</guid><description>Source: Monthly Review, May 1949
-Is it advisable for one who is not an expert on economic and social issues to express views on the subject of socialism? I believe for a number of reasons that it is.
-Let us first consider the question from the point of view of scientific knowledge. It might appear that there are no essential methodological differences between astronomy and economics: scientists in both fields attempt to discover laws of general acceptability for a circumscribed group of phenomena in order to make the interconnection of these phenomena as clearly understandable as possible.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/posts/</link><description>Recent content in Blog on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>&lt;h1 id="heading-level-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2">Heading level 2&lt;/h2>
+&lt;h3 id="heading-level-3">Heading level 3&lt;/h3>
+&lt;h4 id="heading-level-4">Heading level 4&lt;/h4>
+&lt;h5 id="heading-level-5">Heading level 5&lt;/h5>
+&lt;h6 id="heading-level-6">Heading level 6&lt;/h6>
+&lt;p>Normal Text&lt;/p>
+&lt;h2 id="alternate-syntax">Alternate Syntax&lt;/h2>
+&lt;h1 id="heading-level-1-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2-1">Heading level 2&lt;/h2>
+&lt;h2 id="bold-and-italic">Bold and Italic&lt;/h2>
+&lt;p>I just love &lt;strong>bold text&lt;/strong>.
+I just love &lt;strong>bold text&lt;/strong>.
+Love&lt;strong>is&lt;/strong>bold&lt;/p>
+&lt;p>Italicized text is the &lt;em>cat&amp;rsquo;s meow&lt;/em>.&lt;/p>
+&lt;p>This text is &lt;strong>&lt;em>really important&lt;/em>&lt;/strong>.&lt;/p>
+&lt;h2 id="blockquotes">Blockquotes&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p>&lt;/blockquote>
+&lt;h2 id="blockquotes-with-multiple-paragraphs">Blockquotes with Multiple Paragraphs&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p></description></item><item><title>First blog</title><link>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</guid><description>&lt;p>Add the stuff here.&lt;/p>
+&lt;p>
+
+ 
+
+
+
+
+ &lt;picture>
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ &lt;source media=(min-width:600px) srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_58914d1f2f43f7b0.webp" type="image/webp" />
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ &lt;source media=(min-width:768px) srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_5fa9bf70edc8a133.webp" type="image/webp" />
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ &lt;source srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_909dd22ad78800e2.webp" type="image/webp" />
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;img src="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample.jpg" height="833" width="1280"
+ alt="alt" loading="lazy" />
+ &lt;/picture>
+
+
+
+
+
+&lt;/p>
+&lt;p>This is my stuff that I&amp;rsquo;ve written here.&lt;/p></description></item><item><title>Math stuff</title><link>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Many articles like &lt;a href="https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7" target="_blank" rel="external nofollow noopener">this&lt;/a>
+ in the &lt;a href="https://towardsdatascience.com/" target="_blank" rel="external nofollow noopener">towardsdatascience&lt;/a>
+ tell us how to use Bayesian Linear Regression and why. I am not going to repeat that. I want to derive the formulas from scratch entirely.&lt;/p>
+&lt;p>I also understand that comprehending this stuff is slightly challenging if you don&amp;rsquo;t have a strong mathematics background.&lt;/p>
+&lt;blockquote>
+&lt;p>Note: All of my notation is from Bishop’s book.&lt;/p>&lt;/blockquote>
+&lt;p>The main difference between Bayesian and Non-Bayesian regression is that Bayesian regression assumes that weights are Random variables.&lt;/p></description></item><item><title>Why Socialism?</title><link>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</link><pubDate>Sun, 01 May 1949 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</guid><description>&lt;p>&lt;em>Source: Monthly Review, May 1949&lt;/em>&lt;/p>
+&lt;p>Is it advisable for one who is not an expert on economic and social issues to express views on the
+subject of socialism? I believe for a number of reasons that it is.&lt;/p>
+&lt;p>Let us first consider the question from the point of view of scientific knowledge. It might appear
+that there are no essential methodological differences between astronomy and economics: scientists
+in both fields attempt to discover laws of general acceptability for a circumscribed group of
+phenomena in order to make the interconnection of these phenomena as clearly understandable as
+possible. But in reality such methodological differences do exist. The discovery of general laws in
+the field of economics is made difficult by the circumstance that observed economic phenomena are
+often affected by many factors which are very hard to evaluate separately. In addition, the
+experience which has accumulated since the beginning of the so-called civilized period of human
+history has — as is well known — been largely influenced and limited by causes which are by no
+means exclusively economic in nature. For example, most of the major states of history owed their
+existence to conquest. The conquering peoples established themselves, legally and economically, as
+the privileged class of the conquered country. They seized for themselves a monopoly of the land
+ownership and appointed a priesthood from among their own ranks. The priests, in control of
+education, made the class division of society into a permanent institution and created a system of
+values by which the people were thenceforth, to a large extent unconsciously, guided in their social
+behavior.&lt;/p></description></item></channel></rss>

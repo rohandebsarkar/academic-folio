@@ -1,6 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Features on Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/tags/features/</link><description>Recent content in Features on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/tags/features/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>Heading level 1 Heading level 2 Heading level 3 Heading level 4 Heading level 5 Heading level 6 Normal Text
-Alternate Syntax Heading level 1 Heading level 2 Bold and Italic I just love bold text. I just love bold text. Loveisbold
-Italicized text is the cat&amp;rsquo;s meow.
-This text is really important.
-Blockquotes Dorothy followed her through many of the beautiful rooms in her castle.
-Blockquotes with Multiple Paragraphs Dorothy followed her through many of the beautiful rooms in her castle.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Features on Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/tags/features/</link><description>Recent content in Features on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/tags/features/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>&lt;h1 id="heading-level-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2">Heading level 2&lt;/h2>
+&lt;h3 id="heading-level-3">Heading level 3&lt;/h3>
+&lt;h4 id="heading-level-4">Heading level 4&lt;/h4>
+&lt;h5 id="heading-level-5">Heading level 5&lt;/h5>
+&lt;h6 id="heading-level-6">Heading level 6&lt;/h6>
+&lt;p>Normal Text&lt;/p>
+&lt;h2 id="alternate-syntax">Alternate Syntax&lt;/h2>
+&lt;h1 id="heading-level-1-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2-1">Heading level 2&lt;/h2>
+&lt;h2 id="bold-and-italic">Bold and Italic&lt;/h2>
+&lt;p>I just love &lt;strong>bold text&lt;/strong>.
+I just love &lt;strong>bold text&lt;/strong>.
+Love&lt;strong>is&lt;/strong>bold&lt;/p>
+&lt;p>Italicized text is the &lt;em>cat&amp;rsquo;s meow&lt;/em>.&lt;/p>
+&lt;p>This text is &lt;strong>&lt;em>really important&lt;/em>&lt;/strong>.&lt;/p>
+&lt;h2 id="blockquotes">Blockquotes&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p>&lt;/blockquote>
+&lt;h2 id="blockquotes-with-multiple-paragraphs">Blockquotes with Multiple Paragraphs&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p></description></item></channel></rss>

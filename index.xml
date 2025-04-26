@@ -1,16 +1,161 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/</link><description>Recent content on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>Heading level 1 Heading level 2 Heading level 3 Heading level 4 Heading level 5 Heading level 6 Normal Text
-Alternate Syntax Heading level 1 Heading level 2 Bold and Italic I just love bold text. I just love bold text. Loveisbold
-Italicized text is the cat&amp;rsquo;s meow.
-This text is really important.
-Blockquotes Dorothy followed her through many of the beautiful rooms in her castle.
-Blockquotes with Multiple Paragraphs Dorothy followed her through many of the beautiful rooms in her castle.</description></item><item><title>First blog</title><link>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</guid><description>Add the stuff here.
-This is my stuff that I&amp;rsquo;ve written here.</description></item><item><title>Math stuff</title><link>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</guid><description>Introduction Many articles like this in the towardsdatascience tell us how to use Bayesian Linear Regression and why. I am not going to repeat that. I want to derive the formulas from scratch entirely.
-I also understand that comprehending this stuff is slightly challenging if you don&amp;rsquo;t have a strong mathematics background.
-Note: All of my notation is from Bishop’s book.
-The main difference between Bayesian and Non-Bayesian regression is that Bayesian regression assumes that weights are Random variables.</description></item><item><title>biography</title><link>https://rohandebsarkar.github.io/academic-folio/bio/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/bio/</guid><description>Albert Einstein was born at Ulm, in Württemberg, Germany, on March 14, 1879. Six weeks later the family moved to Munich, where he later on began his schooling at the Luitpold Gymnasium. Later, they moved to Italy and Albert continued his education at Aarau, Switzerland and in 1896 he entered the Swiss Federal Polytechnic School in Zurich to be trained as a teacher in physics and mathematics. In 1901, the year he gained his diploma, he acquired Swiss citizenship and, as he was unable to find a teaching post, he accepted a position as technical assistant in the Swiss Patent Office.</description></item><item><title>Attention and Augmented Recurrent Neural Networks</title><link>https://rohandebsarkar.github.io/academic-folio/distill/example/</link><pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/distill/example/</guid><description>This is the ﬁrst paragraph of the article. Test a long — dash — here it is.
-Test for owner’s possessive. Test for &amp;ldquo;quoting a passage.&amp;rdquo; And another sentence. Or two. Some ﬂopping ﬁns; for diving.
-Here’s a test of an inline equation c = a^2 + b^2 . And then there’s a block equation: c = \pm \sqrt{ \sum\limits_{i=0}^{n}{a^{222} + b^2}} We can also cite external publications. .</description></item><item><title>Why Socialism?</title><link>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</link><pubDate>Sun, 01 May 1949 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</guid><description>Source: Monthly Review, May 1949
-Is it advisable for one who is not an expert on economic and social issues to express views on the subject of socialism? I believe for a number of reasons that it is.
-Let us first consider the question from the point of view of scientific knowledge. It might appear that there are no essential methodological differences between astronomy and economics: scientists in both fields attempt to discover laws of general acceptability for a circumscribed group of phenomena in order to make the interconnection of these phenomena as clearly understandable as possible.</description></item><item><title>Albert Einstein's paper on the mass energy equivalence (E = mc²) was published</title><link>https://rohandebsarkar.github.io/academic-folio/news/mass-energy-equivalence/</link><pubDate>Tue, 21 Nov 1905 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/news/mass-energy-equivalence/</guid><description/></item><item><title>Albert Einstein's paper on special theory of relativity was published</title><link>https://rohandebsarkar.github.io/academic-folio/news/special-relativity/</link><pubDate>Tue, 26 Sep 1905 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/news/special-relativity/</guid><description>The paper was titled the On the electrodynamics of moving bodies.
-It reconciled Maxwell&amp;rsquo;s equations for electricity and magnetism with the laws of mechanics by introducing changes to mechanics, resulting from analysis based on empirical evidence that the speed of light is independent of the motion of the observer. Discredited the concept of a &amp;ldquo;luminiferous ether&amp;rdquo;.</description></item><item><title>cv</title><link>https://rohandebsarkar.github.io/academic-folio/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/cv/</guid><description>This is CV.</description></item><item><title>Teaching</title><link>https://rohandebsarkar.github.io/academic-folio/teaching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/teaching/</guid><description>By 1908, Albert Einstein was recognized as a leading scientist and was appointed lecturer at the University of Bern. The following year, after he gave a lecture on electrodynamics and the relativity principle at the University of Zurich, Alfred Kleiner recommended him to the faculty for a newly created professorship in theoretical physics. Einstein was appointed associate professor in 1909.
-Einstein became a full professor at the German Charles-Ferdinand University in Prague in April 1911, accepting Austrian citizenship in the Austro-Hungarian Empire to do so.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Academic Folio</title><link>https://rohandebsarkar.github.io/academic-folio/</link><description>Recent content on Academic Folio</description><generator>Hugo</generator><language>en</language><copyright>© Copyright 2023 The Academic Folio Contributors</copyright><lastBuildDate>Mon, 18 Apr 2022 21:10:00 +0700</lastBuildDate><atom:link href="https://rohandebsarkar.github.io/academic-folio/index.xml" rel="self" type="application/rss+xml"/><item><title>All Markdown features</title><link>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</link><pubDate>Mon, 18 Apr 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/all-markdown-features/</guid><description>&lt;h1 id="heading-level-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2">Heading level 2&lt;/h2>
+&lt;h3 id="heading-level-3">Heading level 3&lt;/h3>
+&lt;h4 id="heading-level-4">Heading level 4&lt;/h4>
+&lt;h5 id="heading-level-5">Heading level 5&lt;/h5>
+&lt;h6 id="heading-level-6">Heading level 6&lt;/h6>
+&lt;p>Normal Text&lt;/p>
+&lt;h2 id="alternate-syntax">Alternate Syntax&lt;/h2>
+&lt;h1 id="heading-level-1-1">Heading level 1&lt;/h1>
+&lt;h2 id="heading-level-2-1">Heading level 2&lt;/h2>
+&lt;h2 id="bold-and-italic">Bold and Italic&lt;/h2>
+&lt;p>I just love &lt;strong>bold text&lt;/strong>.
+I just love &lt;strong>bold text&lt;/strong>.
+Love&lt;strong>is&lt;/strong>bold&lt;/p>
+&lt;p>Italicized text is the &lt;em>cat&amp;rsquo;s meow&lt;/em>.&lt;/p>
+&lt;p>This text is &lt;strong>&lt;em>really important&lt;/em>&lt;/strong>.&lt;/p>
+&lt;h2 id="blockquotes">Blockquotes&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p>&lt;/blockquote>
+&lt;h2 id="blockquotes-with-multiple-paragraphs">Blockquotes with Multiple Paragraphs&lt;/h2>
+&lt;blockquote>
+&lt;p>Dorothy followed her through many of the beautiful rooms in her castle.&lt;/p></description></item><item><title>First blog</title><link>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/welcome/</guid><description>&lt;p>Add the stuff here.&lt;/p>
+&lt;p>
+
+ 
+
+
+
+
+ &lt;picture>
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ &lt;source media=(min-width:600px) srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_58914d1f2f43f7b0.webp" type="image/webp" />
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ &lt;source media=(min-width:768px) srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_5fa9bf70edc8a133.webp" type="image/webp" />
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ &lt;source srcset="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample_hu_909dd22ad78800e2.webp" type="image/webp" />
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;img src="https://rohandebsarkar.github.io/academic-folio/posts/welcome/sample.jpg" height="833" width="1280"
+ alt="alt" loading="lazy" />
+ &lt;/picture>
+
+
+
+
+
+&lt;/p>
+&lt;p>This is my stuff that I&amp;rsquo;ve written here.&lt;/p></description></item><item><title>Math stuff</title><link>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</link><pubDate>Fri, 18 Mar 2022 21:10:00 +0700</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/math-sample/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Many articles like &lt;a href="https://towardsdatascience.com/introduction-to-bayesian-linear-regression-e66e60791ea7" target="_blank" rel="external nofollow noopener">this&lt;/a>
+ in the &lt;a href="https://towardsdatascience.com/" target="_blank" rel="external nofollow noopener">towardsdatascience&lt;/a>
+ tell us how to use Bayesian Linear Regression and why. I am not going to repeat that. I want to derive the formulas from scratch entirely.&lt;/p>
+&lt;p>I also understand that comprehending this stuff is slightly challenging if you don&amp;rsquo;t have a strong mathematics background.&lt;/p>
+&lt;blockquote>
+&lt;p>Note: All of my notation is from Bishop’s book.&lt;/p>&lt;/blockquote>
+&lt;p>The main difference between Bayesian and Non-Bayesian regression is that Bayesian regression assumes that weights are Random variables.&lt;/p></description></item><item><title>biography</title><link>https://rohandebsarkar.github.io/academic-folio/bio/</link><pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/bio/</guid><description>&lt;p>Albert Einstein was born at Ulm, in Württemberg, Germany, on March 14, 1879. Six weeks later the family moved to Munich, where he later on began his schooling at the Luitpold Gymnasium. Later, they moved to Italy and Albert continued his education at Aarau, Switzerland and in 1896 he entered the Swiss Federal Polytechnic School in Zurich to be trained as a teacher in physics and mathematics. In 1901, the year he gained his diploma, he acquired Swiss citizenship and, as he was unable to find a teaching post, he accepted a position as technical assistant in the Swiss Patent Office. In 1905 he obtained his doctor’s degree.&lt;/p></description></item><item><title>Attention and Augmented Recurrent Neural Networks</title><link>https://rohandebsarkar.github.io/academic-folio/distill/example/</link><pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/distill/example/</guid><description>&lt;!-- raw HTML omitted -->
+&lt;p>This is the ﬁrst paragraph of the article. Test a long — dash — here it is.&lt;/p>
+&lt;p>Test for owner’s possessive. Test for &amp;ldquo;quoting a passage.&amp;rdquo; And another sentence. Or two. Some ﬂopping ﬁns; for diving.&lt;/p>
+&lt;p>Here’s a test of an inline equation &lt;d-math >c = a^2 + b^2&lt;/d-math>
+. And then there’s a block equation:
+&lt;d-math block >
+c = \pm \sqrt{ \sum\limits_{i=0}^{n}{a^{222} + b^2}}
+&lt;/d-math>
+&lt;/p></description></item><item><title>Why Socialism?</title><link>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</link><pubDate>Sun, 01 May 1949 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/posts/socialism/</guid><description>&lt;p>&lt;em>Source: Monthly Review, May 1949&lt;/em>&lt;/p>
+&lt;p>Is it advisable for one who is not an expert on economic and social issues to express views on the
+subject of socialism? I believe for a number of reasons that it is.&lt;/p>
+&lt;p>Let us first consider the question from the point of view of scientific knowledge. It might appear
+that there are no essential methodological differences between astronomy and economics: scientists
+in both fields attempt to discover laws of general acceptability for a circumscribed group of
+phenomena in order to make the interconnection of these phenomena as clearly understandable as
+possible. But in reality such methodological differences do exist. The discovery of general laws in
+the field of economics is made difficult by the circumstance that observed economic phenomena are
+often affected by many factors which are very hard to evaluate separately. In addition, the
+experience which has accumulated since the beginning of the so-called civilized period of human
+history has — as is well known — been largely influenced and limited by causes which are by no
+means exclusively economic in nature. For example, most of the major states of history owed their
+existence to conquest. The conquering peoples established themselves, legally and economically, as
+the privileged class of the conquered country. They seized for themselves a monopoly of the land
+ownership and appointed a priesthood from among their own ranks. The priests, in control of
+education, made the class division of society into a permanent institution and created a system of
+values by which the people were thenceforth, to a large extent unconsciously, guided in their social
+behavior.&lt;/p></description></item><item><title>Albert Einstein's paper on the mass energy equivalence (E = mc²) was published</title><link>https://rohandebsarkar.github.io/academic-folio/news/mass-energy-equivalence/</link><pubDate>Tue, 21 Nov 1905 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/news/mass-energy-equivalence/</guid><description/></item><item><title>Albert Einstein's paper on special theory of relativity was published</title><link>https://rohandebsarkar.github.io/academic-folio/news/special-relativity/</link><pubDate>Tue, 26 Sep 1905 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/news/special-relativity/</guid><description>&lt;p>The paper was titled the &lt;code>On the electrodynamics of moving bodies&lt;/code>.&lt;/p>
+&lt;p>It reconciled Maxwell&amp;rsquo;s equations for electricity and magnetism with the laws of mechanics by introducing changes to mechanics, resulting from analysis based on empirical evidence that the speed of light is independent of the motion of the observer. Discredited the concept of a &amp;ldquo;luminiferous ether&amp;rdquo;.&lt;/p></description></item><item><title>cv</title><link>https://rohandebsarkar.github.io/academic-folio/cv/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/cv/</guid><description>&lt;p>This is CV.&lt;/p></description></item><item><title>Teaching</title><link>https://rohandebsarkar.github.io/academic-folio/teaching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rohandebsarkar.github.io/academic-folio/teaching/</guid><description>&lt;p>By 1908, Albert Einstein was recognized as a leading scientist and was appointed lecturer at the University of Bern. The following year, after he gave a lecture on electrodynamics and the relativity principle at the University of Zurich, Alfred Kleiner recommended him to the faculty for a newly created professorship in theoretical physics. Einstein was appointed associate professor in 1909.&lt;/p>
+&lt;p>Einstein became a full professor at the German Charles-Ferdinand University in Prague in April 1911, accepting Austrian citizenship in the Austro-Hungarian Empire to do so. During his Prague stay, he wrote 11 scientific works, five of them on radiation mathematics and on the quantum theory of solids.&lt;/p></description></item></channel></rss>
